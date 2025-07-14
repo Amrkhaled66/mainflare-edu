@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
+
 @import 'tailwindcss';
 
 @plugin 'tailwindcss-animate';
@@ -5,18 +7,82 @@
 @source '../views';
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 
-/* @custom-variant dark (&:is(.dark *)); */
-
+/* Custom theme variables */
 @theme {
-    --font-sans:
-        'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-mainFont: 'IBM Plex Sans Arabic', sans-serif;
+    --color-mainColor: #393962;
+    --color-mainColor-700: #282846;
+    --color-mainGradient: linear-gradient(273deg, #393962 2.21%, #7474c8 116.89%);
+    --color-mainGradientHover: linear-gradient(273deg, #7474c8 0%, #393962 100%);
+    --color-stroke: #e0e0e0;
+    --color-subTitle: #616161;
 }
 
 @layer base {
+    .animate {
+        @apply transition-all duration-300;
+    }
+    .flex-center {
+        @apply flex items-center justify-center;
+    }
+
+    .btn-primary {
+        @apply relative h-[50px] font-bold text-white;
+        background-image: var(--color-mainGradient);
+        background-size: 100%;
+        transition:
+            background-image 300ms,
+            transform 300ms;
+        z-index: 1;
+    }
+
+    .btn-outline {
+        @apply h-[50px] border border-mainColor font-bold text-mainColor;
+    }
+    .btn-outline:hover {
+        @apply bg-mainColor text-white;
+    }
 }
 
-:root {
+/* ============== utilities ================ */
+
+.bg-main-gradient {
+    background-image: var(--color-mainGradient);
+    background-size: 100%;
 }
 
-.dark {
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: var(--color-mainGradientHover);
+    background-size: 100%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 300ms;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+.btn-primary:hover::before {
+    opacity: 1;
+}
+
+/* base */
+html {
+    font-family: var(--font-mainFont);
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+button {
+    cursor: pointer;
 }
