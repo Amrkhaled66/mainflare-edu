@@ -16,9 +16,18 @@
     --color-mainGradientHover: linear-gradient(273deg, #7474c8 0%, #393962 100%);
     --color-stroke: #e0e0e0;
     --color-subTitle: #616161;
+    --color-secondaryGradient: linear-gradient(271deg, #282846 51.73%, #d8d8ef 232.35%);
+    --color-secondaryGradientHover: linear-gradient(271deg, #3a3a5a 40%, #e8e8ff 220%);
+
+    --btn-radius: 50px;
+    --btn-height: 50px;
+    --btn-width: 200px;
 }
 
 @layer base {
+    .container {
+        @apply container mx-auto;
+    }
     .animate {
         @apply transition-all duration-300;
     }
@@ -26,51 +35,59 @@
         @apply flex items-center justify-center;
     }
 
-    .btn-primary {
-        @apply relative h-[50px] font-bold text-white;
-        background-image: var(--color-mainGradient);
-        background-size: 100%;
-        transition:
-            background-image 300ms,
-            transform 300ms;
-        z-index: 1;
-    }
-
     .btn-outline {
-        @apply h-[50px] border border-mainColor font-bold text-mainColor;
+        @apply h-[50px] rounded-[var(--btn-radius)] border border-mainColor font-bold text-mainColor;
     }
     .btn-outline:hover {
         @apply bg-mainColor text-white;
+    }
+
+    .btn {
+        @apply relative h-[50px] overflow-hidden border-none font-bold text-white;
+        border-radius: var(--btn-radius);
+        transition: all 0.3s ease;
+        z-index: 1;
+        -webkit-border-radius: var(--btn-radius);
+        -moz-border-radius: var(--btn-radius);
+        -ms-border-radius: var(--btn-radius);
+        -o-border-radius: var(--btn-radius);
     }
 }
 
 /* ============== utilities ================ */
 
-.bg-main-gradient {
+/* Common pseudo-element styles for gradient hover effect */
+.btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: inherit;
+}
+
+/* Primary button specific styles */
+.btn-primary {
     background-image: var(--color-mainGradient);
     background-size: 100%;
 }
 
 .btn-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     background-image: var(--color-mainGradientHover);
-    background-size: 100%;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 300ms;
-    border-radius: 50px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    -o-border-radius: 50px;
 }
 
-.btn-primary:hover::before {
+/* Secondary button specific styles */
+.btn-secondary {
+    background-image: var(--color-secondaryGradient);
+}
+
+.btn-secondary::before {
+    background-image: var(--color-secondaryGradientHover);
+}
+
+/* Hover effects for all buttons */
+.btn:hover::before {
     opacity: 1;
 }
 
@@ -79,10 +96,32 @@ html {
     font-family: var(--font-mainFont);
     width: 100vw;
     height: 100vh;
+    overflow-x: hidden;
 }
-
-
 
 button {
     cursor: pointer;
+}
+
+.container {
+    width: 100%;
+
+    margin: auto;
+    @media (width >= 40rem /* 640px */) {
+        max-width: 40rem /* 640px */;
+    }
+    @media (width >= 48rem /* 768px */) {
+        max-width: 48rem /* 768px */;
+    }
+    @media (width >= 64rem /* 1024px */) {
+        max-width: 64rem /* 1024px */;
+    }
+    @media (width >= 80rem /* 1280px */) {
+        max-width: 80rem /* 1280px */;
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+    @media (width >= 96rem /* 1536px */) {
+        max-width: 96rem /* 1536px */;
+    }
 }

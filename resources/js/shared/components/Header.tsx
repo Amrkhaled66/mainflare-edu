@@ -1,7 +1,7 @@
+import logo from '@/assets/logo.svg';
 import { Icon } from '@iconify/react';
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import logo from '../../assets/logo.svg';
 import Overlay from './Overlay';
 
 const navLinks = [
@@ -22,7 +22,7 @@ const Header = () => {
 
     return (
         <>
-            <div className="relative z-20 bg-white drop-shadow-lg">
+            <div className="fixed inset-0 z-20 h-fit w-full bg-white drop-shadow-lg">
                 <div className="container mx-auto flex items-center justify-between py-6">
                     <img src={logo} alt="on skill" />
 
@@ -68,8 +68,8 @@ const Header = () => {
 
                         {!isAuth ? (
                             <>
-                                <button className="btn-primary animated-background animate w-[200px] rounded-[50px]">تسجيل الدخول</button>
-                                <button className="btn-outline animate w-[200px] rounded-[50px]">انشاء حساب</button>
+                                <button className="btn-primary btn w-[200px]">تسجيل الدخول</button>
+                                <button className="btn-outline animate w-[200px]">انشاء حساب</button>
                             </>
                         ) : (
                             <div className="mr-8 flex items-center gap-x-3">

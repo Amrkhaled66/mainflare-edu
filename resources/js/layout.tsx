@@ -5,7 +5,7 @@ const layout = () => {
     return (
         <div dir="rtl">
             <Header />
-            <main>
+            <main className="pt-[120px]">
                 <Outlet />
             </main>
         </div>

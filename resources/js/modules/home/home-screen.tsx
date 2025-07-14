@@ -1,5 +1,11 @@
+import HeroSection from './features/heroSection/hero-section';
+
 const HomeScreen = () => {
-    return <div>home-screen</div>;
+    return (
+        <>
+            <HeroSection />
+        </>
+    );
 };
 
 export default HomeScreen;
