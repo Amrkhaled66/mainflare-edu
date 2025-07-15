@@ -24,7 +24,7 @@ const HeroContent = () => {
             </div>
             <div className="flex flex-col gap-y-4 lg:flex-row lg:gap-x-4">
                 <button className="btn btn-secondary w-full lg:w-[200px]">اشترك الآن</button>
-                <button className="animate h-[50px] w-full rounded-[50px] border border-mainColor hover:bg-mainColor lg:w-[200px]">
+                <button className="animate h-[50px] font-bold w-full rounded-[50px] border border-mainColor hover:bg-mainColor lg:w-[200px]">
                     تصفح الدروس
                 </button>
             </div>

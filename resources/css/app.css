@@ -12,6 +12,7 @@
     --font-mainFont: 'IBM Plex Sans Arabic', sans-serif;
     --color-mainColor: #393962;
     --color-mainColor-700: #282846;
+    --color-textColor: #151527;
     --color-mainGradient: linear-gradient(273deg, #393962 2.21%, #7474c8 116.89%);
     --color-mainGradientHover: linear-gradient(273deg, #7474c8 0%, #393962 100%);
     --color-stroke: #e0e0e0;
@@ -19,9 +20,11 @@
     --color-secondaryGradient: linear-gradient(271deg, #282846 51.73%, #d8d8ef 232.35%);
     --color-secondaryGradientHover: linear-gradient(271deg, #3a3a5a 40%, #e8e8ff 220%);
 
-    --btn-radius: 50px;
     --btn-height: 50px;
     --btn-width: 200px;
+    --btn-radius: 50px;
+
+    --padding-sectionPadding: 50px;
 }
 
 @layer base {
@@ -105,16 +108,21 @@ button {
 
 .container {
     width: 100%;
-
-    margin: auto;
+    padding-right:1rem !important;
+    padding-left: 1rem  !important;
     @media (width >= 40rem /* 640px */) {
         max-width: 40rem /* 640px */;
+
     }
     @media (width >= 48rem /* 768px */) {
         max-width: 48rem /* 768px */;
+        padding-right: 2rem;
+        padding-left: 2rem;
     }
     @media (width >= 64rem /* 1024px */) {
         max-width: 64rem /* 1024px */;
+        padding-right: 2rem;
+        padding-left: 2rem;
     }
     @media (width >= 80rem /* 1280px */) {
         max-width: 80rem /* 1280px */;
