@@ -39,7 +39,7 @@
     }
 
     .btn-outline {
-        @apply h-[50px] rounded-[var(--btn-radius)] border border-mainColor font-bold text-mainColor;
+        @apply h-[50px] transition-all duration-300 rounded-[var(--btn-radius)] border border-mainColor font-bold text-mainColor;
     }
     .btn-outline:hover {
         @apply bg-mainColor text-white;
@@ -100,6 +100,8 @@ html {
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
+    overflow-y: auto !important;
+    padding: 0 !important;
 }
 
 button {

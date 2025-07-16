@@ -1,7 +1,7 @@
 import HeroSection from './features/heroSection/hero-section';
-import OurFeatures from './features/ourFeatures/our-features';
+import MainCourses from './features/mainCourses/main-courses';
 import MainSubjects from './features/mainSubjects/main-subjects';
-
+import OurFeatures from './features/ourFeatures/our-features';
 
 const HomeScreen = () => {
     return (
@@ -9,6 +9,7 @@ const HomeScreen = () => {
             <HeroSection />
             <OurFeatures />
             <MainSubjects />
+            <MainCourses />
         </>
     );
 };

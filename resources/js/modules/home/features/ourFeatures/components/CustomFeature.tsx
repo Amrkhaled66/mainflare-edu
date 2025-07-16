@@ -6,7 +6,7 @@ const CustomFeature = ({ icon, bg, color, title }: { icon: string; bg: string; c
             style={{
                 background: bg,
             }}
-            className="animate flex h-[90px] w-full cursor-pointer items-center justify-between rounded-2xl  px-4 drop-shadow-sm lg:drop-shadow-md hover:translate-y-[-9px] hover:drop-shadow-2xl"
+            className="animate flex h-[90px] w-full cursor-pointer items-center justify-between rounded-2xl  px-4 drop-shadow-sm hover:translate-y-[-9px] hover:drop-shadow-xl"
         >
             <p className="text-xl font-semibold text-textColor">{title}</p>
             <div className="flex-center relative pl-4">

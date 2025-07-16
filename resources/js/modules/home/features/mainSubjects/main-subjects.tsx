@@ -1,5 +1,3 @@
-'use client';
-
 import SectionTitle from '@/shared/components/SectionTitle';
 import CustomSubject from './components/CustomSubject';
 import subjects from './subjects';
@@ -15,7 +13,7 @@ const MainSubjects = () => {
 
     return (
         <div className="bg-[#F4F4F4]">
-            <div className="space-y-[60px] px-2  py-sectionPadding lg:container lg:space-y-[80px]">
+            <div className="mx-auto space-y-[60px] px-2 py-sectionPadding lg:container lg:space-y-[80px]">
                 <SectionTitle icon="bxs:book" title="المواد الدراسية" subTitle="اكتشف اهم المواد الدراسية" />
 
                 <div className="hidden grid-cols-4 gap-6 lg:grid">
@@ -25,7 +23,7 @@ const MainSubjects = () => {
                 </div>
                 <div className="block lg:hidden">
                     <Swiper
-                        className=" !pr-3 sm:!pr-9"
+                        className="!pr-3 sm:!pr-6"
                         spaceBetween={16}
                         slidesPerView={1.1}
                         breakpoints={{
