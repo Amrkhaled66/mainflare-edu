@@ -39,7 +39,7 @@
     }
 
     .btn-outline {
-        @apply h-[50px] transition-all duration-300 rounded-[var(--btn-radius)] border border-mainColor font-bold text-mainColor;
+        @apply h-[50px] rounded-[var(--btn-radius)] border border-mainColor font-bold text-mainColor transition-all duration-300;
     }
     .btn-outline:hover {
         @apply bg-mainColor text-white;
@@ -94,12 +94,21 @@
     opacity: 1;
 }
 
+.home-section {
+    padding: var(--padding-sectionPadding) 0px;
+}
+media (width >= 64rem /* 1024px */) {
+    padding: 32px 0px;
+}
+
+/* ============== utilities ================ */
+
 /* base */
 html {
     font-family: var(--font-mainFont);
     width: 100vw;
     height: 100vh;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     overflow-y: auto !important;
     padding: 0 !important;
 }
@@ -110,29 +119,29 @@ button {
 
 .container {
     width: 100%;
-    padding-right:1rem !important;
-    padding-left: 1rem  !important;
     margin: auto;
+
+            padding-right: 2rem;
+        padding-left: 2rem;
     @media (width >= 40rem /* 640px */) {
         max-width: 40rem /* 640px */;
-
     }
     @media (width >= 48rem /* 768px */) {
         max-width: 48rem /* 768px */;
-        padding-right: 2rem;
-        padding-left: 2rem;
     }
     @media (width >= 64rem /* 1024px */) {
         max-width: 64rem /* 1024px */;
-        padding-right: 2rem;
-        padding-left: 2rem;
     }
     @media (width >= 80rem /* 1280px */) {
         max-width: 80rem /* 1280px */;
-        padding-right: 2rem;
-        padding-left: 2rem;
+
     }
     @media (width >= 96rem /* 1536px */) {
         max-width: 96rem /* 1536px */;
+    }
+
+    @media (max-width: 40rem) {
+        padding-right: 1rem;
+        padding-left: 1rem;
     }
 }

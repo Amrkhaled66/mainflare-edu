@@ -9,11 +9,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Link } from 'react-router-dom';
 
 const MainTeachers = () => {
-    const chunkedSubjects = [];
-    for (let i = 0; i < teachers.length; i += 2) {
-        chunkedSubjects.push(teachers.slice(i, i + 2));
-    }
-
     return (
         <div className="">
             <div className="mx-auto space-y-[50px] px-2 py-sectionPadding lg:container lg:space-y-[80px]">
@@ -21,15 +16,15 @@ const MainTeachers = () => {
 
                 <div className="flex w-full flex-col items-center gap-y-8">
                     <div className="container hidden grid-cols-4 gap-6 lg:grid">
-                        {teachers.map((course) => (
+                        {teachers.map((teacher) => (
                             <CustomCard
-                                title={course.grade}
-                                subTitle={course.subjectName}
-                                img={course.img}
+                                title={teacher.grade}
+                                subTitle={teacher.subjectName}
+                                img={teacher.img}
                                 footer={
                                     <div className="flex gap-x-3">
-                                        <img src={course.tutorImg} className="size-[36px] rounded-full" />
-                                        <p className="text-subTitle">{course.tutor}</p>
+                                        <img src={teacher.tutorImg} className="size-[36px] rounded-full" />
+                                        <p className="text-subTitle">{teacher.tutor}</p>
                                     </div>
                                 }
                             />
@@ -52,23 +47,19 @@ const MainTeachers = () => {
                                 },
                             }}
                         >
-                            {chunkedSubjects.map((group, index) => (
+                            {teachers.map((teacher, index) => (
                                 <SwiperSlide key={index}>
-                                    <div className="flex flex-col gap-4">
-                                        {group.map((lesson) => (
-                                            <CustomCard
-                                                title={lesson.grade}
-                                                subTitle={lesson.subjectName}
-                                                img={lesson.img}
-                                                footer={
-                                                    <div className="flex gap-x-3">
-                                                        <img src={lesson.tutorImg} className="size-[36px] rounded-full" />
-                                                        <p className="text-subTitle">{lesson.tutor}</p>
-                                                    </div>
-                                                }
-                                            />
-                                        ))}
-                                    </div>
+                                    <CustomCard
+                                        title={teacher.grade}
+                                        subTitle={teacher.subjectName}
+                                        img={teacher.img}
+                                        footer={
+                                            <div className="flex gap-x-3">
+                                                <img src={teacher.tutorImg} className="size-[36px] rounded-full" />
+                                                <p className="text-subTitle">{teacher.tutor}</p>
+                                            </div>
+                                        }
+                                    />
                                 </SwiperSlide>
                             ))}
                         </Swiper>
