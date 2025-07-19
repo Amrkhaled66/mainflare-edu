@@ -1,11 +1,44 @@
-const navLinks = [
-    { name: 'الرئيسية', path: '/', icon: 'line-md:home' },
-    { name: 'المدرسين', path: '/teachers', icon: 'hugeicons:teacher' },
-    { name: 'المحاضرات', path: '/lectures', icon: 'icon-park-outline:play' },
-    { name: 'الملازم', path: '/books', icon: 'solar:book-outline' },
-    { name: 'تواصل معنا', path: '/contact-us', icon: 'hugeicons:customer-support' },
-    { name: 'عربة التسوق', path: '/cart', icon: 'mdi:cart-outline', mob: true },
-    { name: 'الملف الشخصي', path: '/profile', icon: 'mynaui:user', mob: true },
-];
+import paths from "@/routes/paths"
 
-export default navLinks;
+const navLinks = [
+    {
+      name: paths.home.crumb,
+      path: paths.home.path,
+      icon: 'line-md:home',
+    },
+    {
+      name: paths.filterCourses.crumb,
+      path: paths.filterCourses.path,
+      icon: 'hugeicons:teacher',
+    },
+    {
+      name: 'المحاضرات',
+      path: '/lectures',
+      icon: 'icon-park-outline:play',
+    },
+    {
+      name: paths.books.crumb,
+      path: paths.books.path,
+      icon: 'solar:book-outline',
+    },
+    {
+      name: paths.contactUs.crumb,
+      path: paths.contactUs.path,
+      icon: 'hugeicons:customer-support',
+    },
+    {
+      name: paths.cart.crumb,
+      path: paths.cart.path,
+      icon: 'mdi:cart-outline',
+      mob: true,
+    },
+    {
+      name: 'الملف الشخصي', // Not in paths yet
+      path: '/profile',
+      icon: 'mynaui:user',
+      mob: true,
+    },
+  ];
+  
+  export default navLinks;
+  

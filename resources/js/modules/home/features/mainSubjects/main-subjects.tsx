@@ -13,15 +13,15 @@ const MainSubjects = () => {
 
     return (
         <div className="bg-[#F4F4F4]">
-            <div className="home-section space-y-[60px] lg:space-y-[80px]">
+            <div className="section-padding container flex flex-col gap-y-[60px] lg:gap-y-[80px]">
                 <SectionTitle icon="bxs:book" title="المواد الدراسية" subTitle="اكتشف اهم المواد الدراسية" />
 
-                <div className="hidden grid-cols-4 gap-6 px-3 !pr-9 lg:grid">
+                <div className="hidden grid-cols-4 gap-6  lg:grid">
                     {subjects.map((subject) => (
                         <CustomSubject key={subject.subjectId} {...subject} />
                     ))}
                 </div>
-                <div className="block px-2 lg:hidden">
+                <div className="block  lg:hidden">
                     <Swiper
                         className="!pr-3 sm:!pr-6"
                         spaceBetween={16}

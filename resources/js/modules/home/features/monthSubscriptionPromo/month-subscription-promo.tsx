@@ -4,7 +4,7 @@ import { Icon } from '@iconify/react/dist/iconify.js';
 import pros from './pros';
 const MonthSubscriptionPromo = () => {
     return (
-        <div className="home-section bg-[#F4F4F4]">
+        <div className="section-padding bg-[#F4F4F4]">
             <div className="container space-y-[50px]">
                 <SectionTitle title="الاشتراك الشهري" subTitle="تعرّف على مميزات وقيمة الاشتراك الشهري في المنصة" icon="fa-solid:graduation-cap" />
                 <div
@@ -13,14 +13,14 @@ const MonthSubscriptionPromo = () => {
                         background: ' linear-gradient(279deg, #454576 4.65%, #7474C8 126.24%)',
                     }}
                 >
-                    <div className="space-y-3 w-full lg:w-fit">
+                    <div className="w-full space-y-3 lg:w-fit">
                         <p className="text-2xl font-bold">قيمة الأشتراك</p>
                         <p className="space-x-2">
                             <span className="text-xl font-bold">199.99</span>
                             <span>جنية مصري / شهر</span>
                         </p>
                     </div>
-                    
+
                     {pros.map((group) => (
                         <div className="space-y-3">
                             {group.map((pro) => (

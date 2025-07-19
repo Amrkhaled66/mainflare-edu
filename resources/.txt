@@ -1,0 +1,5 @@
+naming conventions
+
+//homePage
+//home-page-screen
+//heroSection

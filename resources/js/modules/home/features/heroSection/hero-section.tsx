@@ -3,7 +3,7 @@ import HeroCircle from './components/HeroCircle';
 import HeroContent from './components/HeroContent';
 const HeroSection = () => {
     return (
-        <div className="container lg:pb-sectionPadding">
+        <div className="container pt-[30px] lg:pb-[30px]">
             <div
                 className="relative flex min-h-[426px] items-center justify-between rounded-[50px] text-white lg:h-[556px]"
                 style={{

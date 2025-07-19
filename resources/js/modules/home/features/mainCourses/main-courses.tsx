@@ -17,7 +17,7 @@ const MainCourses = () => {
 
     return (
         <div className="">
-            <div className="home-section mx-auto space-y-[50px] px-2 lg:container lg:space-y-[80px]">
+            <div className="section-padding mx-auto space-y-[50px] px-2 lg:container lg:space-y-[80px]">
                 <SectionTitle icon="fa-solid:graduation-cap" title="اهم الدروس" subTitle="اكتشف الدروس المتاحة" />
 
                 <SectionFilters />

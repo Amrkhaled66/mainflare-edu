@@ -9,7 +9,7 @@ import students from './students';
 const TopStudents = () => {
     return (
         <div className="">
-            <div className="home-section mx-auto space-y-[50px] px-2 lg:container lg:space-y-[80px]">
+            <div className="section-padding mx-auto space-y-[50px] px-2 lg:container lg:space-y-[80px]">
                 <SectionTitle title="ابرز الطلبة" subTitle="اكتشف ابرز الطالبة المتفوقين" icon="fa-solid:graduation-cap" />
 
                 <div className="flex w-full flex-col items-center gap-y-8">

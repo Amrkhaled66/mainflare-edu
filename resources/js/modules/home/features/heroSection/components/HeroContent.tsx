@@ -9,9 +9,9 @@ const HeroContent = () => {
                     <p className="lg:text-xl">تعليم على يد نخبة من المدرسين في مصر</p>
                 </div>
                 <div className="space-y-2 text-2xl lg:text-6xl">
-                    <h1 className="flex items-center font-bold">
+                    <h1 className="flex gap-x-3 items-center font-bold">
                         اتقن
-                        <Icon className="size-[48px] lg:size-[60px]" icon="tabler:arrow-left" />
+                        <Icon className="size-[48px] lg:size-[60px]" icon="line-md:arrow-left" />
                     </h1>
                     <h2 className="font-bold lg:leading-20">
                         أي مادة دراسية مع <br className="hidden lg:block" /> أفضل المدرسين.

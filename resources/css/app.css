@@ -55,6 +55,10 @@
         -ms-border-radius: var(--btn-radius);
         -o-border-radius: var(--btn-radius);
     }
+
+    .gap {
+        @apply gap-4 sm:gap-5 lg:gap-6;
+    }
 }
 
 /* ============== utilities ================ */
@@ -94,7 +98,7 @@
     opacity: 1;
 }
 
-.home-section {
+.section-padding {
     padding: var(--padding-sectionPadding) 0px;
 }
 media (width >= 64rem /* 1024px */) {
@@ -118,30 +122,25 @@ button {
 }
 
 .container {
-    width: 100%;
+    /* width: 100%; */
     margin: auto;
 
-            padding-right: 2rem;
-        padding-left: 2rem;
+    @media (width < 40rem /* 640px */) {
+        width: 100%;
+        padding-right: 16px !important;
+        padding-left: 16px !important;
+    }
     @media (width >= 40rem /* 640px */) {
-        max-width: 40rem /* 640px */;
+        max-width: 42rem;
     }
     @media (width >= 48rem /* 768px */) {
-        max-width: 48rem /* 768px */;
+        max-width: 47rem;
     }
     @media (width >= 64rem /* 1024px */) {
-        max-width: 64rem /* 1024px */;
+        max-width: 64rem /* 1024 */;
     }
     @media (width >= 80rem /* 1280px */) {
-        max-width: 80rem /* 1280px */;
-
-    }
-    @media (width >= 96rem /* 1536px */) {
-        max-width: 96rem /* 1536px */;
+        max-width: 80rem /* 1280 */;
     }
 
-    @media (max-width: 40rem) {
-        padding-right: 1rem;
-        padding-left: 1rem;
-    }
 }

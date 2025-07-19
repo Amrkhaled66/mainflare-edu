@@ -2,6 +2,7 @@ import logo from '@/assets/logo.svg';
 import { Icon } from '@iconify/react';
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import CloseButton from './CloseButton';
 import Overlay from './Overlay';
 
 import navLinks from '../data/navLinks';
@@ -92,12 +93,7 @@ const Header = () => {
                             </Link>
                         </div>
                     </div>
-                    <button
-                        className="animate flex-center size-9 rounded-xl bg-mainColor text-white hover:drop-shadow-xl"
-                        onClick={() => setMenuOpen(false)}
-                    >
-                        <Icon icon="material-symbols:close-rounded" width="24" height="24" />
-                    </button>
+                    <CloseButton onClick={() => setMenuOpen(false)} />
                 </div>
 
                 <ul className="flex flex-col gap-3 overflow-y-auto pb-3" style={{ maxHeight: 'calc(100vh - 150px)' }}>
