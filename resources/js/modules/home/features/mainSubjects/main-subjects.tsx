@@ -1,27 +1,26 @@
 import SectionTitle from '@/shared/components/SectionTitle';
+import chunkWithSlice from '@/shared/utils/chunkWithSlice';
 import CustomSubject from './components/CustomSubject';
+import CustomSubjectSk from './components/CustomSubjectSk';
 import subjects from './subjects';
 
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const MainSubjects = () => {
-    const chunkedSubjects = [];
-    for (let i = 0; i < subjects.length; i += 4) {
-        chunkedSubjects.push(subjects.slice(i, i + 4));
-    }
+    const loading = false;
 
     return (
         <div className="bg-[#F4F4F4]">
             <div className="section-padding container flex flex-col gap-y-[60px] lg:gap-y-[80px]">
                 <SectionTitle icon="bxs:book" title="المواد الدراسية" subTitle="اكتشف اهم المواد الدراسية" />
 
-                <div className="hidden grid-cols-4 gap-6  lg:grid">
-                    {subjects.map((subject) => (
-                        <CustomSubject key={subject.subjectId} {...subject} />
-                    ))}
+                <div className="hidden grid-cols-4 gap-6 lg:grid">
+                    {loading
+                        ? Array.from({ length: 8 }, (_, index) => <CustomSubjectSk key={index} />)
+                        : subjects.map((subject) => <CustomSubject key={subject.subjectId} {...subject} />)}
                 </div>
-                <div className="block  lg:hidden">
+                <div className="block lg:hidden">
                     <Swiper
                         className="!pr-3 sm:!pr-6"
                         spaceBetween={16}
@@ -41,15 +40,25 @@ const MainSubjects = () => {
                             },
                         }}
                     >
-                        {chunkedSubjects.map((group, index) => (
-                            <SwiperSlide key={index}>
-                                <div className="flex flex-col gap-4">
-                                    {group.map((subject) => (
-                                        <CustomSubject key={subject.subjectId} {...subject} />
-                                    ))}
-                                </div>
-                            </SwiperSlide>
-                        ))}
+                        {loading
+                            ? chunkWithSlice(Array.from({ length: 12 }), 4).map((group, index) => (
+                                  <SwiperSlide key={index}>
+                                      <div key={index} className="flex flex-col gap-4">
+                                          {group.map((_, i) => (
+                                              <CustomSubjectSk key={i} />
+                                          ))}
+                                      </div>
+                                  </SwiperSlide>
+                              ))
+                            : chunkWithSlice(subjects, 4).map((group, index) => (
+                                  <SwiperSlide key={index}>
+                                      <div className="flex flex-col gap-4">
+                                          {group.map((subject) => (
+                                              <CustomSubject key={subject.subjectId} {...subject} />
+                                          ))}
+                                      </div>
+                                  </SwiperSlide>
+                              ))}
                     </Swiper>
                 </div>
             </div>

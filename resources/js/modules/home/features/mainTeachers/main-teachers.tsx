@@ -1,6 +1,7 @@
 import SectionTitle from '@/shared/components/SectionTitle';
 
 import CustomCard from '@/shared/components/CustomCard';
+import CustomCardSkeleton from '@/shared/components/skeletons/CustomCardSk';
 import teachers from './teachers';
 
 import 'swiper/css';
@@ -9,6 +10,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Link } from 'react-router-dom';
 
 const MainTeachers = () => {
+    const loading = true;
     return (
         <div className="">
             <div className="mx-auto space-y-[50px] px-2 py-sectionPadding lg:container lg:space-y-[80px]">
@@ -16,19 +18,21 @@ const MainTeachers = () => {
 
                 <div className="flex w-full flex-col items-center gap-y-8">
                     <div className="container hidden grid-cols-4 gap-6 lg:grid">
-                        {teachers.map((teacher) => (
-                            <CustomCard
-                                title={teacher.grade}
-                                subTitle={teacher.subjectName}
-                                img={teacher.img}
-                                footer={
-                                    <div className="flex gap-x-3">
-                                        <img src={teacher.tutorImg} className="size-[36px] rounded-full" />
-                                        <p className="text-subTitle">{teacher.tutor}</p>
-                                    </div>
-                                }
-                            />
-                        ))}
+                        {loading
+                            ? Array.from({ length: 4 }).map((_, index) => <CustomCardSkeleton key={index} />)
+                            : teachers.map((teacher) => (
+                                  <CustomCard
+                                      title={teacher.grade}
+                                      subTitle={teacher.subjectName}
+                                      img={teacher.img}
+                                      footer={
+                                          <div className="flex gap-x-3">
+                                              <img src={teacher.tutorImg} className="size-[36px] rounded-full" />
+                                              <p className="text-subTitle">{teacher.tutor}</p>
+                                          </div>
+                                      }
+                                  />
+                              ))}
                     </div>
                     <div className="block !w-full lg:hidden">
                         <Swiper
@@ -47,21 +51,27 @@ const MainTeachers = () => {
                                 },
                             }}
                         >
-                            {teachers.map((teacher, index) => (
-                                <SwiperSlide key={index}>
-                                    <CustomCard
-                                        title={teacher.grade}
-                                        subTitle={teacher.subjectName}
-                                        img={teacher.img}
-                                        footer={
-                                            <div className="flex gap-x-3">
-                                                <img src={teacher.tutorImg} className="size-[36px] rounded-full" />
-                                                <p className="text-subTitle">{teacher.tutor}</p>
-                                            </div>
-                                        }
-                                    />
-                                </SwiperSlide>
-                            ))}
+                            {loading
+                                ? Array.from({ length: 4 }).map((_, index) => (
+                                      <SwiperSlide key={index}>
+                                          <CustomCardSkeleton  />
+                                      </SwiperSlide>
+                                  ))
+                                : teachers.map((teacher, index) => (
+                                      <SwiperSlide key={index}>
+                                          <CustomCard
+                                              title={teacher.grade}
+                                              subTitle={teacher.subjectName}
+                                              img={teacher.img}
+                                              footer={
+                                                  <div className="flex gap-x-3">
+                                                      <img src={teacher.tutorImg} className="size-[36px] rounded-full" />
+                                                      <p className="text-subTitle">{teacher.tutor}</p>
+                                                  </div>
+                                              }
+                                          />
+                                      </SwiperSlide>
+                                  ))}
                         </Swiper>
                     </div>
                     <button className="btn-outline w-[90%] lg:w-[200px]">

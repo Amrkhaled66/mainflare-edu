@@ -34,7 +34,7 @@ const FilterCoursesScreen = () => {
                     prices={{ min: 0, max: 100 }}
                     data={data}
                 />
-                <FilteredCourses openSidebar={toggleSidebar} data={courses} />
+                <FilteredCourses loading={false} openSidebar={toggleSidebar} data={courses} />
                 <Overlay onClick={() => closeSidebar()} isOpen={sidebarOpen} />
             </div>
             {!false && (

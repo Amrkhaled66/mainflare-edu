@@ -5,8 +5,10 @@ import CustomCard from '@/shared/components/CustomCard';
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import CustomCardSkeleton from '@/shared/components/skeletons/CustomCardSk';
 import students from './students';
 const TopStudents = () => {
+    const loading = false;
     return (
         <div className="">
             <div className="section-padding mx-auto space-y-[50px] px-2 lg:container lg:space-y-[80px]">
@@ -14,9 +16,11 @@ const TopStudents = () => {
 
                 <div className="flex w-full flex-col items-center gap-y-8">
                     <div className="container hidden grid-cols-4 gap-6 lg:grid">
-                        {students.map((student: { name: string; grade: string; avatar: string }) => (
-                            <CustomCard title={student.grade} subTitle={student.name} img={student.avatar} />
-                        ))}
+                        {loading
+                            ? Array.from({ length: 4 }).map((_, index) => <CustomCardSkeleton key={index} />)
+                            : students.map((student: { name: string; grade: string; avatar: string }) => (
+                                  <CustomCard title={student.grade} subTitle={student.name} img={student.avatar} />
+                              ))}
                     </div>
                     <div className="block !w-full lg:hidden">
                         <Swiper
@@ -35,11 +39,17 @@ const TopStudents = () => {
                                 },
                             }}
                         >
-                            {students.map((student: { name: string; grade: string; avatar: string }, index) => (
-                                <SwiperSlide key={index}>
-                                    <CustomCard title={student.grade} subTitle={student.name} img={student.avatar} />
-                                </SwiperSlide>
-                            ))}
+                            {loading
+                                ? Array.from({ length: 4 }).map((_, index) => (
+                                      <SwiperSlide key={index}>
+                                          <CustomCardSkeleton />
+                                      </SwiperSlide>
+                                  ))
+                                : students.map((student: { name: string; grade: string; avatar: string }, index) => (
+                                      <SwiperSlide key={index}>
+                                          <CustomCard title={student.grade} subTitle={student.name} img={student.avatar} />
+                                      </SwiperSlide>
+                                  ))}
                         </Swiper>
                     </div>
                 </div>
