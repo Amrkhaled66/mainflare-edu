@@ -3,11 +3,13 @@ import Header from '@/shared/components/Header';
 import PageNav from './shared/components/PageNav';
 
 import { Outlet, useLocation } from 'react-router';
+import LoadingBar from './shared/components/LoadingBar';
 const layout = () => {
     const { pathname } = useLocation();
     return (
         <div dir="rtl">
             <Header />
+            <LoadingBar />
             <main className={`pt-[100px]`}>
                 <div className={`${pathname !== '/' && `section-padding`}`}>
                     <PageNav />

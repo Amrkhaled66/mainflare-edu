@@ -12,8 +12,13 @@ const paths = {
         crumb: 'المدرسين',
     },
     teacher: {
-        path: (id: string = ':id') => `/teachers/${id}`,
+        path: `/teachers/:id`,
+       
         crumb: (id?: string) => `المدرس ${id ?? ':id'}`,
+    },
+    teacherBooks: {
+        path: (id: string = ':id') => `/teachers/${id}/books`,
+        crumb: (id?: string) => `الكتب مستر  ${id ?? ':id'}`,
     },
     teacherLectures: {
         path: (id: string = ':id') => `/teachers/${id}/lectures`,
@@ -64,6 +69,5 @@ const paths = {
         crumb: 'الدفع',
     },
 };
-
 
 export default paths;

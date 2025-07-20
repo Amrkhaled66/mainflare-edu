@@ -17,7 +17,9 @@ const Header = () => {
         <>
             <div className="fixed inset-0 z-20 h-fit w-full bg-white drop-shadow-lg">
                 <div className="container mx-auto flex items-center justify-between py-6">
-                    <img src={logo} alt="on skill" />
+                    <Link to="/">
+                        <img src={logo} alt="on skill" />
+                    </Link>
 
                     <button
                         style={{ backgroundImage: 'var(--color-mainGradient)' }}

@@ -10,7 +10,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Link } from 'react-router-dom';
 
 const MainTeachers = () => {
-    const loading = true;
+    const loading = false;
     return (
         <div className="">
             <div className="mx-auto space-y-[50px] px-2 py-sectionPadding lg:container lg:space-y-[80px]">
@@ -21,17 +21,19 @@ const MainTeachers = () => {
                         {loading
                             ? Array.from({ length: 4 }).map((_, index) => <CustomCardSkeleton key={index} />)
                             : teachers.map((teacher) => (
-                                  <CustomCard
-                                      title={teacher.grade}
-                                      subTitle={teacher.subjectName}
-                                      img={teacher.img}
-                                      footer={
-                                          <div className="flex gap-x-3">
-                                              <img src={teacher.tutorImg} className="size-[36px] rounded-full" />
-                                              <p className="text-subTitle">{teacher.tutor}</p>
-                                          </div>
-                                      }
-                                  />
+                                  <Link to="/teachers/5">
+                                      <CustomCard
+                                          title={teacher.grade}
+                                          subTitle={teacher.subjectName}
+                                          img={teacher.img}
+                                          footer={
+                                              <div className="flex gap-x-3">
+                                                  <img src={teacher.tutorImg} className="size-[36px] rounded-full" />
+                                                  <p className="text-subTitle">{teacher.tutor}</p>
+                                              </div>
+                                          }
+                                      />
+                                  </Link>
                               ))}
                     </div>
                     <div className="block !w-full lg:hidden">
@@ -54,7 +56,7 @@ const MainTeachers = () => {
                             {loading
                                 ? Array.from({ length: 4 }).map((_, index) => (
                                       <SwiperSlide key={index}>
-                                          <CustomCardSkeleton  />
+                                          <CustomCardSkeleton />
                                       </SwiperSlide>
                                   ))
                                 : teachers.map((teacher, index) => (

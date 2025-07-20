@@ -2,9 +2,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import paths from './paths';
 
 import Layout from '@/layout';
-import { FilterCourses, HomePage } from '@/modules';
+import { FilterCourses, HomePage, Teacher } from '@/modules';
 import { createCrumb } from '@/shared/utils/createCrumb';
-
+import { Link } from 'react-router-dom';
 const router = createBrowserRouter([
     {
         path: paths.home.path,
@@ -22,6 +22,22 @@ const router = createBrowserRouter([
                 element: <FilterCourses />,
                 handle: {
                     crumb: createCrumb('الكورسات', paths.filterCourses.path),
+                },
+            },
+            {
+                path: '/teachers/:id',
+                element: <Teacher />,
+                loader: async ({ params }) => {
+                    // const res = await fetch(`/api/teachers/${id}`);
+                    // const teacher = await res.json();
+                    // return { teacher };
+                },
+                handle: {
+                    crumb: (match: any) => {
+                        const name = 'محمد عبد المعبود';
+                        // const name = match.data?.teacher?.name ?? match.params.id;
+                        return <Link to={`/teachers/${match.params.id}`}>{`مستر ${name}`}</Link>;
+                    },
                 },
             },
         ],

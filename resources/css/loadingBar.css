@@ -1,0 +1,35 @@
+/* This class hides the loading bar initially */
+.loading-hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-out;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+}
+
+/* The loading bar itself */
+.loading-bar {
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(124deg, #7474C8, rgb(231, 229, 229));
+    background-size: 200% 100%;
+    animation: loading-bar 1s cubic-bezier(0.43, 0.28, 0.96, 0.98) infinite;
+    -webkit-animation: loading-bar 1s cubic-bezier(0.43, 0.28, 0.96, 0.98) infinite;
+}
+
+/* Keyframe for the animation */
+@keyframes loading-bar {
+    0% {
+        background-position: 200% 0%; /* Start from the right */
+    }
+    50% {
+        background-position: 100% 0%; /* Center the gradient */
+    }
+    100% {
+        background-position: 0% 0%; /* End at the left */
+    }
+}
