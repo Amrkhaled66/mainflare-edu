@@ -18,7 +18,7 @@ const OverViewActions = ({ grades, id }: { grades: any[]; id: string }) => {
             <Link to={paths.teacherBooks.path(id)}>
                 <Action icon="solar:book-2-linear" content="الملازم" />
             </Link>
-            <Link to={paths.teacherLectures.path(id)}>
+            <Link to={paths.teacherCourses.path(id)}>
                 <Action icon="hugeicons:play" content="المحاضرات" />
             </Link>
         </div>

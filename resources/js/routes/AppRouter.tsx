@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import paths from './paths';
 
 import Layout from '@/layout';
-import { FilterCourses, HomePage, Teacher } from '@/modules';
+import { FilterCourses, HomePage, Teacher, TeacherBooks, TeacherCourses } from '@/modules';
 import { createCrumb } from '@/shared/utils/createCrumb';
 import { Link } from 'react-router-dom';
 const router = createBrowserRouter([
@@ -10,7 +10,7 @@ const router = createBrowserRouter([
         path: paths.home.path,
         element: <Layout />,
         handle: {
-            crumb: createCrumb('الصفحة الرئيسية', paths.home.path),
+            crumb: createCrumb(paths.home.crumb, paths.home.path),
         },
         children: [
             {
@@ -21,12 +21,11 @@ const router = createBrowserRouter([
                 path: paths.filterCourses.path,
                 element: <FilterCourses />,
                 handle: {
-                    crumb: createCrumb('الكورسات', paths.filterCourses.path),
+                    crumb: createCrumb(paths.filterCourses.crumb, paths.filterCourses.path),
                 },
             },
             {
-                path: '/teachers/:id',
-                element: <Teacher />,
+                path: paths.teacher.path(),
                 loader: async ({ params }) => {
                     // const res = await fetch(`/api/teachers/${id}`);
                     // const teacher = await res.json();
@@ -39,6 +38,22 @@ const router = createBrowserRouter([
                         return <Link to={`/teachers/${match.params.id}`}>{`مستر ${name}`}</Link>;
                     },
                 },
+                children: [
+                    {
+                        index: true,
+                        element: <Teacher />,
+                    },
+                    {
+                        path: paths.teacherCourses.path(),
+                        element: <TeacherCourses />,
+                        handle: { crumb: createCrumb(paths.teacherCourses.crumb, paths.teacherCourses.path()) },
+                    },
+                    {
+                        path: paths.teacherBooks.path(),
+                        element: <TeacherBooks />,
+                        handle: { crumb: createCrumb(paths.teacherBooks.crumb, paths.teacherBooks.path()) },
+                    },
+                ],
             },
         ],
     },

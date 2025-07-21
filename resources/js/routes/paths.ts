@@ -12,17 +12,16 @@ const paths = {
         crumb: 'المدرسين',
     },
     teacher: {
-        path: `/teachers/:id`,
-       
+        path: (id: string = ':id') => `/teachers/${id}`,
         crumb: (id?: string) => `المدرس ${id ?? ':id'}`,
     },
     teacherBooks: {
         path: (id: string = ':id') => `/teachers/${id}/books`,
-        crumb: (id?: string) => `الكتب مستر  ${id ?? ':id'}`,
+        crumb: 'الكتب',
     },
-    teacherLectures: {
-        path: (id: string = ':id') => `/teachers/${id}/lectures`,
-        crumb: () => 'محاضرات المدرس',
+    teacherCourses: {
+        path: (id: string = ':id') => `/teachers/${id}/Courses`,
+        crumb: 'المحاضرات',
     },
     books: {
         path: '/books',
