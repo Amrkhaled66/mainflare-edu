@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import paths from './paths';
 
 import Layout from '@/layout';
-import { CourseOverviewScreen, CoursePageScreen, CoursesList, HomePage, Teacher, TeacherBooks, TeacherCourses } from '@/modules';
+import { CourseOverviewScreen, CoursePageScreen, CoursesList, HomePage, SubjectsScreen, Teacher, TeacherBooks, TeacherCourses } from '@/modules';
 import { createCrumb } from '@/shared/utils/createCrumb';
 import { Link } from 'react-router-dom';
 const router = createBrowserRouter([
@@ -77,6 +77,13 @@ const router = createBrowserRouter([
                         handle: { crumb: createCrumb(paths.teacherBooks.crumb, paths.teacherBooks.path()) },
                     },
                 ],
+            },
+            {
+                path: paths.subjects.path,
+                element: <SubjectsScreen />,
+                handle: {
+                    crumb: createCrumb(paths.subjects.crumb, paths.subjects.path),
+                },
             },
         ],
     },

@@ -15,6 +15,10 @@ const paths = {
         path: (courseId: string = ':courseId') => `/courses/${courseId}`,
         crumb: (courseId?: string) => `كورس ${courseId ?? ':courseId'}`,
     },
+    subjects: {
+        path: '/subjects',
+        crumb: 'المواد الدراسية',
+    },
     teachers: {
         path: '/teachers',
         crumb: 'المدرسين',

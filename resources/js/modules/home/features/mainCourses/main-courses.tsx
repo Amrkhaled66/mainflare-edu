@@ -89,11 +89,10 @@ const MainCourses = () => {
                                   ))}
                         </Swiper>
                     </div>
-                    <button className="btn-outline w-[90%] lg:w-[200px]">
-                        <Link className="mx-auto w-full lg:w-fit" to="courses">
-                            تصفح المزيد
-                        </Link>
-                    </button>
+
+                    <Link className="mx-auto w-full lg:w-fit" to="courses">
+                        <button className="btn-outline w-[90%] lg:w-[200px]">تصفح المزيد</button>
+                    </Link>
                 </div>
             </div>
         </div>
