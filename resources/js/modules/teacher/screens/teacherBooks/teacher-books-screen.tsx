@@ -1,7 +1,10 @@
 import PageTitle from '@/shared/components/ui/PageTitle';
 import BooksSection from './features/BooksSection/BooksSection';
 
+import usePageTitle from '@/shared/hooks/usePageTitle';
+
 const TeacherBooksScreen = () => {
+    usePageTitle('الكتب');
     return (
         <div className="container">
             <div className="space-y-8">

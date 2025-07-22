@@ -2,7 +2,10 @@ import PageTitle from '@/shared/components/ui/PageTitle';
 import course from './course';
 import CourseInfo from './features/courseInfo/CourseInfo';
 import CourseLectures from './features/courseLectures/CourseLectures';
+
+import usePageTitle from '@/shared/hooks/usePageTitle';
 const CourseOverviewScreen = () => {
+    usePageTitle(course.name||"");
     const loading = false;
     return (
         <div className="container space-y-8">
