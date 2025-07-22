@@ -1,6 +1,7 @@
 import courseImg from '@/assets/lessons/2.jpg';
 
 const course = {
+    id: 1,
     name: 'الفصل الاول فيزياء',
     lectures: [
         { title: 'الفصل الاول فيزياء', id: 1 },

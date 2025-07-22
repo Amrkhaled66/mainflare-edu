@@ -1,10 +1,12 @@
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+
 import CourseSummary from './components/CourseSummary';
 import CourseSummarySkeleton from './components/CourseSummarySk';
 import TutorInfo from './components/TutorInfo';
 import TutorInfoSkeleton from './components/TutorInfoSk';
 const CourseInfo = ({
+    id,
     img,
     price,
     lecturesLength,
@@ -13,6 +15,7 @@ const CourseInfo = ({
     tutor,
     loading,
 }: {
+    id: number;
     img: string;
     price: number;
     lecturesLength: number;
@@ -29,7 +32,7 @@ const CourseInfo = ({
                 </div>
                 {loading ? <TutorInfoSkeleton /> : <TutorInfo img={tutor.img} name={tutor.name} subject={tutor.subject} />}
             </div>
-            {loading ? <CourseSummarySkeleton /> : <CourseSummary price={price} lecturesLength={lecturesLength} time={time} />}
+            {loading ? <CourseSummarySkeleton /> : <CourseSummary id={id} price={price} lecturesLength={lecturesLength} time={time} />}
         </div>
     );
 };

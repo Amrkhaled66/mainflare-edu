@@ -1,5 +1,5 @@
 import PageTitle from '@/shared/components/ui/PageTitle';
-import course from './course';
+import course from '../course';
 import CourseInfo from './features/courseInfo/CourseInfo';
 import CourseLectures from './features/courseLectures/CourseLectures';
 
@@ -12,6 +12,7 @@ const CourseOverviewScreen = () => {
             {!loading && <PageTitle title={course.name} />}
             <div className="space-y-6 lg:space-y-8">
                 <CourseInfo
+                    id={course.id}
                     loading={loading}
                     img={course.img}
                     tutor={course.tutor}

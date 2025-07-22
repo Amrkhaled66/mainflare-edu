@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import paths from './paths';
 
 import Layout from '@/layout';
-import { CourseOverviewScreen, CoursesList, HomePage, Teacher, TeacherBooks, TeacherCourses } from '@/modules';
+import { CourseOverviewScreen, CoursePageScreen, CoursesList, HomePage, Teacher, TeacherBooks, TeacherCourses } from '@/modules';
 import { createCrumb } from '@/shared/utils/createCrumb';
 import { Link } from 'react-router-dom';
 const router = createBrowserRouter([
@@ -32,6 +32,17 @@ const router = createBrowserRouter([
                         element: <CourseOverviewScreen />,
                         handle: {
                             crumb: createCrumb(paths.courseOverview.crumb, paths.courseOverview.path()),
+                        },
+                    },
+                    {
+                        path: paths.coursePage.path(),
+                        element: <CoursePageScreen />,
+                        handle: {
+                            crumb: ({ params }: { params: { courseId: string } }) => {
+                                // const cachedCourse = queryClient.getQueryData(['course', params.courseId]);
+                                // return cachedCourse?.title || '...';
+                                return '...';
+                            },
                         },
                     },
                 ],

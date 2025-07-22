@@ -1,10 +1,10 @@
 import priceFormatter from '@/shared/utils/priceFormatter';
 import { Icon } from '@iconify/react/dist/iconify.js';
-
-const CourseSummary = ({ price, lecturesLength, time }: { price: number; lecturesLength: number; time: number }) => {
+import { Link } from 'react-router';
+const CourseSummary = ({ price, lecturesLength, time, id }: { price: number; lecturesLength: number; time: number; id: number }) => {
     return (
         <div className="h-fit flex-1 space-y-6 rounded-xl border border-stroke p-6 text-textColor drop-shadow-md">
-            <p className='font-bold text-mainColor text-xl'>{priceFormatter(price)}</p>
+            <p className="text-xl font-bold text-mainColor">{priceFormatter(price)}</p>
             <p className="space-y-3">
                 <p className="flex items-center gap-x-2">
                     <Icon icon="proicons:grid" className="size-6" />
@@ -15,10 +15,12 @@ const CourseSummary = ({ price, lecturesLength, time }: { price: number; lecture
                     <span>{time} ساعة</span>
                 </p>
             </p>
-            <button className="btn w-full gap-x-2.5 text-lg flex-center btn-primary">
-                <Icon icon="mynaui:cart" className="size-6" />
-                شراء الان
-            </button>
+            <Link to={`/courses/${id}`}>
+                <button className="btn flex-center btn-primary w-full gap-x-2.5 text-lg">
+                    <Icon icon="mynaui:cart" className="size-6" />
+                    شراء الان
+                </button>
+            </Link>
         </div>
     );
 };

@@ -11,6 +11,10 @@ const paths = {
         path: (courseId: string = ':courseId') => `/courses/${courseId}/overview`,
         crumb: 'تفاصيل الكورس',
     },
+    coursePage: {
+        path: (courseId: string = ':courseId') => `/courses/${courseId}`,
+        crumb: (courseId?: string) => `كورس ${courseId ?? ':courseId'}`,
+    },
     teachers: {
         path: '/teachers',
         crumb: 'المدرسين',
@@ -27,10 +31,7 @@ const paths = {
         path: (id: string = ':id') => `/teachers/${id}/Courses`,
         crumb: 'المحاضرات',
     },
-    coursePage: {
-        path: (courseId: string = ':courseId') => `/courses/${courseId}`,
-        crumb: (courseId?: string) => `كورس ${courseId ?? ':courseId'}`,
-    },
+
     contactUs: {
         path: '/contact-us',
         crumb: 'تواصل معنا',
