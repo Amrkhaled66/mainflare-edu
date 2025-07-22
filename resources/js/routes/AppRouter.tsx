@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import paths from './paths';
 
 import Layout from '@/layout';
-import { CourseOverviewScreen, FilterCourses, HomePage, Teacher, TeacherBooks, TeacherCourses } from '@/modules';
+import { CourseOverviewScreen, CoursesList, HomePage, Teacher, TeacherBooks, TeacherCourses } from '@/modules';
 import { createCrumb } from '@/shared/utils/createCrumb';
 import { Link } from 'react-router-dom';
 const router = createBrowserRouter([
@@ -18,11 +18,23 @@ const router = createBrowserRouter([
                 element: <HomePage />,
             },
             {
-                path: paths.filterCourses.path,
-                element: <FilterCourses />,
+                path: paths.courses.path,
                 handle: {
-                    crumb: createCrumb(paths.filterCourses.crumb, paths.filterCourses.path),
+                    crumb: createCrumb(paths.courses.crumb, paths.courses.path),
                 },
+                children: [
+                    {
+                        index: true,
+                        element: <CoursesList />,
+                    },
+                    {
+                        path: paths.courseOverview.path(),
+                        element: <CourseOverviewScreen />,
+                        handle: {
+                            crumb: createCrumb(paths.courseOverview.crumb, paths.courseOverview.path()),
+                        },
+                    },
+                ],
             },
             {
                 path: paths.teacher.path(),
@@ -54,13 +66,6 @@ const router = createBrowserRouter([
                         handle: { crumb: createCrumb(paths.teacherBooks.crumb, paths.teacherBooks.path()) },
                     },
                 ],
-            },
-            {
-                path: paths.courseOverview.path(),
-                element: <CourseOverviewScreen />,
-                handle: {
-                    crumb: createCrumb(paths.courseOverview.crumb, paths.courseOverview.path()),
-                },
             },
         ],
     },

@@ -7,8 +7,8 @@ const navLinks = [
         icon: 'line-md:home',
     },
     {
-        name: paths.filterCourses.crumb,
-        path: paths.filterCourses.path,
+        name: paths.courses.crumb,
+        path: paths.courses.path,
         icon: 'hugeicons:teacher',
     },
     {

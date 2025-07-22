@@ -3,9 +3,13 @@ const paths = {
         path: '/',
         crumb: 'الصفحة الرئيسية',
     },
-    filterCourses: {
-        path: '/filterCourses',
+    courses: {
+        path: '/courses',
         crumb: 'الكورسات',
+    },
+    courseOverview: {
+        path: (courseId: string = ':courseId') => `/courses/${courseId}/overview`,
+        crumb: 'تفاصيل الكورس',
     },
     teachers: {
         path: '/teachers',
@@ -22,10 +26,6 @@ const paths = {
     teacherCourses: {
         path: (id: string = ':id') => `/teachers/${id}/Courses`,
         crumb: 'المحاضرات',
-    },
-    courseOverview: {
-        path: (courseId: string = ':courseId') => `/courses/${courseId}/overview`,
-        crumb:  "تفاصيل الكورس",
     },
     coursePage: {
         path: (courseId: string = ':courseId') => `/courses/${courseId}`,

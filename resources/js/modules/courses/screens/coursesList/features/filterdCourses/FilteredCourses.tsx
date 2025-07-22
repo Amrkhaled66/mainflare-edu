@@ -2,6 +2,7 @@ import Card from '@/shared/components/CustomCard';
 import CustomCardSk from '@/shared/components/ui/Skeletons/CustomCardSk';
 
 import { Icon } from '@iconify/react/dist/iconify.js';
+import { Link } from 'react-router';
 
 const FilteredCourses = ({ data, openSidebar, loading }: { data: any[]; openSidebar: () => void; loading: boolean }) => {
     return (
@@ -22,17 +23,19 @@ const FilteredCourses = ({ data, openSidebar, loading }: { data: any[]; openSide
                     {loading
                         ? Array.from({ length: 12 }).map((_, index) => <CustomCardSk key={index} />)
                         : data.map((course: any) => (
-                              <Card
-                                  title={course.grade}
-                                  subTitle={course.name}
-                                  img={course.img}
-                                  footer={
-                                      <div className="flex gap-x-3">
-                                          <img src={course.tutorImg} className="size-[36px] rounded-full" />
-                                          <p className="text-subTitle">{course.tutor}</p>
-                                      </div>
-                                  }
-                              />
+                              <Link to={`/courses/${course.id}/overview`}>
+                                  <Card
+                                      title={course.grade}
+                                      subTitle={course.name}
+                                      img={course.img}
+                                      footer={
+                                          <div className="flex gap-x-3">
+                                              <img src={course.tutorImg} className="size-[36px] rounded-full" />
+                                              <p className="text-subTitle">{course.tutor}</p>
+                                          </div>
+                                      }
+                                  />
+                              </Link>
                           ))}
                 </div>
             )}

@@ -1,5 +1,5 @@
-import CustomLectureCard from '@/shared/components/ui/CustomLectureCard';
-import CustomLectureCardSkeleton from '@/shared/components/ui/Skeletons/CustomLectureCardSk ';
+import CustomLectureCard from '@/modules/courses/components/CustomLectureCard';
+import CustomLectureCardSkeleton from '@/modules/courses/components/CustomLectureCardSk ';
 const CourseLectures = ({ lectures, loading }: { lectures: any[]; loading: boolean }) => {
     return (
         <div className="space-y-5 lg:space-y-8">
