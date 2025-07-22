@@ -1,4 +1,4 @@
-import CloseButton from '@/shared/components/CloseButton';
+import CloseButton from '@/shared/components/ui/CloseButton';
 import CheckBoxList from './components/CheckBoxList';
 import PriceRange from './components/PriceRange';
 import SearchInput from './components/SearchInput';

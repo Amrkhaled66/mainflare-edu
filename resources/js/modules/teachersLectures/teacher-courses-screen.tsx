@@ -1,4 +1,4 @@
-import PageTitle from '@/shared/components/PageTitle';
+import PageTitle from '@/shared/components/ui/PageTitle';
 import CoursesSection from './features/Courses/CoursesSection';
 
 const TeacherCoursesScreen = () => {

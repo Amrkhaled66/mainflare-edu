@@ -1,9 +1,9 @@
-import Footer from '@/shared/components/Footer';
-import Header from '@/shared/components/Header';
-import PageNav from './shared/components/PageNav';
+import Footer from '@/shared/components/layout/Footer';
+import Header from '@/shared/components/layout/Header';
+import PageNav from './shared/components/layout/PageNav';
 
 import { Outlet, useLocation } from 'react-router';
-import LoadingBar from './shared/components/LoadingBar';
+import LoadingBar from './shared/components/ui/LoadingBar';
 import ScrollToTop from './shared/components/ScrollToTop';
 const layout = () => {
     const { pathname } = useLocation();

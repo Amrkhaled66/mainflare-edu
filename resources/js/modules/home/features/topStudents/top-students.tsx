@@ -1,11 +1,11 @@
-import SectionTitle from '@/shared/components/SectionTitle';
+import SectionTitle from '@/modules/home/shared/components/SectionTitle';
 
 import CustomCard from '@/shared/components/CustomCard';
 
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import CustomCardSkeleton from '@/shared/components/skeletons/CustomCardSk';
+import CustomCardSkeleton from '@/shared/components/ui/Skeletons/CustomCardSk';
 import students from './students';
 const TopStudents = () => {
     const loading = false;

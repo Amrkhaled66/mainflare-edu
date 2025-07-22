@@ -1,4 +1,4 @@
-import SectionTitle from '@/shared/components/SectionTitle';
+import SectionTitle from '@/modules/home/shared/components/SectionTitle';
 import chunkWithSlice from '@/shared/utils/chunkWithSlice';
 import CustomSubject from './components/CustomSubject';
 import CustomSubjectSk from './components/CustomSubjectSk';

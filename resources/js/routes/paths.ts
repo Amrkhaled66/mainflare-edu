@@ -23,13 +23,9 @@ const paths = {
         path: (id: string = ':id') => `/teachers/${id}/Courses`,
         crumb: 'المحاضرات',
     },
-    books: {
-        path: '/books',
-        crumb: 'الكتب',
-    },
     courseOverview: {
         path: (courseId: string = ':courseId') => `/courses/${courseId}/overview`,
-        crumb: () => 'نظرة عامة',
+        crumb:  "تفاصيل الكورس",
     },
     coursePage: {
         path: (courseId: string = ':courseId') => `/courses/${courseId}`,

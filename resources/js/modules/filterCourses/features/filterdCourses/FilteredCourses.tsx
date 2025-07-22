@@ -1,5 +1,5 @@
 import Card from '@/shared/components/CustomCard';
-import CustomCardSk from '@/shared/components/skeletons/CustomCardSk';
+import CustomCardSk from '@/shared/components/ui/Skeletons/CustomCardSk';
 
 import { Icon } from '@iconify/react/dist/iconify.js';
 

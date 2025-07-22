@@ -1,5 +1,5 @@
+import SectionTitle from '@/modules/home/shared/components/SectionTitle';
 import CustomCard from '@/shared/components/CustomCard';
-import SectionTitle from '@/shared/components/SectionTitle';
 import chunkWithSlice from '@/shared/utils/chunkWithSlice';
 import SectionFilters from './components/SectionFilters';
 
@@ -8,7 +8,7 @@ import courses from './courses';
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import CustomCardSkeleton from '@/shared/components/skeletons/CustomCardSk';
+import CustomCardSkeleton from '@/shared/components/ui/Skeletons/CustomCardSk';
 import { Link } from 'react-router-dom';
 
 const MainCourses = () => {
@@ -21,21 +21,23 @@ const MainCourses = () => {
                 <SectionFilters />
                 <div className="flex w-full flex-col items-center gap-y-8">
                     <div className="container hidden grid-cols-4 gap-6 lg:grid">
-                        {loading ?
-                        Array.from({ length: 8 }).map((_, index) => <CustomCardSkeleton key={index} />)
-                        : courses.map((course) => (
-                            <CustomCard
-                                title={course.grade}
-                                subTitle={course.name}
-                                img={course.img}
-                                footer={
-                                    <div className="flex gap-x-3">
-                                        <img src={course.tutorImg} className="size-[36px] rounded-full" />
-                                        <p className="text-subTitle">{course.tutor}</p>
-                                    </div>
-                                }
-                            />
-                        ))}
+                        {loading
+                            ? Array.from({ length: 8 }).map((_, index) => <CustomCardSkeleton key={index} />)
+                            : courses.map((course) => (
+                                  <Link to={`/courses/${course.id}/overview`}>
+                                      <CustomCard
+                                          title={course.grade}
+                                          subTitle={course.name}
+                                          img={course.img}
+                                          footer={
+                                              <div className="flex gap-x-3">
+                                                  <img src={course.tutorImg} className="size-[36px] rounded-full" />
+                                                  <p className="text-subTitle">{course.tutor}</p>
+                                              </div>
+                                          }
+                                      />
+                                  </Link>
+                              ))}
                     </div>
                     <div className="block !w-full lg:hidden">
                         <Swiper
@@ -58,7 +60,7 @@ const MainCourses = () => {
                                 ? chunkWithSlice(Array.from({ length: 8 }), 2).map((group, index) => (
                                       <SwiperSlide key={index}>
                                           <div className="flex flex-col gap-4">
-                                              {group.map((_,i) => (
+                                              {group.map((_, i) => (
                                                   <CustomCardSkeleton key={i} />
                                               ))}
                                           </div>
@@ -68,17 +70,19 @@ const MainCourses = () => {
                                       <SwiperSlide key={index}>
                                           <div className="flex flex-col gap-4">
                                               {group.map((lesson) => (
-                                                  <CustomCard
-                                                      title={lesson.grade}
-                                                      subTitle={lesson.name}
-                                                      img={lesson.img}
-                                                      footer={
-                                                          <div className="flex gap-x-3">
-                                                              <img src={lesson.tutorImg} className="size-[36px] rounded-full" />
-                                                              <p className="text-subTitle">{lesson.tutor}</p>
-                                                          </div>
-                                                      }
-                                                  />
+                                                  <Link to={`/courses/${lesson.id}/overview`}>
+                                                      <CustomCard
+                                                          title={lesson.grade}
+                                                          subTitle={lesson.name}
+                                                          img={lesson.img}
+                                                          footer={
+                                                              <div className="flex gap-x-3">
+                                                                  <img src={lesson.tutorImg} className="size-[36px] rounded-full" />
+                                                                  <p className="text-subTitle">{lesson.tutor}</p>
+                                                              </div>
+                                                          }
+                                                      />
+                                                  </Link>
                                               ))}
                                           </div>
                                       </SwiperSlide>

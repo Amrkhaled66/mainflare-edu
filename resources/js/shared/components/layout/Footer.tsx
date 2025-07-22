@@ -1,7 +1,7 @@
 import logo from '@/assets/logo2.svg';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { Link } from 'react-router';
-import navLinks from '../data/navLinks';
+import navLinks from '@/shared/data/navLinks';
 const Footer = () => {
     const currentYear = new Date().getFullYear();
     const social = [

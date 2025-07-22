@@ -1,8 +1,8 @@
 import courses from './data/courses';
 import data from './data/options';
 
-import Overlay from '@/shared/components/Overlay';
 import Pagination from '@/shared/components/Pagination';
+import Overlay from '@/shared/components/ui/Overlay';
 import FilteredCourses from './features/filterdCourses/FilteredCourses';
 import FilterSideBar from './features/filterSideBar/FilterSideBar';
 
@@ -21,7 +21,7 @@ const FilterCoursesScreen = () => {
         applyFilters();
     };
     return (
-        <div className="container flex min-h-dvh flex-col justify-between ">
+        <div className="container flex min-h-dvh flex-col justify-between">
             <div className="flex h-auto gap-x-6">
                 <FilterSideBar
                     loading={false}

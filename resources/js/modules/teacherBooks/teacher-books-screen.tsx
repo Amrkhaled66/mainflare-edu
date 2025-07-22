@@ -1,4 +1,4 @@
-import PageTitle from '@/shared/components/PageTitle';
+import PageTitle from '@/shared/components/ui/PageTitle';
 import BooksSection from './features/BooksSection/BooksSection';
 
 const TeacherBooksScreen = () => {

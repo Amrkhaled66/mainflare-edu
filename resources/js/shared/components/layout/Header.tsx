@@ -2,10 +2,10 @@ import logo from '@/assets/logo.svg';
 import { Icon } from '@iconify/react';
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import CloseButton from './CloseButton';
-import Overlay from './Overlay';
+import CloseButton from '../ui/CloseButton';
+import Overlay from '../ui/Overlay';
 
-import navLinks from '../data/navLinks';
+import navLinks from '../../data/navLinks';
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);

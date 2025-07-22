@@ -1,5 +1,5 @@
 import CustomCard from '@/shared/components/CustomCard';
-import CustomCardSkeleton from '@/shared/components/skeletons/CustomCardSk';
+import CustomCardSkeleton from '@/shared/components/ui/Skeletons/CustomCardSk';
 
 import priceFormatter from '@/shared/utils/priceFormatter';
 import books from '../../books';

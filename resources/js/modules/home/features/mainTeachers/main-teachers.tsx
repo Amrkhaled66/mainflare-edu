@@ -1,7 +1,7 @@
-import SectionTitle from '@/shared/components/SectionTitle';
+import SectionTitle from '@/modules/home/shared/components/SectionTitle';
 
 import CustomCard from '@/shared/components/CustomCard';
-import CustomCardSkeleton from '@/shared/components/skeletons/CustomCardSk';
+import CustomCardSkeleton from '@/shared/components/ui/Skeletons/CustomCardSk';
 import teachers from './teachers';
 
 import 'swiper/css';
