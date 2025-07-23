@@ -6,27 +6,20 @@ interface FormInputProps {
     placeholder?: string;
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     className?: string;
-  }
-  
-  const FormInput = ({
-    type = 'text',
-    value,
-    name,
-    placeholder,
-    onChange,
-    className = '',
-  }: FormInputProps) => {
+    error?: string;
+}
+
+const FormInput = ({ type = 'text', value, name, placeholder, onChange, className = '', error }: FormInputProps) => {
     return (
-      <input
-        type={type}
-        value={value}
-        name={name}
-        placeholder={placeholder}
-        onChange={onChange}
-        className={`w-full animate h-12 px-4 font-normal rounded-2xl border border-stroke bg-bgBackground outline-none focus:border-mainColor ${className}`}
-      />
+        <input
+            type={type}
+            value={value}
+            name={name}
+            placeholder={placeholder}
+            onChange={onChange}
+            className={`animate h-12 w-full rounded-2xl border border-stroke bg-bgBackground px-4 font-normal outline-none focus:border-mainColor ${className}`}
+        />
     );
-  };
-  
-  export default FormInput;
-  
+};
+
+export default FormInput;

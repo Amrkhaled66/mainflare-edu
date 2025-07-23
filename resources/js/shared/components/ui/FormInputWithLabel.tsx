@@ -11,6 +11,8 @@ interface FormInputWithLabelProps {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   inputClassName?: string;
   containerClassName?: string;
+  error?: string;
+
 }
 
 const FormInputWithLabel: React.FC<FormInputWithLabelProps> = ({
@@ -22,6 +24,7 @@ const FormInputWithLabel: React.FC<FormInputWithLabelProps> = ({
   onChange,
   inputClassName = '',
   containerClassName = '',
+  error
 }) => {
   return (
     <label className={`flex flex-col gap-y-2 text-sm font-medium text-textColor ${containerClassName}`}>
@@ -34,6 +37,8 @@ const FormInputWithLabel: React.FC<FormInputWithLabelProps> = ({
         onChange={onChange}
         className={inputClassName}
       />
+                  {error && <p className="text-sm text-red-600">{error}</p>}
+
     </label>
   );
 };

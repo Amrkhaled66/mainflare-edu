@@ -21,11 +21,12 @@ const cart = {
 };
 
 const user = {
-    name: 'mohamed',
-    phone: '0123456789',
-    city: 'cairo',
-    town: 'cairo',
-    address: 'cairo cairo cairo',
+    // name: 'mohamed',
+    // phone: '0123456789',
+    // alternativePhone: '0123456789',
+    // city: 'cairo',
+    // area: 'cairo',
+    // detailedAddress: 'cairo cairo cairo',
 };
 
 export default cart;
