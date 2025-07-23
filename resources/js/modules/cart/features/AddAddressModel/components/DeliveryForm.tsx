@@ -7,7 +7,7 @@ const DeliveryForm = ({ onClose }: { onClose: () => void }) => {
     const { formData, errors, isSubmitting, handleInputChange, handleCitySelect, handleAreaSelect, handleSubmit, isValid } = useDeliveryInfo();
 
     const onSubmit = async (data: any) => {
-        // Your submit logic
+        //  logic
         console.log('Submitting:', data);
         onClose();
     };
