@@ -65,8 +65,12 @@ const Header = () => {
 
                         {!isAuth ? (
                             <>
-                                <button className="btn-primary btn w-[200px]">تسجيل الدخول</button>
-                                <button className="btn-outline animate w-[200px]">انشاء حساب</button>
+                                <Link to={'/auth/signin'}>
+                                    <button className="btn-primary btn w-[200px]">تسجيل الدخول</button>
+                                </Link>
+                                <Link to="/auth/signup">
+                                    <button className="btn-outline animate w-[200px]">انشاء حساب</button>
+                                </Link>
                             </>
                         ) : (
                             <div className="mr-8 flex items-center gap-x-3">

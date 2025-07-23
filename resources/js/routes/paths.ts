@@ -41,34 +41,30 @@ const paths = {
         crumb: 'السلة',
     },
 
-    contactUs: {
-        path: '/contact-us',
-        crumb: 'تواصل معنا',
-    },
     login: {
-        path: '/login',
+        path: `/auth/signin`,
         crumb: 'تسجيل الدخول',
     },
     signup: {
-        path: '/signup',
+        path: '/auth/signup',
         crumb: 'إنشاء حساب',
     },
     forgetPassword: {
-        path: '/forget-password',
+        path: '/auth/forget-password',
         crumb: 'نسيت كلمة المرور',
     },
     checkOtp: {
-        path: '/forget-password/check-otp',
+        path: '/auth/forget-password/check-otp',
         crumb: 'التحقق من OTP',
     },
     resetPassword: {
-        path: '/forget-password/reset-password',
+        path: '/auth/forget-password/reset-password',
         crumb: 'إعادة تعيين كلمة المرور',
     },
 
-    checkout: {
-        path: '/checkout',
-        crumb: 'الدفع',
+    contactUs: {
+        path: '/contact-us',
+        crumb: 'تواصل معنا',
     },
 };
 

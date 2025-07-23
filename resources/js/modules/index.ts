@@ -7,3 +7,8 @@ export { default as TeacherCourses } from './teacher/screens/teacherCourses/teac
 export { default as Teacher } from './teacher/screens/teacherOverView/teacher-screen';
 export { default as SubjectsScreen } from './subjects/subjects-screen';
 export { default as CartScreen } from './cart/cart-screen';
+
+
+export { default as AuthLayout } from './auth/layout';
+export { default as SignIn } from './auth/screens/SignIn';
+export { default as SignUp } from './auth/screens/SignUp';

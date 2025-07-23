@@ -3,11 +3,15 @@ import paths from './paths';
 
 import Layout from '@/layout';
 import {
+    // AUTH
+    AuthLayout,
     CartScreen,
     CourseOverviewScreen,
     CoursePageScreen,
     CoursesList,
     HomePage,
+    SignIn,
+    SignUp,
     SubjectsScreen,
     Teacher,
     TeacherBooks,
@@ -101,6 +105,21 @@ const router = createBrowserRouter([
                 handle: {
                     crumb: createCrumb(paths.cart.crumb, paths.cart.path),
                 },
+            },
+        ],
+    },
+    {
+        path: '/auth',
+        element: <AuthLayout />,
+        children: [
+            {
+                path: paths.login.path,
+                element: <SignIn />,
+                index: true,
+            },
+            {
+                path: paths.signup.path,
+                element: <SignUp />,
             },
         ],
     },
