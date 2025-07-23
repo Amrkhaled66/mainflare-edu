@@ -36,6 +36,11 @@ const paths = {
         crumb: 'المحاضرات',
     },
 
+    cart: {
+        path: '/cart',
+        crumb: 'السلة',
+    },
+
     contactUs: {
         path: '/contact-us',
         crumb: 'تواصل معنا',
@@ -60,10 +65,7 @@ const paths = {
         path: '/forget-password/reset-password',
         crumb: 'إعادة تعيين كلمة المرور',
     },
-    cart: {
-        path: '/cart',
-        crumb: 'السلة',
-    },
+
     checkout: {
         path: '/checkout',
         crumb: 'الدفع',

@@ -11,6 +11,8 @@
 @theme {
     --font-mainFont: 'IBM Plex Sans Arabic', sans-serif;
     --color-mainColor: #393962;
+    --color-mainColor-50: #ebebef;
+    --color-mainColor-200: #e6e6ff;
     --color-mainColor-700: #282846;
     --color-textColor: #151527;
     --color-mainGradient: linear-gradient(273deg, #393962 2.21%, #7474c8 116.89%);
@@ -19,6 +21,7 @@
     --color-subTitle: #616161;
     --color-secondaryGradient: linear-gradient(271deg, #282846 51.73%, #d8d8ef 232.35%);
     --color-secondaryGradientHover: linear-gradient(271deg, #3a3a5a 40%, #e8e8ff 220%);
+    --color-bgBackground: #f4f4f4;
 
     --btn-height: 50px;
     --btn-width: 200px;
@@ -39,7 +42,7 @@
     }
 
     .btn-outline {
-        @apply h-[50px] rounded-[var(--btn-radius)] border border-mainColor font-bold text-mainColor transition-all duration-300;
+        @apply border-mainColor text-mainColor h-[50px] rounded-[var(--btn-radius)] border font-bold transition-all duration-300;
     }
     .btn-outline:hover {
         @apply bg-mainColor text-white;
@@ -142,5 +145,4 @@ button {
     @media (width >= 80rem /* 1280px */) {
         max-width: 80rem /* 1280 */;
     }
-
 }

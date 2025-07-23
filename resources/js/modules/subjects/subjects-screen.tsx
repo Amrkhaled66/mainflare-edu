@@ -12,7 +12,7 @@ const SubjectsScreen = () => {
         const filtered = subjects.filter((subject) => subject.subjectName.toLowerCase().includes(searchTerm.toLowerCase()));
         setFilteredSubjects(filtered);
     };
-    const loading = true;
+    const loading = false;
     return (
         <div className="container space-y-8">
             <PageTitle title="اختار المادة اللي عايز تذاكرها" />

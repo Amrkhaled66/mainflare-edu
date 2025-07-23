@@ -50,12 +50,14 @@ const Header = () => {
                     </nav>
 
                     <div className="hidden items-center gap-3 lg:flex">
-                        <button className="animate relative rounded-full border border-stroke bg-[#F4F5F5] p-3 text-mainColor drop-shadow-sm hover:drop-shadow-xl">
-                            <span className="absolute -top-1 -right-2 flex size-5 items-center justify-center rounded-full bg-mainColor text-white">
-                                {cartItemsCount}
-                            </span>
-                            <Icon icon="mdi:cart-outline" width="24" height="24" />
-                        </button>
+                        <Link to="/cart">
+                            <button className="animate relative rounded-full border border-stroke bg-[#F4F5F5] p-3 text-mainColor drop-shadow-sm hover:drop-shadow-xl">
+                                <span className="absolute -top-1 -right-2 flex size-5 items-center justify-center rounded-full bg-mainColor text-white">
+                                    {cartItemsCount}
+                                </span>
+                                <Icon icon="mdi:cart-outline" width="24" height="24" />
+                            </button>
+                        </Link>
 
                         <button className="animate rounded-full border border-stroke bg-[#F4F5F5] p-3 text-mainColor drop-shadow-sm hover:drop-shadow-xl">
                             <Icon icon="line-md:bell-loop" width="24" height="24" />
