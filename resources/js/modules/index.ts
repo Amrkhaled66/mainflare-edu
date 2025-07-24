@@ -10,5 +10,5 @@ export { default as CartScreen } from './cart/cart-screen';
 
 
 export { default as AuthLayout } from './auth/layout';
-export { default as SignIn } from './auth/screens/SignIn';
-export { default as SignUp } from './auth/screens/SignUp';
+export { default as SignIn } from './auth/screens/SingIn/signin-screen';
+export { default as SignUp } from './auth/screens/signup/signup-screen';

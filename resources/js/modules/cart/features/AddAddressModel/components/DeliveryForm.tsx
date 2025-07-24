@@ -50,7 +50,6 @@ const DeliveryForm = ({ onClose }: { onClose: () => void }) => {
                     value={formData.city}
                     options={[{ name: 'القاهرة' }, { name: 'الجيزة' }, { name: 'المنصورة' }]}
                     onSelected={handleCitySelect}
-                    Input={<FormInputWithLabel value={formData.city} type="text" placeholder="اختر المدينة" inputClassName="pr-6" />}
                 />
                 <ComboBox
                     label="المنطقة"
@@ -58,7 +57,6 @@ const DeliveryForm = ({ onClose }: { onClose: () => void }) => {
                     value={formData.area}
                     options={[{ name: 'المعادي' }, { name: 'مدينة نصر' }, { name: 'الهرم' }]}
                     onSelected={handleAreaSelect}
-                    Input={<FormInputWithLabel value={formData.area} type="text" placeholder="اختر المدينة" inputClassName="pr-6" />}
                 />
             </div>
             <FormInputWithLabel

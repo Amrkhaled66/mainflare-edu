@@ -1,8 +1,9 @@
 import { Combobox, ComboboxButton, ComboboxOption, ComboboxOptions, Field } from '@headlessui/react';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { ReactNode, useState } from 'react';
+
+import FormInputWithLabel from './FormInputWithLabel';
 interface ComboBoxProps {
-    Input?: ReactNode;
     bgColor?: string;
     onSelected: (value: any) => void;
     options: { name: string; [key: string]: any }[];
@@ -11,8 +12,7 @@ interface ComboBoxProps {
     placeholder?: string;
     name?: string;
 }
-
-function ComboBox({ bgColor = 'bg-white', onSelected, options, label, value, placeholder, Input, name }: ComboBoxProps) {
+function ComboBox({ bgColor = 'bg-white', onSelected, options, label, value, placeholder, name }: ComboBoxProps) {
     const [query, setQuery] = useState('');
 
     const filteredOptions = query === '' ? options : options.filter((option) => option.name.toLowerCase().includes(query.toLowerCase()));
@@ -30,7 +30,12 @@ function ComboBox({ bgColor = 'bg-white', onSelected, options, label, value, pla
                     }}
                 >
                     <div className="relative w-full">
-                        {Input}
+                         <FormInputWithLabel
+                            value={value}
+                            type="text"
+                            placeholder="الفصل الدراسي"
+                            inputClassName="pr-6"
+                        />
                         <ComboboxButton className="absolute end-1 top-1/2 size-fit -translate-y-1/2 rounded px-3">
                             <Icon icon="iconamoon:arrow-down-2" width="24" height="24" />
                         </ComboboxButton>
