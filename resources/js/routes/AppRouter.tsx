@@ -5,19 +5,20 @@ import Layout from '@/layout';
 import {
     AuthLayout,
     CartScreen,
+    ContactUsScreen,
     CourseOverviewScreen,
     CoursePageScreen,
     CoursesList,
     HomePage,
     RequestOtpScreen,
+    ResetPasswordScreen,
     SignIn,
     SignUp,
     SubjectsScreen,
+    SubmitOtpScreen,
     Teacher,
     TeacherBooks,
     TeacherCourses,
-    SubmitOtpScreen,
-    ResetPasswordScreen
 } from '@/modules';
 import { createCrumb } from '@/shared/utils/createCrumb';
 import { Link } from 'react-router-dom';
@@ -106,6 +107,13 @@ const router = createBrowserRouter([
                 element: <CartScreen />,
                 handle: {
                     crumb: createCrumb(paths.cart.crumb, paths.cart.path),
+                },
+            },
+            {
+                path: paths.contactUs.path,
+                element: <ContactUsScreen />,
+                handle: {
+                    crumb: createCrumb(paths.contactUs.crumb, paths.contactUs.path),
                 },
             },
         ],

@@ -15,3 +15,4 @@ export { default as ResetPasswordScreen } from './auth/screens/forgetPassword/re
 export { default as SubmitOtpScreen } from './auth/screens/forgetPassword/submitOtp/submit-otp-screen';
 export { default as SignUp } from './auth/screens/signup/signup-screen';
 export { default as SignIn } from './auth/screens/SingIn/signin-screen';
+export { default as ContactUsScreen } from './contactUs/contactUs-screen';
