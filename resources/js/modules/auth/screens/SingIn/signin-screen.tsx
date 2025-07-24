@@ -15,7 +15,6 @@ const SignIn = () => {
                 </AnimatingFormHeader>
                 <SignInForm />
             </div>
-            {/* footer */}
         </div>
     );
 };

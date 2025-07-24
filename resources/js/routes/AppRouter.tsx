@@ -3,19 +3,20 @@ import paths from './paths';
 
 import Layout from '@/layout';
 import {
-    // AUTH
     AuthLayout,
     CartScreen,
     CourseOverviewScreen,
     CoursePageScreen,
     CoursesList,
     HomePage,
+    RequestOtpScreen,
     SignIn,
     SignUp,
     SubjectsScreen,
     Teacher,
     TeacherBooks,
     TeacherCourses,
+    SubmitOtpScreen
 } from '@/modules';
 import { createCrumb } from '@/shared/utils/createCrumb';
 import { Link } from 'react-router-dom';
@@ -120,6 +121,18 @@ const router = createBrowserRouter([
             {
                 path: paths.signup.path,
                 element: <SignUp />,
+            },
+            {
+                path: paths.forgetPassword.path,
+                element: <RequestOtpScreen />,
+            },
+            {
+                path: paths.checkOtp.path,
+                element: <SubmitOtpScreen />,
+            },
+            {
+                path: paths.resetPassword.path,
+                element: <SignIn />,
             },
         ],
     },
