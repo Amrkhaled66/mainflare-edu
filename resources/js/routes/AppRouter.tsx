@@ -16,7 +16,8 @@ import {
     Teacher,
     TeacherBooks,
     TeacherCourses,
-    SubmitOtpScreen
+    SubmitOtpScreen,
+    ResetPasswordScreen
 } from '@/modules';
 import { createCrumb } from '@/shared/utils/createCrumb';
 import { Link } from 'react-router-dom';
@@ -132,7 +133,7 @@ const router = createBrowserRouter([
             },
             {
                 path: paths.resetPassword.path,
-                element: <SignIn />,
+                element: <ResetPasswordScreen />,
             },
         ],
     },

@@ -11,6 +11,7 @@ export { default as Teacher } from './teacher/screens/teacherOverView/teacher-sc
 // Auth
 export { default as AuthLayout } from './auth/layout';
 export { default as RequestOtpScreen } from './auth/screens/forgetPassword/requestOtp/request-otp-screen';
+export { default as ResetPasswordScreen } from './auth/screens/forgetPassword/resetPassword/reset-password-screen';
 export { default as SubmitOtpScreen } from './auth/screens/forgetPassword/submitOtp/submit-otp-screen';
 export { default as SignUp } from './auth/screens/signup/signup-screen';
 export { default as SignIn } from './auth/screens/SingIn/signin-screen';
