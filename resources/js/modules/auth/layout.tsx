@@ -8,7 +8,7 @@ const layout = () => {
             className={`flex h-auto lg:h-screen !overflow-y-auto  justify-between min-h-screen w-full flex-col lg:flex-row`}
         >
             <FixedLogoSection />
-            <div className="relative h-full !pb-8 min-h-fit flex lg:bg-white  w-screen flex-col  justify-center items-center lg:justify-start  lg:container lg:w-[55%] lg:rounded-none lg:p-0">
+            <div className="relative h-full lg:!pb-8 min-h-fit flex lg:bg-white  w-screen flex-col  justify-center items-center lg:justify-start  lg:container lg:w-[55%] lg:rounded-none lg:p-0">
                 <Outlet />
             </div>
         </div>
