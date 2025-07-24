@@ -19,7 +19,7 @@ function ComboBox({ bgColor = 'bg-white', onSelected, options, label, value, pla
 
     return (
         <div dir="rtl" className="relative w-full">
-            <Field className="flex flex-col space-y-4">
+            <Field className="flex flex-col gap-y-4">
                 {label && <label className="text-sm font-bold text-textColor">{label}</label>}
 
                 <Combobox

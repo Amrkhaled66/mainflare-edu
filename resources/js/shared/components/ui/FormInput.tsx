@@ -13,13 +13,14 @@ interface FormInputProps {
 const FormInput = ({ type = 'text', value, name, placeholder, onChange, className = '', error, mode }: FormInputProps) => {
     return (
         <input
+            dir="rtl"
             type={type}
             inputMode={mode || 'text'}
             value={value}
             name={name}
             placeholder={placeholder}
             onChange={onChange}
-            className={`animate h-12 w-full rounded-2xl border border-stroke bg-bgBackground px-4 font-normal outline-none focus:border-mainColor ${className}`}
+            className={`animate h-12 w-full rounded-2xl focus:bg-[#F8F8FF] border border-stroke bg-bgBackground px-4 font-normal outline-none focus:border-mainColor ${className} ${error && '!border-red-600'}`}
         />
     );
 };

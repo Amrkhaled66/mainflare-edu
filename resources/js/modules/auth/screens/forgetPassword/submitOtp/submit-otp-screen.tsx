@@ -5,8 +5,10 @@ import AnimatingFormHeader from '@/modules/auth/components/AnimatingFormHeader';
 import PageHeader from '@/modules/auth/components/PageHeader';
 
 import paths from '@/routes/paths';
+import usePageTitle from '@/shared/hooks/usePageTitle';
 import { Link } from 'react-router';
 const SubmitOtpScreen = () => {
+    usePageTitle(paths.forgetPassword.crumb);
     return (
         <div className={`flex h-full w-full flex-col justify-start gap-y-8 text-textColor lg:h-fit lg:max-w-[70%]`}>
             <PageHeader />

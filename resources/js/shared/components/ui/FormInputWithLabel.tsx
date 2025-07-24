@@ -12,7 +12,7 @@ interface FormInputWithLabelProps {
     inputClassName?: string;
     containerClassName?: string;
     error?: string;
-    mode?:"numeric" | "text"
+    mode?: 'numeric' | 'text';
 }
 
 const FormInputWithLabel: React.FC<FormInputWithLabelProps> = ({
@@ -24,12 +24,13 @@ const FormInputWithLabel: React.FC<FormInputWithLabelProps> = ({
     onChange,
     inputClassName = '',
     containerClassName = '',
-    error,mode
+    error,
+    mode,
 }) => {
     return (
-        <label dir="rtl" className={`flex flex-col !gap-y-4  font-medium text-textColor ${containerClassName}`}>
+        <label dir="rtl" className={`flex flex-col !gap-y-4 font-medium text-textColor ${containerClassName}`}>
             {label && <span className="font-bold">{label}</span>}
-            <FormInput type={type} mode={mode} value={value} name={name} placeholder={placeholder} onChange={onChange} className={inputClassName} />
+            <FormInput error={error} type={type} mode={mode} value={value} name={name} placeholder={placeholder} onChange={onChange} className={inputClassName} />
             {error && <p className="text-sm text-red-600">{error}</p>}
         </label>
     );

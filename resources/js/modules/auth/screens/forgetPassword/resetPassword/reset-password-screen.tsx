@@ -3,7 +3,11 @@ import AnimatingFormHeader from '@/modules/auth/components/AnimatingFormHeader';
 import PageHeader from '@/modules/auth/components/PageHeader';
 import FormInputWithLabel from '@/shared/components/ui/FormInputWithLabel';
 
+import usePageTitle from '@/shared/hooks/usePageTitle';
+import paths from '@/routes/paths';
 const ResetPasswordScreen = () => {
+        usePageTitle(paths.forgetPassword.crumb);
+
     return (
         <div className={`flex h-full w-full flex-col justify-start gap-y-8 text-textColor lg:h-fit lg:max-w-[70%]`}>
             <PageHeader />
