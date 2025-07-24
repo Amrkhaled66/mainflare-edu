@@ -7,12 +7,14 @@ interface FormInputProps {
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     className?: string;
     error?: string;
+    mode?: 'numeric' | 'text';
 }
 
-const FormInput = ({ type = 'text', value, name, placeholder, onChange, className = '', error }: FormInputProps) => {
+const FormInput = ({ type = 'text', value, name, placeholder, onChange, className = '', error, mode }: FormInputProps) => {
     return (
         <input
             type={type}
+            inputMode={mode || 'text'}
             value={value}
             name={name}
             placeholder={placeholder}

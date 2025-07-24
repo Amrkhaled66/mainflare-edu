@@ -1,6 +1,6 @@
 import { Combobox, ComboboxButton, ComboboxOption, ComboboxOptions, Field } from '@headlessui/react';
 import { Icon } from '@iconify/react/dist/iconify.js';
-import { ReactNode, useState } from 'react';
+import { useState } from 'react';
 
 import FormInputWithLabel from './FormInputWithLabel';
 interface ComboBoxProps {
@@ -18,8 +18,8 @@ function ComboBox({ bgColor = 'bg-white', onSelected, options, label, value, pla
     const filteredOptions = query === '' ? options : options.filter((option) => option.name.toLowerCase().includes(query.toLowerCase()));
 
     return (
-        <div className="relative w-full">
-            <Field className="flex flex-col space-y-2">
+        <div dir="rtl" className="relative w-full">
+            <Field className="flex flex-col space-y-4">
                 {label && <label className="text-sm font-bold text-textColor">{label}</label>}
 
                 <Combobox
@@ -30,12 +30,7 @@ function ComboBox({ bgColor = 'bg-white', onSelected, options, label, value, pla
                     }}
                 >
                     <div className="relative w-full">
-                         <FormInputWithLabel
-                            value={value}
-                            type="text"
-                            placeholder="الفصل الدراسي"
-                            inputClassName="pr-6"
-                        />
+                        <FormInputWithLabel value={value} type="text" placeholder="الفصل الدراسي" />
                         <ComboboxButton className="absolute end-1 top-1/2 size-fit -translate-y-1/2 rounded px-3">
                             <Icon icon="iconamoon:arrow-down-2" width="24" height="24" />
                         </ComboboxButton>
