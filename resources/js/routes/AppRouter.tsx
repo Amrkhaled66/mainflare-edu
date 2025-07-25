@@ -32,7 +32,9 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <HomePage />,
+                element: (
+                        <HomePage />
+                ),
             },
             {
                 path: paths.courses.path,
@@ -42,18 +44,24 @@ const router = createBrowserRouter([
                 children: [
                     {
                         index: true,
-                        element: <CoursesList />,
+                        element: (
+                                <CoursesList />
+                        ),
                     },
                     {
                         path: paths.courseOverview.path(),
-                        element: <CourseOverviewScreen />,
+                        element: (
+                                <CourseOverviewScreen />
+                        ),
                         handle: {
                             crumb: createCrumb(paths.courseOverview.crumb, paths.courseOverview.path()),
                         },
                     },
                     {
                         path: paths.coursePage.path(),
-                        element: <CoursePageScreen />,
+                        element: (
+                                <CoursePageScreen />
+                        ),
                         handle: {
                             crumb: ({ params }: { params: { courseId: string } }) => {
                                 // const cachedCourse = queryClient.getQueryData(['course', params.courseId]);
@@ -81,7 +89,8 @@ const router = createBrowserRouter([
                 children: [
                     {
                         index: true,
-                        element: <Teacher />,
+                        element:
+                            <Teacher />,
                     },
                     {
                         path: paths.teacherCourses.path(),

@@ -58,11 +58,11 @@ export default function OtpInput({ otp, setOtp, error }: { otp: string[]; setOtp
                         ref={(el) => {
                             inputRefs.current[index] = el;
                         }}
-                        className="text-gray-5 animate flex h-16 w-16 items-center justify-center rounded-2xl border border-stroke bg-white text-center text-2xl font-medium shadow-xs outline-none focus:border-mainColor sm:text-4xl"
+                        className={`"text-gray-5 animate flex h-16 w-16 items-center justify-center rounded-2xl border ${error ? 'border-red-600' : 'border-stroke'} sm:text-4xl" bg-white text-center text-2xl font-medium shadow-xs outline-none focus:border-mainColor`}
                     />
                 ))}
             </form>
-            {error && <p className="text-red max-w-full text-center text-sm text-wrap">{error}</p>}
+            {error && <p className="max-w-full text-center text-sm text-wrap text-red-600">{error}</p>}
         </div>
     );
 }
