@@ -20,7 +20,7 @@ function CustomSectionFilter({ onSelected, options, label, name, value }: ComboB
               });
 
     return (
-        <div className={`animate relative z-10  w-full rounded-xl border border-stroke bg-white p-4 drop-shadow-md hover:drop-shadow-xl lg:w-[300px]`}>
+        <div className={`animate relative  w-full rounded-xl border border-stroke bg-white p-4 drop-shadow-md hover:drop-shadow-xl lg:w-[300px]`}>
             <Field className="flex w-full flex-col space-y-3">
                 <Combobox
                     as="div"
@@ -46,7 +46,7 @@ function CustomSectionFilter({ onSelected, options, label, name, value }: ComboB
                             <Icon icon="iconamoon:arrow-down-2" width="24" height="24" />
                         </ComboboxButton>
                     </div>
-                    <ComboboxOptions className="absolute z-50 inset-x-0 top-full  mt-1 max-h-[200px] w-full overflow-y-auto rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5">
+                    <ComboboxOptions className="absolute !z-50 inset-x-0 top-full  mt-1 max-h-[200px] w-full overflow-y-auto rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5">
                         {filteredOptions.map((option, index) => (
                             <ComboboxOption
                                 key={`option-${index}`}
