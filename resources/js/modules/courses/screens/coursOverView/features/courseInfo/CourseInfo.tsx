@@ -27,7 +27,7 @@ const CourseInfo = ({
     return (
         <div className="flex flex-col justify-between gap-6 lg:flex-row">
             <div className="gap flex flex-col">
-                <div className="h-[343px] overflow-hidden rounded-[30px] drop-shadow-lg lg:h-[540px] lg:w-[760px]">
+                <div className="h-[343px] overflow-hidden rounded-[30px] drop-shadow-lg lg:h-[540px] xl:w-[760px]">
                     {loading ? <Skeleton className="size-full" /> : <img src={img} alt={name} className="size-full object-cover" />}
                 </div>
                 {loading ? <TutorInfoSkeleton /> : <TutorInfo img={tutor.img} name={tutor.name} subject={tutor.subject} />}

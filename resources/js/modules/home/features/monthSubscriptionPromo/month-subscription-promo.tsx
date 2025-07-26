@@ -1,4 +1,4 @@
-import SectionTitle from '@/modules/home/components/SectionTitle';
+import SectionTitle from '@/modules/home/shared/components/SectionTitle';
 
 import { Icon } from '@iconify/react/dist/iconify.js';
 import pros from './pros';

@@ -37,7 +37,7 @@ const SignInForm = () => {
                     </Link>
                 </div>
 
-                <div className="space-y-10 pt-4">
+                <div className=" space-y-8 lg:space-y-10 pt-4">
                     <button type="submit" className="btn btn-primary w-full" disabled={isLoading}>
                         {isLoading ? 'جاري تسجيل الدخول...' : 'تسجيل الدخول'}
                     </button>

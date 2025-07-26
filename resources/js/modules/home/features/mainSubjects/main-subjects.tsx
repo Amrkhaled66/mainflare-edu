@@ -1,4 +1,4 @@
-import SectionTitle from '@/modules/home/components/SectionTitle';
+import SectionTitle from '@/modules/home/shared/components/SectionTitle';
 import CustomSubject from '@/shared/components/ui/CustomSubject';
 import CustomSubjectSk from '@/shared/components/ui/Skeletons/CustomSubjectSk';
 import chunkWithSlice from '@/shared/utils/chunkWithSlice';
@@ -17,7 +17,7 @@ const MainSubjects = () => {
                 <SectionTitle icon="bxs:book" title="المواد الدراسية" subTitle="اكتشف اهم المواد الدراسية" />
 
                 <div className="flex-center w-full flex-col gap-y-8">
-                    <div className="hidden w-full grid-cols-4 gap-6 lg:grid">
+                    <div className="hidden w-full grid-cols-3 xl:grid-cols-4 gap lg:grid">
                         {loading
                             ? Array.from({ length: 8 }, (_, index) => <CustomSubjectSk key={index} />)
                             : subjects.map((subject) => <CustomSubject key={subject.subjectId} {...subject} />)}

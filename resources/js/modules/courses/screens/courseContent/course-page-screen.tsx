@@ -8,7 +8,7 @@ const CoursePageScreen = () => {
     return (
         <div className="container gap-y-8 flex flex-col">
             {!loading && <PageTitle title={course.name} />}
-            <div className="flex flex-col gap-6 lg:flex-row">
+            <div className="flex flex-col gap-6 xl:flex-row">
                 <CoursePlayer course={course} name={course.name} loading={loading} />
                 <LecturesList loading={loading} lectures={course.lectures} />
             </div>

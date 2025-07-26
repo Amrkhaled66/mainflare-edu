@@ -1,4 +1,4 @@
-import SectionTitle from '@/modules/home/components/SectionTitle';
+import SectionTitle from '@/modules/home/shared/components/SectionTitle';
 
 import CustomCard from '@/shared/components/CustomCard';
 
@@ -7,6 +7,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import CustomCardSkeleton from '@/shared/components/ui/Skeletons/CustomCardSk';
 import students from './students';
+
+import GridView from '@/shared/components/ui/GridView';
 const TopStudents = () => {
     const loading = false;
     return (
@@ -15,13 +17,13 @@ const TopStudents = () => {
                 <SectionTitle title="ابرز الطلبة" subTitle="اكتشف ابرز الطالبة المتفوقين" icon="fa-solid:graduation-cap" />
 
                 <div className="flex w-full flex-col items-center gap-y-8">
-                    <div className="container hidden grid-cols-3 xl:grid-cols-4 gap-6 lg:grid">
+                    <GridView className="hidden lg:grid">
                         {loading
                             ? Array.from({ length: 4 }).map((_, index) => <CustomCardSkeleton key={index} />)
                             : students.map((student: { name: string; grade: string; avatar: string }) => (
                                   <CustomCard title={student.grade} subTitle={student.name} img={student.avatar} />
                               ))}
-                    </div>
+                    </GridView>
                     <div className="block !w-full lg:hidden">
                         <Swiper
                             className="!pr- !w-full sm:!pr-6"

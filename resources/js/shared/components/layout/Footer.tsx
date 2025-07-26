@@ -44,7 +44,7 @@ const Footer = () => {
                             if (link.mob) return;
                             return (
                                 <Link to={link.path}>
-                                    <p className="animate hover:underline">{link.name}</p>
+                                    <p className="animate text-nowrap hover:underline">{link.name}</p>
                                 </Link>
                             );
                         })}

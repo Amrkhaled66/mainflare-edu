@@ -3,7 +3,7 @@ import 'react-loading-skeleton/dist/skeleton.css';
 
 const CoursePlayer = ({ course, name, loading }: { course: any; name: string; loading: boolean }) => {
     return (
-        <div className="h-[343px] overflow-hidden rounded-[30px] drop-shadow-lg lg:h-[540px] lg:w-[760px]">
+        <div className="h-[343px] overflow-hidden rounded-[30px] drop-shadow-lg lg:h-[540px] xl:w-[760px]">
             {loading ? (
                 <Skeleton className="size-full" />
             ) : (

@@ -1,5 +1,5 @@
-import SectionTitle from '@/modules/home/components/SectionTitle';
-
+import SectionTitle from '@/modules/home/shared/components/SectionTitle';
+import GridView from '@/shared/components/ui/GridView';
 import CustomCard from '@/shared/components/CustomCard';
 import CustomCardSkeleton from '@/shared/components/ui/Skeletons/CustomCardSk';
 import teachers from './teachers';
@@ -8,7 +8,6 @@ import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { Link } from 'react-router-dom';
-
 const MainTeachers = () => {
     const loading = false;
     return (
@@ -17,7 +16,7 @@ const MainTeachers = () => {
                 <SectionTitle icon="fa-solid:chalkboard-teacher" title="اهم المدرسين" subTitle="اكتشف ابرز المدرسين" />
 
                 <div className="flex w-full flex-col items-center gap-y-8">
-                    <div className="container hidden grid-cols-3 xl:grid-cols-4 gap-6 lg:grid">
+                    <GridView className="hidden lg:grid">
                         {loading
                             ? Array.from({ length: 4 }).map((_, index) => <CustomCardSkeleton key={index} />)
                             : teachers.map((teacher) => (
@@ -35,7 +34,7 @@ const MainTeachers = () => {
                                       />
                                   </Link>
                               ))}
-                    </div>
+                    </GridView>
                     <div className="block !w-full lg:hidden">
                         <Swiper
                             className="!pr- !w-full sm:!pr-6"

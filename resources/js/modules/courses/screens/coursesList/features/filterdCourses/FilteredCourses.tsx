@@ -19,7 +19,7 @@ const FilteredCourses = ({ data, openSidebar, loading }: { data: any[]; openSide
                     <p className="text-center font-bold">مفيش دروس للفلتر ده هنضيف قريب ان شاء الله</p>
                 </div>
             ) : (
-                <div className="gap gap grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="gap gap grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
                     {loading
                         ? Array.from({ length: 12 }).map((_, index) => <CustomCardSk key={index} />)
                         : data.map((course: any) => (

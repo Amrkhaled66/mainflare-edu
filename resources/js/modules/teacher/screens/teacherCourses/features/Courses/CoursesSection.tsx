@@ -6,7 +6,7 @@ import courses from '../../courses';
 const CoursesSection = () => {
     const loading = false;
     return (
-        <div className="gap grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="gap grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {loading
                 ? Array.from({ length: 6 }).map((_, index) => <CustomCardSkeleton key={index} />)
                 : courses.map((course: any) => (
