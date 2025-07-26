@@ -23,13 +23,13 @@ const Header = () => {
 
                     <button
                         style={{ backgroundImage: 'var(--color-mainGradient)' }}
-                        className="animate rounded-xl p-2 text-2xl text-white hover:drop-shadow-xl lg:hidden"
+                        className="animate rounded-xl p-2 text-2xl text-white hover:drop-shadow-xl xl:hidden"
                         onClick={() => setMenuOpen(true)}
                     >
                         <Icon icon="mdi:menu" width="28" height="28" />
                     </button>
 
-                    <nav className="hidden lg:block">
+                    <nav className="hidden xl:block">
                         <ul className="flex gap-x-5">
                             {navLinks.map((link) => {
                                 if (link.mob) return;
@@ -49,7 +49,7 @@ const Header = () => {
                         </ul>
                     </nav>
 
-                    <div className="hidden items-center gap-3 lg:flex">
+                    <div className="hidden items-center gap-3 xl:flex">
                         <Link to="/cart">
                             <button className="animate relative rounded-full border border-stroke bg-[#F4F5F5] p-3 text-mainColor drop-shadow-sm hover:drop-shadow-xl">
                                 <span className="absolute -top-1 -right-2 flex size-5 items-center justify-center rounded-full bg-mainColor text-white">
@@ -89,7 +89,7 @@ const Header = () => {
 
             <Overlay onClick={() => setMenuOpen(false)} isOpen={menuOpen} />
             <div
-                className={`animate fixed top-0 right-0 z-90 h-screen lg:hidden ${menuOpen ? 'translate-x-0' : 'translate-x-full'} w-[350px] overflow-y-auto bg-white p-6 shadow-lg`}
+                className={`animate fixed top-0 right-0 z-90 h-screen xl:hidden ${menuOpen ? 'translate-x-0' : 'translate-x-full'} w-[350px] overflow-y-auto bg-white p-6 shadow-lg`}
             >
                 <div className="mb-6 flex items-center justify-between">
                     <div className="flex items-center gap-x-3">

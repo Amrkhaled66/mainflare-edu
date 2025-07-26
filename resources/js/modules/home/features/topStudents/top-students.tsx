@@ -1,4 +1,4 @@
-import SectionTitle from '@/modules/home/shared/components/SectionTitle';
+import SectionTitle from '@/modules/home/components/SectionTitle';
 
 import CustomCard from '@/shared/components/CustomCard';
 
@@ -15,7 +15,7 @@ const TopStudents = () => {
                 <SectionTitle title="ابرز الطلبة" subTitle="اكتشف ابرز الطالبة المتفوقين" icon="fa-solid:graduation-cap" />
 
                 <div className="flex w-full flex-col items-center gap-y-8">
-                    <div className="container hidden grid-cols-4 gap-6 lg:grid">
+                    <div className="container hidden grid-cols-3 xl:grid-cols-4 gap-6 lg:grid">
                         {loading
                             ? Array.from({ length: 4 }).map((_, index) => <CustomCardSkeleton key={index} />)
                             : students.map((student: { name: string; grade: string; avatar: string }) => (

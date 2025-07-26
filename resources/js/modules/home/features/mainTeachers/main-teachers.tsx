@@ -1,4 +1,4 @@
-import SectionTitle from '@/modules/home/shared/components/SectionTitle';
+import SectionTitle from '@/modules/home/components/SectionTitle';
 
 import CustomCard from '@/shared/components/CustomCard';
 import CustomCardSkeleton from '@/shared/components/ui/Skeletons/CustomCardSk';
@@ -17,7 +17,7 @@ const MainTeachers = () => {
                 <SectionTitle icon="fa-solid:chalkboard-teacher" title="اهم المدرسين" subTitle="اكتشف ابرز المدرسين" />
 
                 <div className="flex w-full flex-col items-center gap-y-8">
-                    <div className="container hidden grid-cols-4 gap-6 lg:grid">
+                    <div className="container hidden grid-cols-3 xl:grid-cols-4 gap-6 lg:grid">
                         {loading
                             ? Array.from({ length: 4 }).map((_, index) => <CustomCardSkeleton key={index} />)
                             : teachers.map((teacher) => (

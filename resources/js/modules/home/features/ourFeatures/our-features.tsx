@@ -1,4 +1,4 @@
-import SectionTitle from '@/modules/home/shared/components/SectionTitle';
+import SectionTitle from '@/modules/home/components/SectionTitle';
 import CustomFeature from './components/customFeature';
 
 import features from './features';

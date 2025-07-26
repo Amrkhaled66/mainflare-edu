@@ -1,4 +1,4 @@
-import SectionTitle from '@/modules/home/shared/components/SectionTitle';
+import SectionTitle from '@/modules/home/components/SectionTitle';
 import CustomCard from '@/shared/components/CustomCard';
 import chunkWithSlice from '@/shared/utils/chunkWithSlice';
 import SectionFilters from './components/SectionFilters';
@@ -20,7 +20,7 @@ const MainCourses = () => {
 
                 <SectionFilters />
                 <div className="flex w-full flex-col items-center gap-y-8">
-                    <div className="container hidden grid-cols-4 gap-6 lg:grid">
+                    <div className="container hidden grid-cols-3 xl:grid-cols-4 gap-6 lg:grid">
                         {loading
                             ? Array.from({ length: 8 }).map((_, index) => <CustomCardSkeleton key={index} />)
                             : courses.map((course) => (

@@ -1,7 +1,7 @@
-import SectionTitle from '@/modules/home/shared/components/SectionTitle';
-import chunkWithSlice from '@/shared/utils/chunkWithSlice';
+import SectionTitle from '@/modules/home/components/SectionTitle';
 import CustomSubject from '@/shared/components/ui/CustomSubject';
 import CustomSubjectSk from '@/shared/components/ui/Skeletons/CustomSubjectSk';
+import chunkWithSlice from '@/shared/utils/chunkWithSlice';
 import subjects from './subjects';
 
 import 'swiper/css';
@@ -16,7 +16,7 @@ const MainSubjects = () => {
             <div className="section-padding container flex flex-col gap-y-[60px] lg:gap-y-[80px]">
                 <SectionTitle icon="bxs:book" title="المواد الدراسية" subTitle="اكتشف اهم المواد الدراسية" />
 
-                <div className="flex-center  w-full flex-col gap-y-8">
+                <div className="flex-center w-full flex-col gap-y-8">
                     <div className="hidden w-full grid-cols-4 gap-6 lg:grid">
                         {loading
                             ? Array.from({ length: 8 }, (_, index) => <CustomSubjectSk key={index} />)
