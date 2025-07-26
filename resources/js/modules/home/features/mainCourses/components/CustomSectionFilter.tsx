@@ -1,4 +1,4 @@
-import { Combobox, ComboboxButton, ComboboxOption, ComboboxOptions, Field, Label } from '@headlessui/react';
+import { Combobox, ComboboxButton, ComboboxOption, ComboboxOptions, Label } from '@headlessui/react';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { useState } from 'react';
 interface ComboBoxProps {
@@ -20,16 +20,11 @@ function CustomSectionFilter({ onSelected, options, label, name, value }: ComboB
               });
 
     return (
-        <div className={`animate relative  w-full rounded-xl border border-stroke bg-white p-4 drop-shadow-md hover:drop-shadow-xl lg:w-[300px]`}>
-            <Field className="flex w-full flex-col space-y-3">
-                <Combobox
-                    as="div"
-                    className="flex w-full justify-between"
-                    name={name}
-                    value={value}
-                    onChange={onSelected}
-                    onClose={() => setQuery('')}
-                >
+        <div
+            className={`animate relative w-full rounded-xl border border-stroke bg-white p-4 drop-shadow-md hover:drop-shadow-xl nth-[1]:z-30 nth-[2]:z-20 nth-[3]:z-10 lg:w-[300px]`}
+        >
+            <Combobox name={name} value={value} onChange={onSelected} onClose={() => setQuery('')}>
+                <div className="flex w-full justify-between">
                     <div className="flex w-[90%] flex-col gap-y-1">
                         <Label className="text-text-main font-bold">{label}</Label>
                         <p className="line-clamp-1 max-w-[85%]">
@@ -46,7 +41,11 @@ function CustomSectionFilter({ onSelected, options, label, name, value }: ComboB
                             <Icon icon="iconamoon:arrow-down-2" width="24" height="24" />
                         </ComboboxButton>
                     </div>
-                    <ComboboxOptions className="absolute !z-50 inset-x-0 top-full  mt-1 max-h-[200px] w-full overflow-y-auto rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5">
+
+                    <ComboboxOptions
+                        defaultValue="لا توجد بيانات"
+                        className="absolute top-full right-0 left-0 z-50 mt-1 max-h-[200px] w-full overflow-y-auto rounded-md bg-white py-1 shadow-lg ring-1 ring-black/5"
+                    >
                         {filteredOptions.map((option, index) => (
                             <ComboboxOption
                                 key={`option-${index}`}
@@ -57,8 +56,8 @@ function CustomSectionFilter({ onSelected, options, label, name, value }: ComboB
                             </ComboboxOption>
                         ))}
                     </ComboboxOptions>
-                </Combobox>
-            </Field>
+                </div>
+            </Combobox>
         </div>
     );
 }
