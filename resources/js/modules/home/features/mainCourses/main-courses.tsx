@@ -25,24 +25,24 @@ const MainCourses = () => {
                         {loading
                             ? Array.from({ length: 8 }).map((_, index) => <CustomCardSkeleton key={index} />)
                             : courses.map((course) => (
-                                  <Link to={`/courses/${course.id}/overview`}>
-                                      <CustomCard
-                                          title={course.grade}
-                                          subTitle={course.name}
-                                          img={course.img}
-                                          footer={
-                                              <div className="flex gap-x-3">
-                                                  <img src={course.tutorImg} className="size-[36px] rounded-full" />
-                                                  <p className="text-subTitle">{course.tutor}</p>
-                                              </div>
-                                          }
-                                      />
-                                  </Link>
-                              ))}
+                                <Link to={`/courses/${course.id}/overview`}>
+                                    <CustomCard
+                                        title={course.grade}
+                                        subTitle={course.name}
+                                        img={course.img}
+                                        footer={
+                                            <div className="flex gap-x-3">
+                                                <img src={course.tutorImg} className="size-[36px] rounded-full" />
+                                                <p className="text-subTitle">{course.tutor}</p>
+                                            </div>
+                                        }
+                                    />
+                                </Link>
+                            ))}
                     </GridView>
                     <div className="block !w-full lg:hidden">
                         <Swiper
-                            className="!pr- !w-full sm:!pr-6"
+                            className="!w-full sm:!pr-6"
                             spaceBetween={16}
                             slidesPerView={1.1}
                             breakpoints={{
@@ -59,35 +59,35 @@ const MainCourses = () => {
                         >
                             {loading
                                 ? chunkWithSlice(Array.from({ length: 8 }), 2).map((group, index) => (
-                                      <SwiperSlide key={index}>
-                                          <div className="flex flex-col gap-4">
-                                              {group.map((_, i) => (
-                                                  <CustomCardSkeleton key={i} />
-                                              ))}
-                                          </div>
-                                      </SwiperSlide>
-                                  ))
+                                    <SwiperSlide key={index}>
+                                        <div className="flex flex-col gap-4">
+                                            {group.map((_, i) => (
+                                                <CustomCardSkeleton key={i} />
+                                            ))}
+                                        </div>
+                                    </SwiperSlide>
+                                ))
                                 : chunkWithSlice(courses, 2).map((group, index) => (
-                                      <SwiperSlide key={index}>
-                                          <div className="flex flex-col gap-4">
-                                              {group.map((lesson) => (
-                                                  <Link to={`/courses/${lesson.id}/overview`}>
-                                                      <CustomCard
-                                                          title={lesson.grade}
-                                                          subTitle={lesson.name}
-                                                          img={lesson.img}
-                                                          footer={
-                                                              <div className="flex gap-x-3">
-                                                                  <img src={lesson.tutorImg} className="size-[36px] rounded-full" />
-                                                                  <p className="text-subTitle">{lesson.tutor}</p>
-                                                              </div>
-                                                          }
-                                                      />
-                                                  </Link>
-                                              ))}
-                                          </div>
-                                      </SwiperSlide>
-                                  ))}
+                                    <SwiperSlide key={index}>
+                                        <div className="flex flex-col gap-4">
+                                            {group.map((lesson) => (
+                                                <Link to={`/courses/${lesson.id}/overview`}>
+                                                    <CustomCard
+                                                        title={lesson.grade}
+                                                        subTitle={lesson.name}
+                                                        img={lesson.img}
+                                                        footer={
+                                                            <div className="flex gap-x-3">
+                                                                <img src={lesson.tutorImg} className="size-[36px] rounded-full" />
+                                                                <p className="text-subTitle">{lesson.tutor}</p>
+                                                            </div>
+                                                        }
+                                                    />
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    </SwiperSlide>
+                                ))}
                         </Swiper>
                     </div>
 
