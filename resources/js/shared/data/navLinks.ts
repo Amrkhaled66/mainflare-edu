@@ -12,9 +12,9 @@ const navLinks = [
         icon: 'hugeicons:teacher',
     },
     {
-        name: 'المحاضرات',
-        path: '/lectures',
-        icon: 'icon-park-outline:play',
+        name: paths.subjects.crumb,
+        path: paths.subjects.path,
+        icon: 'ic:outline-class',
     },
     {
         name: paths.contactUs.crumb,
