@@ -9,9 +9,9 @@ import FilterSideBar from './features/filterSideBar/FilterSideBar';
 import usePageTitle from '@/shared/hooks/usePageTitle';
 import { useFilterOptions } from './hooks/useFilterOptions';
 import { useSidebar } from './hooks/useSideBar';
-
+import paths from '@/routes/paths';
 const FilterCoursesScreen = () => {
-    usePageTitle('المحاضرات');
+    usePageTitle(paths.courses.crumb);
 
     const { options, handleOptionChange, handlePriceRangeChange, appliedOptions, page, applyFilters, onPageChange } = useFilterOptions();
     const { sidebarOpen, closeSidebar, toggleSidebar } = useSidebar();

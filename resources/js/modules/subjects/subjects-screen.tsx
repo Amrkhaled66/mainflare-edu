@@ -5,7 +5,10 @@ import SubjectsSection from './features/subjectsSection/SubjectsSection';
 
 import { useState } from 'react';
 import subjects from './subjects';
+import usePageTitle from '@/shared/hooks/usePageTitle';
+import paths from '@/routes/paths';
 const SubjectsScreen = () => {
+    usePageTitle(paths.subjects.crumb);
     const [filteredSubjects, setFilteredSubjects] = useState(subjects);
 
     const handleSearch = (searchTerm: string) => {

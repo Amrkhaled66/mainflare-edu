@@ -13,5 +13,13 @@ Route::middleware(['auth', 'verified'])->group(function () {
     })->name('dashboard');
 });
 
+
+Route::get('/{any}', function () {
+    return view('app'); // or whatever blade file loads your SPA
+})->where('any', '.*');
+
+
 require __DIR__.'/settings.php';
 require __DIR__.'/auth.php';
+
+
