@@ -12,8 +12,8 @@ const navLinks = [
         icon: 'hugeicons:teacher',
     },
     {
-        name: 'المحاضرات',
-        path: '/lectures',
+        name: paths.subjects.crumb,
+        path: paths.subjects.path,
         icon: 'ic:outline-class',
 
     },
