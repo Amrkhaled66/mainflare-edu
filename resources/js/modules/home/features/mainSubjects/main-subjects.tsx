@@ -20,7 +20,7 @@ const MainSubjects = () => {
                     <div className="hidden w-full grid-cols-3 xl:grid-cols-4 gap lg:grid">
                         {loading
                             ? Array.from({ length: 8 }, (_, index) => <CustomSubjectSk key={index} />)
-                            : subjects.map((subject) => <CustomSubject key={subject.subjectId} {...subject} />)}
+                            : subjects.map((subject) => <CustomSubject  key={subject.subjectId} {...subject} />)}
                     </div>
                     <div className="block w-full lg:hidden">
                         <Swiper

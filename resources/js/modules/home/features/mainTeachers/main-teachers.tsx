@@ -75,11 +75,11 @@ const MainTeachers = () => {
                                   ))}
                         </Swiper>
                     </div>
-                    <button className="btn-outline w-[90%] lg:w-[200px]">
+                    {/* <button className="btn-outline w-[90%] lg:w-[200px]">
                         <Link className="mx-auto w-full lg:w-fit" to="teachers">
                             تصفح المزيد
                         </Link>
-                    </button>
+                    </button> */}
                 </div>
             </div>
         </div>

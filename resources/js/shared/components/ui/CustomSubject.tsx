@@ -12,7 +12,7 @@ const CustomSubject = ({
     subjectName: string;
 }) => {
     return (
-        <Link to="/teachers">
+        <Link to={`/courses?subject_ids=${subjectId}`}>
             <div className="group animate flex w-full cursor-pointer items-center justify-between rounded-[20px] border border-stroke bg-white p-3 drop-shadow-md hover:translate-y-[-5px] hover:border-mainColor hover:drop-shadow-xl">
                 <div className="flex-center gap-x-3">
                     <div className="size-[60px]">
