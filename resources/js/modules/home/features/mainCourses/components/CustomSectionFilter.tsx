@@ -21,7 +21,7 @@ function CustomSectionFilter({ onSelected, options, label, name, value }: ComboB
 
     return (
         <div
-            className={`animate relative w-full rounded-xl border border-stroke bg-white p-4 drop-shadow-md hover:drop-shadow-xl nth-[1]:z-30 nth-[2]:z-20 nth-[3]:z-10 lg:w-[300px]`}
+            className={`animate relative w-full rounded-xl border border-stroke bg-white p-4 drop-shadow-md hover:drop-shadow-xl nth-[1]:z-3 nth-[2]:z-2 nth-[3]:z-1 lg:w-[300px]`}
         >
             <Combobox name={name} value={value} onChange={onSelected} onClose={() => setQuery('')}>
                 <div className="flex w-full justify-between">

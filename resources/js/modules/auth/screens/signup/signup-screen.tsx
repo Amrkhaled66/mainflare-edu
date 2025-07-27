@@ -16,7 +16,7 @@ const SignUp = () => {
                     <span className="font-bold text-mainColor hover:underline">الدخول الي حسابك</span>
                 </Link>
             </PageHeader>
-            <div className="h-full w-full space-y-5 lg:mt-8  lg:space-y-[50px]">
+            <div className="h-full w-full  space-y-5 lg:mt-8  lg:space-y-[50px]">
                 <AnimatingFormHeader>
                     <h1 className="text-2xl font-bold lg:text-3xl">انشاء حساب</h1>
                 </AnimatingFormHeader>

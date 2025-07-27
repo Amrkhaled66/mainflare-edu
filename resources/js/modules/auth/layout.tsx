@@ -9,13 +9,14 @@ const layout = () => {
                 className={`flex h-auto min-h-screen w-full flex-col justify-between !overflow-y-auto lg:h-screen lg:flex-row`}
             >
                 <FixedLogoSection />
-                <div className="relative flex h-full min-h-fit w-screen flex-col items-center justify-center lg:container lg:w-[55%] lg:justify-start lg:rounded-none lg:bg-white lg:p-0 lg:!pb-8">
+                <div className="relative flex overflow-auto min-h-screen flex-col items-center justify-center lg:w-[55%] lg:justify-start lg:rounded-none lg:bg-white lg:p-0 lg:!pb-8">
                     <Outlet />
                 </div>
+
             </div>
         </ResetProvider>
 
-      
+
     );
 };
 
