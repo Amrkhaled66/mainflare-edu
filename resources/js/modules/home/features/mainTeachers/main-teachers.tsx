@@ -1,7 +1,7 @@
 import SectionTitle from '@/modules/home/shared/components/SectionTitle';
-import GridView from '@/shared/components/ui/GridView';
-import CustomCard from '@/shared/components/CustomCard';
 import CustomCardSkeleton from '@/shared/components/ui/Skeletons/CustomCardSk';
+import chunkWithSlice from '@/shared/utils/chunkWithSlice';
+import CustomTeacherCard from './components/CustomTeacherCard';
 import teachers from './teachers';
 
 import 'swiper/css';
@@ -16,25 +16,20 @@ const MainTeachers = () => {
                 <SectionTitle icon="fa-solid:chalkboard-teacher" title="اهم المدرسين" subTitle="اكتشف ابرز المدرسين" />
 
                 <div className="flex w-full flex-col items-center gap-y-8">
-                    <GridView className="hidden lg:grid">
+                    <div className="gap hidden grid-cols-3 lg:grid">
                         {loading
                             ? Array.from({ length: 4 }).map((_, index) => <CustomCardSkeleton key={index} />)
                             : teachers.map((teacher) => (
                                   <Link to="/teachers/5">
-                                      <CustomCard
-                                          title={teacher.grade}
-                                          subTitle={teacher.subjectName}
+                                      <CustomTeacherCard
+                                          name={teacher.tutor}
+                                          subject={teacher.subjectName}
                                           img={teacher.img}
-                                          footer={
-                                              <div className="flex gap-x-3">
-                                                  <img src={teacher.tutorImg} className="size-[36px] rounded-full" />
-                                                  <p className="text-subTitle">{teacher.tutor}</p>
-                                              </div>
-                                          }
+                                          grades={teacher.grades}
                                       />
                                   </Link>
                               ))}
-                    </GridView>
+                    </div>
                     <div className="block !w-full lg:hidden">
                         <Swiper
                             className="!pr- !w-full sm:!pr-6"
@@ -58,28 +53,29 @@ const MainTeachers = () => {
                                           <CustomCardSkeleton />
                                       </SwiperSlide>
                                   ))
-                                : teachers.map((teacher, index) => (
+                                : chunkWithSlice(teachers, 3).map((group, index) => (
                                       <SwiperSlide key={index}>
-                                          <CustomCard
-                                              title={teacher.grade}
-                                              subTitle={teacher.subjectName}
-                                              img={teacher.img}
-                                              footer={
-                                                  <div className="flex gap-x-3">
-                                                      <img src={teacher.tutorImg} className="size-[36px] rounded-full" />
-                                                      <p className="text-subTitle">{teacher.tutor}</p>
-                                                  </div>
-                                              }
-                                          />
+                                          <div className="flex flex-col gap-4">
+                                              {group.map((teacher) => (
+                                                  <Link to="/teachers/5">
+                                                      <CustomTeacherCard
+                                                          name={teacher.tutor}
+                                                          subject={teacher.subjectName}
+                                                          img={teacher.img}
+                                                          grades={teacher.grades}
+                                                      />
+                                                  </Link>
+                                              ))}
+                                          </div>
                                       </SwiperSlide>
                                   ))}
                         </Swiper>
                     </div>
-                    {/* <button className="btn-outline w-[90%] lg:w-[200px]">
+                    <button className="btn-outline w-[90%] lg:w-[200px]">
                         <Link className="mx-auto w-full lg:w-fit" to="teachers">
                             تصفح المزيد
                         </Link>
-                    </button> */}
+                    </button>
                 </div>
             </div>
         </div>
