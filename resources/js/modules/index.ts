@@ -4,9 +4,11 @@ export { default as CoursesList } from './courses/screens/coursesList/courses-li
 export { default as CourseOverviewScreen } from './courses/screens/coursOverView/course-overview-screen';
 export { default as HomePage } from './home/home-screen.jsx';
 export { default as SubjectsScreen } from './subjects/subjects-screen';
-export { default as TeacherBooks } from './teacher/screens/teacherBooks/teacher-books-screen';
-export { default as TeacherCourses } from './teacher/screens/teacherCourses/teacher-courses-screen';
-export { default as Teacher } from './teacher/screens/teacherOverView/teacher-screen';
+export { default as TeacherBooks } from './teachers/screens/teacherBooks/teacher-books-screen';
+export { default as TeacherCourses } from './teachers/screens/teacherCourses/teacher-courses-screen';
+export { default as Teacher } from './teachers/screens/teacherOverView/teacher-screen';
+export { default as TeachersListScreen } from './teachers/screens/teachersList/teachers-list-screen';
+export { default as ContactUsScreen } from './contactUs/contactUs-screen';
 
 // Auth
 export { default as AuthLayout } from './auth/layout';
@@ -15,4 +17,3 @@ export { default as ResetPasswordScreen } from './auth/screens/forgetPassword/re
 export { default as SubmitOtpScreen } from './auth/screens/forgetPassword/submitOtp/submit-otp-screen';
 export { default as SignUp } from './auth/screens/signup/signup-screen';
 export { default as SignIn } from './auth/screens/SingIn/signin-screen';
-export { default as ContactUsScreen } from './contactUs/contactUs-screen';

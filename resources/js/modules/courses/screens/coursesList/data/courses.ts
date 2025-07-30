@@ -1,56 +1,103 @@
-import img1 from '@/assets/lessons/1.png';
+import courseImg from '@/assets/lessons/1.png';
 
-const lessons = [
+const courses = [
     {
-        grade: 'اولي اعدادي',
-        name: 'الكيمياء العضوية',
-        img: img1,
-        tutor: 'محمود مجدي',
-        tutorImg: img1,
-        term: 1,
+        id: 1,
+        name: 'الفصل الاول فيزياء',
+        price: 220,
+        hours: 14,
+        tutor: {
+            name: 'محمد عبد المعبود',
+            img: courseImg,
+            subject: 'فيزياء',
+        },
+        grade: {
+            name: 'ابتدائي',
+            id: 1,
+        },
+        img: courseImg,
     },
     {
-        grade: 'اولي اعدادي',
-        name: 'الكيمياء العضوية',
-        img: img1,
-        tutor: 'محمود مجدي',
-        tutorImg: img1,
-        term: 1,
+        id: 1,
+        name: 'الفصل الاول فيزياء',
+        price: 220,
+        hours: 14,
+        tutor: {
+            name: 'محمد عبد المعبود',
+            img: courseImg,
+            subject: 'فيزياء',
+        },
+        grade: {
+            name: 'ابتدائي',
+            id: 1,
+        },
+        img: courseImg,
     },
     {
-        grade: 'اولي اعدادي',
-        name: 'الكيمياء العضوية',
-        img: img1,
-        tutor: 'محمود مجدي',
-        tutorImg: img1,
-        term: 1,
+        id: 1,
+        name: 'الفصل الاول فيزياء',
+        price: 220,
+        hours: 14,
+        tutor: {
+            name: 'محمد عبد المعبود',
+            img: courseImg,
+            subject: 'فيزياء',
+        },
+        grade: {
+            name: 'ابتدائي',
+            id: 1,
+        },
+        img: courseImg,
     },
     {
-        grade: 'اولي اعدادي',
-        name: 'الكيمياء العضوية',
-        img: img1,
-        tutor: 'محمود مجدي',
-        tutorImg: img1,
-        term: 1,
+        id: 1,
+        name: 'الفصل الاول فيزياء',
+        price: 220,
+        hours: 14,
+        tutor: {
+            name: 'محمد عبد المعبود',
+            img: courseImg,
+            subject: 'فيزياء',
+        },
+        grade: {
+            name: 'ابتدائي',
+            id: 1,
+        },
+        img: courseImg,
     },
     {
-        grade: 'اولي اعدادي',
-        name: 'الكيمياء العضوية',
-        img: img1,
-        tutor: 'محمود مجدي',
-        tutorImg: img1,
-        term: 1,
+        id: 1,
+        name: 'الفصل الاول فيزياء',
+        price: 220,
+        hours: 14,
+        tutor: {
+            name: 'محمد عبد المعبود',
+            img: courseImg,
+            subject: 'فيزياء',
+        },
+        grade: {
+            name: 'ابتدائي',
+            id: 1,
+        },
+        img: courseImg,
     },
     {
-        grade: 'اولي اعدادي',
-        name: 'الكيمياء العضوية',
-        img: img1,
-        tutor: 'محمود مجدي',
-        tutorImg: img1,
-        term: 1,
+        id: 1,
+        name: 'الفصل الاول فيزياء',
+        price: 220,
+        hours: 14,
+        tutor: {
+            name: 'محمد عبد المعبود',
+            img: courseImg,
+            subject: 'فيزياء',
+        },
+        grade: {
+            name: 'ابتدائي',
+            id: 1,
+        },
+        img: courseImg,
     },
-    
+   
 ];
 
-
-export default lessons
+export default courses;

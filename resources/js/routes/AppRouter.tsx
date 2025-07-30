@@ -19,6 +19,7 @@ import {
     Teacher,
     TeacherBooks,
     TeacherCourses,
+    TeachersListScreen,
 } from '@/modules';
 import { createCrumb } from '@/shared/utils/createCrumb';
 import { Link } from 'react-router-dom';
@@ -32,9 +33,7 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: (
-                        <HomePage />
-                ),
+                element: <HomePage />,
             },
             {
                 path: paths.courses.path,
@@ -44,24 +43,18 @@ const router = createBrowserRouter([
                 children: [
                     {
                         index: true,
-                        element: (
-                                <CoursesList />
-                        ),
+                        element: <CoursesList />,
                     },
                     {
                         path: paths.courseOverview.path(),
-                        element: (
-                                <CourseOverviewScreen />
-                        ),
+                        element: <CourseOverviewScreen />,
                         handle: {
                             crumb: createCrumb(paths.courseOverview.crumb, paths.courseOverview.path()),
                         },
                     },
                     {
                         path: paths.coursePage.path(),
-                        element: (
-                                <CoursePageScreen />
-                        ),
+                        element: <CoursePageScreen />,
                         handle: {
                             crumb: ({ params }: { params: { courseId: string } }) => {
                                 // const cachedCourse = queryClient.getQueryData(['course', params.courseId]);
@@ -73,24 +66,31 @@ const router = createBrowserRouter([
                 ],
             },
             {
-                path: paths.teacher.path(),
-                loader: async ({ params }) => {
-                    // const res = await fetch(`/api/teachers/${id}`);
-                    // const teacher = await res.json();
-                    // return { teacher };
-                },
+                path: paths.teachers.path,
                 handle: {
-                    crumb: (match: any) => {
-                        const name = 'محمد عبد المعبود';
-                        // const name = match.data?.teacher?.name ?? match.params.id;
-                        return <Link to={`/teachers/${match.params.id}`}>{`مستر ${name}`}</Link>;
-                    },
+                    crumb: createCrumb(paths.teachers.crumb, paths.teachers.path),
                 },
                 children: [
                     {
                         index: true,
-                        element:
-                            <Teacher />,
+                        element: <TeachersListScreen />,
+                    },
+                    {
+                        loader: async ({ params }) => {
+                            // const res = await fetch(`/api/teachers/${id}`);
+                            // const teacher = await res.json();
+                            // return { teacher };
+                        },
+                        path: paths.teacher.path(),
+                        element: <Teacher />,
+                        handle: {
+                            crumb: (match: any) => {
+                                const name = 'محمد عبد المعبود';
+                                // const name = match.data?.teacher?.name ?? match.params.id;
+                                return <Link to={`/teachers/${match.params.id}`}>{`مستر ${name}`}</Link>;
+                            },
+                            element: <Teacher />,
+                        },
                     },
                     {
                         path: paths.teacherCourses.path(),

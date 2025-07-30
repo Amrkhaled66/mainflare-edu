@@ -4,7 +4,7 @@ import CustomCardSk from '@/shared/components/ui/Skeletons/CustomCardSk';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { Link } from 'react-router';
 
-const FilteredCourses = ({ data, openSidebar, loading }: { data: any[]; openSidebar: () => void; loading: boolean }) => {
+const FilteredTeachers = ({ data, openSidebar, loading }: { data: any[]; openSidebar: () => void; loading: boolean }) => {
     return (
         <div className="flex h-fit w-full flex-col gap-y-8 lg:w-auto">
             <button
@@ -22,22 +22,24 @@ const FilteredCourses = ({ data, openSidebar, loading }: { data: any[]; openSide
                 <div className="gap gap grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
                     {loading
                         ? Array.from({ length: 12 }).map((_, index) => <CustomCardSk key={index} />)
-                        : data.map((course: any) => (
-                              <Link to={`/courses/${course.id}/overview`}>
-                                   <Card
-                                      title={course.grade.name}
-                                      subTitle={course.name}
-                                      img={course.img}
+                        : data.map((teacher: any) => (
+                              <Link to={`/teachers/${teacher.id}`}>
+                                  <Card
+                                      title={teacher.subject}
+                                      subTitle={teacher.name}
+                                      img={teacher.img}
                                       footer={
-                                          <div className="flex flex-col gap-y-3">
-                                              <div className="flex gap-x-3">
-                                                  <img src={course.tutor.img} className="size-[36px] rounded-full" />
-                                                  <p className="text-subTitle">
-                                                      <span>{course.tutor.subject}</span>
-                                                      <span>{course.tutor.name}</span>
-                                                  </p>
-                                              </div>
-                                              <button className="btn btn-primary w-full">عرض تفاصيل الكورس</button>
+                                          <div className="flex gap-x-2">
+                                              {teacher.grades.slice(0, 2).map((grade: any) => (
+                                                  <span key={`sm-${grade.id}`} className="rounded-full bg-mainColor-300 px-2 py-1 text-white">
+                                                      {grade.name}
+                                                  </span>
+                                              ))}
+                                              {teacher.grades.length > 2 && (
+                                                  <span className="flex-center  px-2 rounded-full bg-mainColor-300 text-xs text-white">
+                                                      +{teacher.grades.length - 2}
+                                                  </span>
+                                              )}
                                           </div>
                                       }
                                   />
@@ -49,4 +51,4 @@ const FilteredCourses = ({ data, openSidebar, loading }: { data: any[]; openSide
     );
 };
 
-export default FilteredCourses;
+export default FilteredTeachers;

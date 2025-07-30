@@ -18,6 +18,12 @@ const navLinks = [
 
     },
     {
+        name: paths.teachers.crumb,
+        path: paths.teachers.path,
+        icon: 'ic:outline-class',
+
+    },
+    {
         name: paths.contactUs.crumb,
         path: paths.contactUs.path,
         icon: 'hugeicons:customer-support',

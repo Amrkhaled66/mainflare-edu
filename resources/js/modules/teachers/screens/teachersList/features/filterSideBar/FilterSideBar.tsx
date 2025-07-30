@@ -1,7 +1,7 @@
 import CloseButton from '@/shared/components/ui/CloseButton';
 import CheckBoxList from '@/shared/components/ui/CheckBoxList';
 import SearchInput from '@/shared/components/ui/SearchInput';
-import PriceRange from './components/PriceRange';
+
 
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
@@ -20,7 +20,6 @@ const FilterSideBar = ({
 }: {
     data: any;
     onOptionChange: (key: string, value: number) => void;
-    handlePriceRangeChange: (min: number, max: number) => void;
     options: any;
     prices: { min: number; max: number };
     onSubmit: () => void;
@@ -45,7 +44,6 @@ const FilterSideBar = ({
                 <div className="max-h-[calc(100vh-100px)] overflow-y-auto rounded-2xl border border-stroke bg-[#F8F8F8] lg:max-h-max">
                     <div className="space-y-6 p-4">
                         <SearchInput />
-                        <PriceRange handlePriceRangeChange={handlePriceRangeChange} min={prices.min} max={prices.max} />
                         <CheckBoxList
                             selectedValues={options.grade_ids}
                             title="حسب المرحلة الدراسية"
