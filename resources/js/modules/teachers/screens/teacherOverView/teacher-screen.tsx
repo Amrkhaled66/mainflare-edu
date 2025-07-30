@@ -1,4 +1,3 @@
-import Actions from './features/actions/Actions';
 import TeacherOverView from './features/teacherOverView/TeacherOverView';
 
 import usePageTitle from '@/shared/hooks/usePageTitle';
@@ -12,7 +11,6 @@ const TeacherScreen = () => {
     return (
         <motion.div variants={animationsVariants} initial="initial" animate="animate" exit="exit" className="container">
             <TeacherOverView teacher={teacher} />
-            <Actions id={teacher.id} />
         </motion.div>
     );
 };

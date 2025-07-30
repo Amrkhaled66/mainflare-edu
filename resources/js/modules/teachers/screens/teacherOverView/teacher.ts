@@ -8,7 +8,7 @@ const teacher = {
         id: 1,
     },
     biography: 'مدرس ثانوية عامة لاكثر من 20 عام ',
-    img: img1,
+    image: img1,
     grades: [
         {
             name: 'أولي ثانوي',
