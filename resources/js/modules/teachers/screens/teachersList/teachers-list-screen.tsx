@@ -3,7 +3,7 @@ import data from './data/options';
 
 import Pagination from '@/shared/components/Pagination';
 import Overlay from '@/shared/components/ui/Overlay';
-import FilteredTeachers from './features/filterdCourses/FilteredTeachers';
+import FilteredTeachers from './features/filterdTeachers/FilteredTeachers';
 import FilterSideBar from './features/filterSideBar/FilterSideBar';
 
 import usePageTitle from '@/shared/hooks/usePageTitle';

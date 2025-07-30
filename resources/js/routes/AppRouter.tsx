@@ -19,6 +19,7 @@ import {
     Teacher,
     TeacherBooks,
     TeacherCourses,
+    TeacherPageLayout,
     TeachersListScreen,
 } from '@/modules';
 import { createCrumb } from '@/shared/utils/createCrumb';
@@ -76,31 +77,37 @@ const router = createBrowserRouter([
                         element: <TeachersListScreen />,
                     },
                     {
-                        loader: async ({ params }) => {
-                            // const res = await fetch(`/api/teachers/${id}`);
-                            // const teacher = await res.json();
-                            // return { teacher };
-                        },
-                        path: paths.teacher.path(),
-                        element: <Teacher />,
-                        handle: {
-                            crumb: (match: any) => {
-                                const name = 'محمد عبد المعبود';
-                                // const name = match.data?.teacher?.name ?? match.params.id;
-                                return <Link to={`/teachers/${match.params.id}`}>{`مستر ${name}`}</Link>;
+                        element: <TeacherPageLayout />,
+                        children: [
+                            {
+                                loader: async ({ params }) => {
+                                    // const res = await fetch(`/api/teachers/${id}`);
+                                    // const teacher = await res.json();
+                                    // return { teacher };
+                                },
+                                path: paths.teacher.path(),
+                                element: <Teacher />,
+                                index: true,
+                                handle: {
+                                    crumb: (match: any) => {
+                                        const name = 'محمد عبد المعبود';
+                                        // const name = match.data?.teacher?.name ?? match.params.id;
+                                        return <Link to={`/teachers/${match.params.id}`}>{`مستر ${name}`}</Link>;
+                                    },
+                                    element: <Teacher />,
+                                },
                             },
-                            element: <Teacher />,
-                        },
-                    },
-                    {
-                        path: paths.teacherCourses.path(),
-                        element: <TeacherCourses />,
-                        handle: { crumb: createCrumb(paths.teacherCourses.crumb, paths.teacherCourses.path()) },
-                    },
-                    {
-                        path: paths.teacherBooks.path(),
-                        element: <TeacherBooks />,
-                        handle: { crumb: createCrumb(paths.teacherBooks.crumb, paths.teacherBooks.path()) },
+                            {
+                                path: paths.teacherCourses.path(),
+                                element: <TeacherCourses />,
+                                handle: { crumb: createCrumb(paths.teacherCourses.crumb, paths.teacherCourses.path()) },
+                            },
+                            {
+                                path: paths.teacherBooks.path(),
+                                element: <TeacherBooks />,
+                                handle: { crumb: createCrumb(paths.teacherBooks.crumb, paths.teacherBooks.path()) },
+                            },
+                        ],
                     },
                 ],
             },
