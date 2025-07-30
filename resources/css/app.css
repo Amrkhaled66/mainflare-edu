@@ -13,7 +13,7 @@
     --color-mainColor: #393962;
     --color-mainColor-50: #ebebef;
     --color-mainColor-200: #e6e6ff;
-    --color-mainColor-300: #7A7A96;
+    --color-mainColor-300: #7a7a96;
     --color-mainColor-700: #282846;
     --color-textColor: #151527;
     --color-mainGradient: linear-gradient(273deg, #393962 2.21%, #7474c8 116.89%);
@@ -43,7 +43,7 @@
     }
 
     .btn-outline {
-        @apply border-mainColor text-mainColor h-[50px] rounded-[var(--btn-radius)] border font-bold transition-all duration-300;
+        @apply h-[50px] rounded-[var(--btn-radius)] border border-mainColor font-bold text-mainColor transition-all duration-300;
     }
     .btn-outline:hover {
         @apply bg-mainColor text-white;
@@ -62,6 +62,10 @@
 
     .gap {
         @apply gap-4 sm:gap-5 lg:gap-6;
+    }
+
+    .section-padding {
+        @apply py-8 lg:py-[var(--padding-sectionPadding)];
     }
 }
 
@@ -102,9 +106,6 @@
     opacity: 1;
 }
 
-.section-padding {
-    padding: var(--padding-sectionPadding) 0px;
-}
 media (width >= 64rem /* 1024px */) {
     padding: 32px 0px;
 }
@@ -148,15 +149,14 @@ button {
     }
 }
 
-
 /* Hide number input spinners in Chrome, Safari, Edge */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* Hide number input spinners in Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
+input[type='number'] {
+    -moz-appearance: textfield;
 }

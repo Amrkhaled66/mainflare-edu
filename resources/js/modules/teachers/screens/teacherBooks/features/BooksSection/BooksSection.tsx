@@ -2,14 +2,18 @@ import CustomCard from '@/shared/components/CustomCard';
 import CustomCardSkeleton from '@/shared/components/ui/Skeletons/CustomCardSk';
 
 import priceFormatter from '@/shared/utils/priceFormatter';
-import books from '../../books';
-const BooksSection = () => {
+const BooksSection = ({ data }: { data: any }) => {
     const loading = false;
+
+    if (!loading && data.length === 0) {
+        return <div className="h-fit flex-1 rounded-2xl bg-mainColor-50 p-6 text-center text-lg font-semibold"> مفيش كتب للصف ده للاسف</div>;
+    }
+
     return (
-        <div className="gap grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="gap grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {loading
                 ? Array.from({ length: 6 }).map((_, index) => <CustomCardSkeleton key={index} />)
-                : books.map((book: any) => (
+                : data.map((book: any) => (
                       <CustomCard
                           key={book.id}
                           title={book.grade.name}
