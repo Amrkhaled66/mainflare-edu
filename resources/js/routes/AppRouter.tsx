@@ -78,24 +78,24 @@ const router = createBrowserRouter([
                     },
                     {
                         element: <TeacherPageLayout />,
+                        loader: async ({ params }) => {
+                            // const res = await fetch(`/api/teachers/${id}`);
+                            // const teacher = await res.json();
+                            // return { teacher };
+                        },
+                        handle: {
+                            crumb: (match: any) => {
+                                const name = 'محمد عبد المعبود';
+                                // const name = match.data?.teacher?.name ?? match.params.id;
+                                return <Link to={`/teachers/${match.params.id}`}>{`مستر ${name}`}</Link>;
+                            },
+                            element: <Teacher />,
+                        },
                         children: [
                             {
-                                loader: async ({ params }) => {
-                                    // const res = await fetch(`/api/teachers/${id}`);
-                                    // const teacher = await res.json();
-                                    // return { teacher };
-                                },
                                 path: paths.teacher.path(),
                                 element: <Teacher />,
                                 index: true,
-                                handle: {
-                                    crumb: (match: any) => {
-                                        const name = 'محمد عبد المعبود';
-                                        // const name = match.data?.teacher?.name ?? match.params.id;
-                                        return <Link to={`/teachers/${match.params.id}`}>{`مستر ${name}`}</Link>;
-                                    },
-                                    element: <Teacher />,
-                                },
                             },
                             {
                                 path: paths.teacherCourses.path(),

@@ -1,6 +1,7 @@
 import CustomCard from '@/shared/components/CustomCard';
 import CustomCardSkeleton from '@/shared/components/ui/Skeletons/CustomCardSk';
 
+import priceFormatter from '@/shared/utils/priceFormatter';
 import { Link } from 'react-router';
 import courses from '../../courses';
 const CoursesSection = () => {
@@ -10,13 +11,19 @@ const CoursesSection = () => {
             {loading
                 ? Array.from({ length: 6 }).map((_, index) => <CustomCardSkeleton key={index} />)
                 : courses.map((course: any) => (
-                      <Link to={`/courses/${course.id}`}>
+                      <Link to={`/courses/${course.id}/overview`}>
                           <CustomCard
                               key={course.id}
                               title={course.grade.name}
                               subTitle={course.name}
                               img={course.img}
-                              footer={<p className="rounded border-r-4 border-r-mainColor pr-2 text-subTitle">({course.lectures}) المحاضرات</p>}
+                              footer={
+                                  <div>
+                                      <p className="rounded border-r-4 border-r-mainColor pr-2 text-subTitle">({course.lectures}) المحاضرات</p>
+                                      <p className="text-end font-bold">{priceFormatter(course.price)}</p>
+                                      <button className="btn btn-primary mt-4 w-full">عرض تفاصيل الكورس</button>
+                                  </div>
+                              }
                           />
                       </Link>
                   ))}

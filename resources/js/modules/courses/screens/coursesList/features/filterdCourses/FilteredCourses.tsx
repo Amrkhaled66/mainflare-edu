@@ -32,14 +32,15 @@ const FilteredCourses = ({ data, openSidebar, loading }: { data: any[]; openSide
                                           <div className="flex flex-col gap-y-3">
                                               <div className="flex gap-x-3">
                                                   <img src={course.tutor.img} className="size-[36px] rounded-full" />
-                                                  <p className="text-subTitle">
-                                                      <span>{course.tutor.subject}</span>
+                                                  <p className="text-subTitle space-x-2">
                                                       <span>{course.tutor.name}</span>
+                                                      <span>({course.tutor.subject})</span>
                                                   </p>
                                               </div>
                                               <button className="btn btn-primary w-full">عرض تفاصيل الكورس</button>
                                           </div>
                                       }
+                                    
                                   />
                               </Link>
                           ))}

@@ -16,7 +16,7 @@ const TeacherInfo = ({ teacher }: { teacher: any }) => {
                 <span className="rounded border-r-5 border-r-white ps-1 text-xl font-bold">السيرة الذاتية : </span>
                 <span className="leading-10">{teacher.biography}</span>
             </div>
-            <div className="flex gap-x-2">
+            <div className="flex flex-wrap gap-x-2 gap-y-4">
                 {teacher.grades.map((grade: any) => (
                     <span key={`${grade.id}`} className="rounded-full bg-mainColor-300 px-2 py-1 text-white">
                         {grade.name}
@@ -24,15 +24,15 @@ const TeacherInfo = ({ teacher }: { teacher: any }) => {
                 ))}
             </div>
             <div className="flex w-fit rounded-2xl bg-mainColor-300 px-6 py-2">
-                <p className="flex-center flex-col gap-y-2 border-e border-r-white pe-6">
+                <p className="flex-center flex-col gap-y-2 border-e border-r-white pe-4 text-nowrap lg:pe-6">
                     <Icon icon="bi:play-btn-fill" className="size-6" />
                     كورس: {teacher.courses.length}
                 </p>
-                <p className="flex-center flex-col gap-y-2 border-e border-r-white px-6">
+                <p className="flex-center flex-col gap-y-2 border-e border-r-white px-4 text-nowrap lg:px-6">
                     <Icon icon="material-symbols:book-rounded" className="size-6" />
                     كتاب: {teacher.books.length}
                 </p>
-                <p className="flex-center flex-col gap-y-2 ps-6">
+                <p className="flex-center flex-col gap-y-2 ps-4 text-nowrap lg:ps-6">
                     <Icon icon="healthicons:i-exam-qualification" className="size-6" />
                     كورس: {teacher.courses.length}
                 </p>

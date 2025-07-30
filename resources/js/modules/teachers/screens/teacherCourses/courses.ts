@@ -2,54 +2,21 @@ import img from '@/assets/lessons/2.jpg';
 
 const courses = [
     {
-        name: 'الفصل الأولي الفيزياء الكهربية',
         id: 1,
-        grade: {
-            name: 'ثانوي',
-            id: 3,
+        name: 'الفصل الاول فيزياء',
+        price: 220,
+        hours: 14,
+        tutor: {
+            name: 'محمد عبد المعبود',
+            img: img,
+            subject: 'فيزياء',
         },
-        img: img,
-        lectures:4
-    },
-    {
-        name: 'الفصل الأولي الفيزياء الكهربية',
-        id: 2,
         grade: {
-            name: 'ثانوي',
-            id: 3,
+            name: 'ابتدائي',
+            id: 1,
         },
+        lectures: 10,
         img: img,
-        lectures:4
-    },
-    {
-        name: 'الفصل الأولي الفيزياء الكهربية',
-        id: 3,
-        grade: {
-            name: 'ثانوي',
-            id: 3,
-        },
-        img: img,
-        lectures:4
-    },
-    {
-        name: 'الفصل الأولي الفيزياء الكهربية',
-        id: 4,
-        grade: {
-            name: 'ثانوي',
-            id: 3,
-        },
-        img: img,
-        lectures:4
-    },
-    {
-        name: 'الفصل الأولي الفيزياء الكهربية',
-        id: 5,
-        grade: {
-            name: 'ثانوي',
-            id: 3,
-        },
-        img: img,
-        lectures:4
     },
 ];
 
