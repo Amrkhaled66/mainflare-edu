@@ -1,11 +1,10 @@
 import SectionTitle from '@/modules/home/shared/components/SectionTitle';
-import CustomCardSkeleton from '@/shared/components/ui/Skeletons/CustomCardSk';
 import chunkWithSlice from '@/shared/utils/chunkWithSlice';
-import CustomTeacherCard from './components/CustomTeacherCard';
-import teachers from './teachers';
-
 import 'swiper/css';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import CustomTeacherCard from './components/CustomTeacherCard';
+import CustomTeacherCardSkeleton from './components/CustomTeacherCardSk';
+import teachers from './teachers';
 
 import { Link } from 'react-router-dom';
 const MainTeachers = () => {
@@ -16,9 +15,9 @@ const MainTeachers = () => {
                 <SectionTitle icon="fa-solid:chalkboard-teacher" title="اهم المدرسين" subTitle="اكتشف ابرز المدرسين" />
 
                 <div className="flex w-full flex-col items-center gap-y-8">
-                    <div className="gap hidden grid-cols-3 lg:grid">
+                    <div className="gap hidden w-full grid-cols-3 lg:grid">
                         {loading
-                            ? Array.from({ length: 4 }).map((_, index) => <CustomCardSkeleton key={index} />)
+                            ? Array.from({ length: 4 }).map((_, index) => <CustomTeacherCardSkeleton key={index} />)
                             : teachers.map((teacher) => (
                                   <Link to="/teachers/5">
                                       <CustomTeacherCard
@@ -32,7 +31,7 @@ const MainTeachers = () => {
                     </div>
                     <div className="block !w-full lg:hidden">
                         <Swiper
-                            className="!pr- !w-full sm:!pr-6"
+                            className="h-full !w-full sm:!pr-6"
                             spaceBetween={16}
                             slidesPerView={1.1}
                             breakpoints={{
@@ -48,9 +47,13 @@ const MainTeachers = () => {
                             }}
                         >
                             {loading
-                                ? Array.from({ length: 4 }).map((_, index) => (
-                                      <SwiperSlide key={index}>
-                                          <CustomCardSkeleton />
+                                ? chunkWithSlice(Array.from({ length: 4 }), 3).map((group, index) => (
+                                      <SwiperSlide className="!h-auto" key={index}>
+                                          <div className="flex h-full flex-col gap-4">
+                                              {group.map((_, index) => (
+                                                  <CustomTeacherCardSkeleton key={index} />
+                                              ))}
+                                          </div>
                                       </SwiperSlide>
                                   ))
                                 : chunkWithSlice(teachers, 3).map((group, index) => (
