@@ -26,7 +26,7 @@ const TopStudents = () => {
                     </GridView>
                     <div className="block !w-full lg:hidden">
                         <Swiper
-                            className="!pr- !w-full sm:!pr-6"
+                            className="!h-full !w-full sm:!pr-6"
                             spaceBetween={16}
                             slidesPerView={1.1}
                             breakpoints={{
@@ -43,12 +43,12 @@ const TopStudents = () => {
                         >
                             {loading
                                 ? Array.from({ length: 4 }).map((_, index) => (
-                                      <SwiperSlide key={index}>
+                                      <SwiperSlide className="!h-auto" key={index}>
                                           <CustomCardSkeleton />
                                       </SwiperSlide>
                                   ))
                                 : students.map((student: { name: string; grade: string; avatar: string }, index) => (
-                                      <SwiperSlide key={index}>
+                                      <SwiperSlide className="!h-auto" key={index}>
                                           <CustomCard title={student.grade} subTitle={student.name} img={student.avatar} />
                                       </SwiperSlide>
                                   ))}

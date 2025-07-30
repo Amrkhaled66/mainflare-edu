@@ -42,7 +42,7 @@ const MainCourses = () => {
                     </GridView>
                     <div className="block !w-full lg:hidden">
                         <Swiper
-                            className="!w-full sm:!pr-6"
+                            className="!w-full h-full sm:!pr-6"
                             spaceBetween={16}
                             slidesPerView={1.1}
                             breakpoints={{
@@ -60,7 +60,7 @@ const MainCourses = () => {
                             {loading
                                 ? chunkWithSlice(Array.from({ length: 8 }), 2).map((group, index) => (
                                     <SwiperSlide key={index}>
-                                        <div className="flex flex-col gap-4">
+                                        <div className="flex !h-auto flex-col gap-4">
                                             {group.map((_, i) => (
                                                 <CustomCardSkeleton key={i} />
                                             ))}
@@ -69,7 +69,7 @@ const MainCourses = () => {
                                 ))
                                 : chunkWithSlice(courses, 2).map((group, index) => (
                                     <SwiperSlide key={index}>
-                                        <div className="flex flex-col gap-4">
+                                        <div className="flex !h-auto flex-col gap-4">
                                             {group.map((lesson) => (
                                                 <Link to={`/courses/${lesson.id}/overview`}>
                                                     <CustomCard

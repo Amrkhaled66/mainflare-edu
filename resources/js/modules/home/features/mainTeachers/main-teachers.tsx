@@ -58,7 +58,7 @@ const MainTeachers = () => {
                                   ))
                                 : chunkWithSlice(teachers, 3).map((group, index) => (
                                       <SwiperSlide key={index}>
-                                          <div className="flex flex-col gap-4">
+                                          <div className="flex !h-auto flex-col gap-4">
                                               {group.map((teacher) => (
                                                   <Link to="/teachers/5">
                                                       <CustomTeacherCard

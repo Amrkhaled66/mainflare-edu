@@ -24,7 +24,7 @@ const MainSubjects = () => {
                     </div>
                     <div className="block w-full lg:hidden">
                         <Swiper
-                            className="!pr-3 sm:!pr-6"
+                            className="!pr-3 h-full sm:!pr-6"
                             spaceBetween={16}
                             slidesPerView={1.1}
                             breakpoints={{
@@ -45,7 +45,7 @@ const MainSubjects = () => {
                             {loading
                                 ? chunkWithSlice(Array.from({ length: 12 }), 4).map((group, index) => (
                                       <SwiperSlide key={index}>
-                                          <div key={index} className="flex flex-col gap-4">
+                                          <div key={index} className="flex !h-auto flex-col gap-4">
                                               {group.map((_, i) => (
                                                   <CustomSubjectSk key={i} />
                                               ))}
@@ -54,7 +54,7 @@ const MainSubjects = () => {
                                   ))
                                 : chunkWithSlice(subjects, 4).map((group, index) => (
                                       <SwiperSlide key={index}>
-                                          <div className="flex flex-col gap-4">
+                                          <div className="flex !h-auto flex-col gap-4">
                                               {group.map((subject) => (
                                                   <CustomSubject key={subject.subjectId} {...subject} />
                                               ))}
