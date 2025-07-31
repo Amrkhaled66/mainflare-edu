@@ -1,4 +1,4 @@
-import course from '../course';
+import course from '../../course';
 import CourseInfo from './features/courseInfo/CourseInfo';
 
 import usePageTitle from '@/shared/hooks/usePageTitle';
@@ -10,7 +10,7 @@ const CourseOverviewScreen = () => {
     return (
         <div className="container space-y-8">
             {/* {!loading && <PageTitle title={course.name} />} */}
-            <div className="flex gap-y-6 lg:flex-row flex-col gap-x-10">
+            <div className="flex flex-col gap-x-10 gap-y-6 lg:flex-row">
                 <CourseSummary courseImage={course.img} loading={loading} tutor={course.tutor} price={course.price} subject={course.subject} />
                 <CourseInfo course={course} />
             </div>

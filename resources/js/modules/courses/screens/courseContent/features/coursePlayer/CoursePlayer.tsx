@@ -1,20 +1,11 @@
-import Skeleton from 'react-loading-skeleton';
-import 'react-loading-skeleton/dist/skeleton.css';
-
+import TeacherInfo from './components/TeacherInfo';
+import VideoPlayer from './components/VideoPlayer';
 const CoursePlayer = ({ course, name, loading }: { course: any; name: string; loading: boolean }) => {
     return (
-        <div className="h-[343px] overflow-hidden rounded-[30px] drop-shadow-lg lg:h-[540px] xl:w-[760px]">
-            {loading ? (
-                <Skeleton className="size-full" />
-            ) : (
-                <iframe
-                    className="size-full"
-                    src="https://www.youtube.com/embed/Ix2Q_GdihIc"
-                    title="مراجعة شاملة على الفصل الأول فيزياء ثانوية عامة 2025 أستاذ محمد عبد المعبود #رجالة_عبدالمعبود"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowFullScreen
-                ></iframe>
-            )}
+        <div className="main-rounded flex flex-1 flex-col gap-y-6 overflow-hidden rounded-[30px] bg-bgBackground p-4 drop-shadow-lg">
+            <h2 className="border-b border-b-stroke pb-6 text-xl font-medium">{course.name}</h2>
+            <VideoPlayer loading={loading} />
+            <TeacherInfo />
         </div>
     );
 };

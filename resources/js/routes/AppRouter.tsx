@@ -5,6 +5,7 @@ import Layout from '@/layout';
 import {
     AuthLayout,
     CartScreen,
+    CheckoutScreen,
     ContactUsScreen,
     CourseOverviewScreen,
     CoursePageScreen,
@@ -62,6 +63,13 @@ const router = createBrowserRouter([
                                 // return cachedCourse?.title || '...';
                                 return '...';
                             },
+                        },
+                    },
+                    {
+                        path: paths.courseCheckout.path(),
+                        element: <CheckoutScreen />,
+                        handle: {
+                            crumb: createCrumb(paths.courseCheckout.crumb, paths.courseCheckout.path()),
                         },
                     },
                 ],

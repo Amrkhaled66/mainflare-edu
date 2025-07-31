@@ -15,6 +15,10 @@ const paths = {
         path: (courseId: string = ':courseId') => `/courses/${courseId}`,
         crumb: (courseId?: string) => `كورس ${courseId ?? ':courseId'}`,
     },
+    courseCheckout: {
+        path: (courseId: string = ':courseId') => `/courses/${courseId}/checkout`,
+        crumb: `الاشتراك بالكورس`,
+    },
     subjects: {
         path: '/subjects',
         crumb: 'المواد الدراسية',

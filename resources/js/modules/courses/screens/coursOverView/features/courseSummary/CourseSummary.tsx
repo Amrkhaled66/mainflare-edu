@@ -1,6 +1,7 @@
 import priceFormatter from '@/shared/utils/priceFormatter';
 import { Link } from 'react-router';
 
+import paths from '@/routes/paths';
 const CourseSummary = ({
     courseImage,
     loading,
@@ -14,10 +15,11 @@ const CourseSummary = ({
     price: number;
     subject: any;
 }) => {
-    const isSubscribed = false;
+    const isSubscribed = 1;
+    const id = '1';
     return (
-        <div className="main-rounded h-fit bg-white drop-shadow-xl overflow-hidden border border-stroke">
-            <img className=" h-[343px] sm:h-[680px] lg:h-[420px]" src={courseImage} alt={tutor.name} />
+        <div className="main-rounded h-fit overflow-hidden border border-stroke bg-white drop-shadow-xl">
+            <img className="h-[343px] sm:h-[680px] lg:h-[420px]" src={courseImage} alt={tutor.name} />
             <div className="space-y-5 p-4">
                 <div className="space-y-3">
                     <p className="flex items-center space-x-2">
@@ -35,8 +37,8 @@ const CourseSummary = ({
                         {isSubscribed ? 'انت مشترك في هذا الكورس بالفعل ' : priceFormatter(price)}
                     </p>
                 </div>
-                <Link to={isSubscribed ? `/courses/${subject.id}` : `/checkout`}>
-                    <p className="btn btn-primary w-full flex-center">{isSubscribed ? 'اذهب لمشاهدة الكورس' : 'شراء الكورس'}</p>
+                <Link to={isSubscribed ? paths.coursePage.path(id) : paths.courseCheckout.path(id)}>
+                    <p className="btn btn-primary flex-center w-full">{isSubscribed ? 'اذهب لمشاهدة الكورس' : 'شراء الكورس'}</p>
                 </Link>
             </div>
         </div>

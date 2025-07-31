@@ -10,6 +10,7 @@ export { default as TeacherCourses } from './teachers/screens/teacherCourses/tea
 export { default as Teacher } from './teachers/screens/teacherOverView/teacher-screen';
 export { default as TeachersListScreen } from './teachers/screens/teachersList/teachers-list-screen';
 export { default as TeacherPageLayout } from './teachers/TeacherPageLayout';
+export { default as CheckoutScreen } from './courses/screens/checkout/checkout-screen';
 
 // Auth
 export { default as AuthLayout } from './auth/layout';
