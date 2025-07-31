@@ -67,6 +67,10 @@
     .section-padding {
         @apply py-8 lg:py-[var(--padding-sectionPadding)];
     }
+
+    .main-rounded {
+        @apply rounded-[20px];
+    }
 }
 
 /* ============== utilities ================ */

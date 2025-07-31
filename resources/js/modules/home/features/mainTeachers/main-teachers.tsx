@@ -11,7 +11,7 @@ const MainTeachers = () => {
     const loading = false;
     return (
         <div className="">
-            <div className="mx-auto space-y-[50px] px-2 py-sectionPadding lg:container lg:space-y-[80px]">
+            <div className="container mx-auto space-y-[50px] px-2 py-sectionPadding lg:space-y-[80px]">
                 <SectionTitle icon="fa-solid:chalkboard-teacher" title="اهم المدرسين" subTitle="اكتشف ابرز المدرسين" />
 
                 <div className="flex w-full flex-col items-center gap-y-8">
@@ -29,9 +29,9 @@ const MainTeachers = () => {
                                   </Link>
                               ))}
                     </div>
-                    <div className="block !w-full lg:hidden">
+                    <div className="block px-1 w-screen lg:hidden">
                         <Swiper
-                            className="h-full !w-full sm:!pr-6"
+                            className="h-full w-full "
                             spaceBetween={16}
                             slidesPerView={1.1}
                             breakpoints={{

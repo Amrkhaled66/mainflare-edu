@@ -22,7 +22,7 @@ const CustomTeacherCard = ({
                 <p>{subject}</p>
                 <p>{name}</p>
                 <div className="flex items-center gap-x-2 text-sm">
-                    <div className="flex gap-x-2 lg:hidden">
+                    <div className="flex gap-x-2 xl:hidden">
                         {oneGrade.map((grade) => (
                             <span key={`sm-${grade.id}`} className="rounded-full bg-mainColor-300 px-2 py-1 text-white">
                                 {grade.name}
@@ -33,7 +33,7 @@ const CustomTeacherCard = ({
                         )}
                     </div>
 
-                    <div className="hidden gap-x-2 lg:flex">
+                    <div className="hidden gap-x-2 xl:flex">
                         {twoGrades.map((grade) => (
                             <span key={`lg-${grade.id}`} className="rounded-full bg-mainColor-300 px-2 py-1 text-white">
                                 {grade.name}
