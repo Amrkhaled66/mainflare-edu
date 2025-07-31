@@ -23,14 +23,14 @@ const Accordion = ({
     const [isOpen, setIsOpen] = useState(defaultOpen);
 
     return (
-        <div className={clsx('main-rounded overflow-hidden', !isSubSection && 'flex flex-col gap-5')}>
+        <div className={clsx('main-rounded overflow-hidden ', !isSubSection && 'flex flex-col gap-5')}>
             <div
                 onClick={() => setIsOpen(!isOpen)}
-                className={clsx('cursor-pointer transition-colors', bg, isSubSection ? 'rounded-ee-none rounded-es-none px-4 py-5' : 'p-6')}
+                className={clsx('cursor-pointer border border-stroke transition-colors', bg, isSubSection ? 'rounded-ee-none rounded-es-none px-4 py-5' : 'p-6')}
             >
                 <div className={clsx('flex items-center justify-between', isSubSection && isOpen && 'border-b border-mainColor pb-3')}>
                     <div className="flex items-center gap-3">
-                        <span className="flex size-10 items-center justify-center rounded-full border border-stroke bg-white">
+                        <span className="flex size-10 items-center justify-center text-mainColor rounded-full border border-stroke bg-white">
                             <Icon icon={accordionIcon} className="size-6" />
                         </span>
                         <span className={clsx('font-medium', isSubSection ? 'text-base lg:text-xl' : 'text-xl')}>{header}</span>

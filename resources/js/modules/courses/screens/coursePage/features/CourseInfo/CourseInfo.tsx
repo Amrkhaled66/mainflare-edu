@@ -1,4 +1,5 @@
-import CourseContent from '@/modules/courses/components/CourseContent';
+import CourseContent from '../CourseInfo/components/CourseContent';
+import clsx from 'clsx';
 import { useState } from 'react';
 import AboutCourse from './components/AboutCourse';
 
@@ -17,14 +18,15 @@ const CourseInfo = ({ loading, course }: { loading: boolean; course: any }) => {
 
     return (
         <div className="w-full space-y-5 lg:w-[32%] lg:space-y-6">
-            <div className="main-rounded gap grid grid-cols-2 bg-bgBackground p-2 font-bold">
+            <div className="main-rounded grid grid-cols-2 gap-x-3 bg-bgBackground p-2 font-bold">
                 {TABS.map((tab) => (
                     <button
                         key={tab.id}
                         onClick={() => setActiveTab(tab.id)}
-                        className={`main-rounded animate cursor-pointer bg-white hover:bg-mainColor hover:text-white ${
-                            activeTab === tab.id ? 'text-primary btn btn-primary' : 'text-subTitle'
-                        }`}
+                        className={clsx(`animate cursor-pointer rounded-[50px] bg-white hover:bg-mainColor hover:text-white`, {
+                            'text-primary btn btn-primary': activeTab === tab.id,
+                            'text-subTitle': activeTab !== tab.id,
+                        })}
                     >
                         {tab.label}
                     </button>

@@ -1,6 +1,7 @@
 export { default as CartScreen } from './cart/cart-screen';
 export { default as ContactUsScreen } from './contactUs/contactUs-screen';
-export { default as CoursePageScreen } from './courses/screens/courseContent/course-page-screen';
+export { default as CheckoutScreen } from './courses/screens/checkout/checkout-screen';
+export { default as CoursePageScreen } from './courses/screens/coursePage/course-page-screen';
 export { default as CoursesList } from './courses/screens/coursesList/courses-list-screen';
 export { default as CourseOverviewScreen } from './courses/screens/coursOverView/course-overview-screen';
 export { default as HomePage } from './home/home-screen.jsx';
@@ -10,7 +11,6 @@ export { default as TeacherCourses } from './teachers/screens/teacherCourses/tea
 export { default as Teacher } from './teachers/screens/teacherOverView/teacher-screen';
 export { default as TeachersListScreen } from './teachers/screens/teachersList/teachers-list-screen';
 export { default as TeacherPageLayout } from './teachers/TeacherPageLayout';
-export { default as CheckoutScreen } from './courses/screens/checkout/checkout-screen';
 
 // Auth
 export { default as AuthLayout } from './auth/layout';

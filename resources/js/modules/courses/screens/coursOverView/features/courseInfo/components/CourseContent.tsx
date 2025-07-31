@@ -1,5 +1,6 @@
 import Accordion from '@/shared/components/ui/Accordion';
 import { accordionIcon } from '@/shared/utils/defaultSettings';
+
 const CourseContent = ({ courseContent, coursePageContent }: { courseContent: any; coursePageContent?: boolean }) => {
     return (
         <div className="space-y-3">

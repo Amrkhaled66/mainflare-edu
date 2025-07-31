@@ -1,6 +1,6 @@
 import 'react-loading-skeleton/dist/skeleton.css';
 import AboutCourse from '../../../../components/AboutCourse';
-import CourseContent from '../../../../components/CourseContent';
+import CourseContent from './components/CourseContent';
 import CourseDetails from '../../../../components/CourseDetails';
 const CourseInfo = ({ course }: { course: any }) => {
     return (
