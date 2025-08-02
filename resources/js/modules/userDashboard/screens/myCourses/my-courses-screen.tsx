@@ -1,15 +1,15 @@
 import SearchBox from '@/shared/components/ui/SearchBox';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import DashBoardContainer from '../../components/DashBoardContainer';
 import courses from './courses';
 import UserCourses from './features/UserCourses/UserCourses';
-import UserCourseTable from './features/UserCourses/components/UserCoursesTable';
 const MyCoursesScreen = () => {
     const [searchTerm, setSearchTerm] = useState('');
 
-    const onSearch = (searchTerm: string) => {
-        setSearchTerm(searchTerm);
-    };
+    const onSearch = useCallback((searchTerm_: string) => {
+        if (searchTerm_ === searchTerm) return;
+        setSearchTerm(searchTerm_);
+    }, []);
 
     const filteredCourses = courses.filter((course) => course?.courseInfo?.name?.toLowerCase().includes(searchTerm.toLowerCase()));
 

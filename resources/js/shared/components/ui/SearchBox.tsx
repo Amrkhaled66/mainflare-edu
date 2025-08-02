@@ -15,7 +15,7 @@ const SearchBox = ({
         onSearch(searchTerm);
     };
     return (
-        <form onSubmit={handleSubmit} className={`relative flex h-[50px] w-full items-center justify-between ${className} lg:max-w-[400px]`}>
+        <form onSubmit={handleSubmit} className={`relative flex rounded-2xl h-[50px] w-full items-center justify-between ${className} lg:max-w-[400px]`}>
             <input
                 placeholder={placeholder}
                 className="animate input size-full rounded-2xl border border-stroke ps-3 outline-none placeholder:text-sm placeholder:text-subTitle focus:border-mainColor"

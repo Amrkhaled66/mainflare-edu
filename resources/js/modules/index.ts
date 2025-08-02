@@ -25,3 +25,4 @@ export { default as UserDashboardLayout } from './userDashboard/layout';
 export { default as AnalyticsScreen } from './userDashboard/screens/analytics/analytics-screen';
 export { default as MyCoursesScreen } from './userDashboard/screens/myCourses/my-courses-screen';
 export { default as MyFilesScreen } from './userDashboard/screens/myFiles/my-files-screen';
+export { default as MyInvoicesScreen } from './userDashboard/screens/myInvoices/my-invoices-screen';
