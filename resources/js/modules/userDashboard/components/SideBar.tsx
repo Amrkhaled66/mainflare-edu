@@ -1,14 +1,25 @@
+import CloseButton from '@/shared/components/ui/CloseButton';
 import { Icon } from '@iconify/react/dist/iconify.js';
+import clsx from 'clsx';
 import { NavLink } from 'react-router';
 import SideBarLinks from '../data/SideBarLinks';
-const SideBar = () => {
+const SideBar = ({ menuOpen, onClose }: { menuOpen: boolean; onClose: () => void }) => {
     return (
-        <div className="h-screen w-1/5 overflow-auto bg-mainColor-50">
+        <div
+            className={clsx(
+                'animate fixed top-0 z-50 h-screen min-w-[300px] overflow-auto bg-mainColor-50 lg:w-1/5 xl:relative xl:!translate-x-0',
+
+                menuOpen ? 'translate-x-0' : 'translate-x-full',
+            )}
+        >
             <div className="space-y-3 p-6">
+                <div className="mr-auto w-fit xl:hidden">
+                    <CloseButton onClick={onClose} />
+                </div>
                 {SideBarLinks.map((link) => (
                     <NavLink
                         className={({ isActive }) =>
-                            `${isActive ? 'bg-mainColor font-medium text-white' : 'text-mainColor'} flex text-lg gap-x-2 rounded-2xl p-3 hover:bg-mainColor animate hover:text-white`
+                            `${isActive ? 'bg-mainColor font-medium text-white' : 'text-mainColor'} animate flex gap-x-2 rounded-2xl p-3 text-lg hover:bg-mainColor hover:text-white`
                         }
                         to={link.path}
                         key={link.name}

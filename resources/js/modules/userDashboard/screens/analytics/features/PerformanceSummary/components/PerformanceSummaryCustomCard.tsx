@@ -15,7 +15,7 @@ const PerformanceSummaryCustomCard = ({
     label2?: string;
 }) => {
     return (
-        <DashBoardContainer className="px-4 drop-shadow-md py-6">
+        <DashBoardContainer className="px-4 w-full drop-shadow-md py-6">
             <div className="flex-center flex-col gap-y-3">
                 <DoughnutChart label={label} value={finished} total={shouldFinished} color={chartColor} />
                 <div className="flex-center flex-col gap-y-4">

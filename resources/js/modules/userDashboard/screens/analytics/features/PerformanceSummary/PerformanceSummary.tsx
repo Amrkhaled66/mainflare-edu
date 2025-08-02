@@ -16,7 +16,7 @@ export default function PerformanceSummary({
     // ];
 
     return (
-        <div className="grid gap-6 xl:grid-cols-3">
+        <div className="grid gap-6 place-items-center  lg:grid-cols-3">
             <PerformanceSummaryCustomCard
                 label="عدد الفيديوهات اللي شوفتها"
                 chartLabel="الفيديوهات اللي شوفتها"
