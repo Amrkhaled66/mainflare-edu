@@ -3,6 +3,7 @@ import paths from './paths';
 
 import Layout from '@/layout';
 import {
+    AnalyticsScreen,
     AuthLayout,
     CartScreen,
     CheckoutScreen,
@@ -22,6 +23,7 @@ import {
     TeacherCourses,
     TeacherPageLayout,
     TeachersListScreen,
+    UserDashboardLayout,
 } from '@/modules';
 import { createCrumb } from '@/shared/utils/createCrumb';
 import { Link } from 'react-router-dom';
@@ -166,6 +168,20 @@ const router = createBrowserRouter([
             {
                 path: paths.resetPassword.path,
                 element: <ResetPasswordScreen />,
+            },
+        ],
+    },
+    {
+        path: paths.userDashboard.dashboard.path,
+        element: <UserDashboardLayout />,
+        children: [
+            {
+                index: true,
+                path: paths.userDashboard.analytics.path,
+                element: <AnalyticsScreen />,
+                handle: {
+                    crumb: createCrumb(paths.userDashboard.analytics.crumb, paths.userDashboard.analytics.path),
+                },
             },
         ],
     },

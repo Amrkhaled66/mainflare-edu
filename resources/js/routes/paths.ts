@@ -70,6 +70,17 @@ const paths = {
         path: '/contact-us',
         crumb: 'تواصل معنا',
     },
+
+    userDashboard: {
+        dashboard: {
+            path: '/user-dashboard',
+            crumb: 'لوحة المستخدم',
+        },
+        analytics: {
+            path: '/user-dashboard/analytics',
+            crumb: 'التحليلات',
+        },
+    },
 };
 
 export default paths;
