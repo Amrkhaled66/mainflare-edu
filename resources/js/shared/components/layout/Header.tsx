@@ -77,7 +77,7 @@ const Header = () => {
                             <div className="mr-8 flex items-center gap-x-3">
                                 <div className="space-y-2">
                                     <p>{name}</p>
-                                    <Link className="text-mainColor" to={paths.userDashboard.path}>
+                                    <Link className="text-mainColor hover:!underline" to={paths.userDashboard.dashboard.path}>
                                         اضغط لعرض الملف الشخصي
                                     </Link>
                                 </div>
@@ -97,7 +97,7 @@ const Header = () => {
                         <div className="size-14 rounded-full bg-mainColor" />
                         <div className="space-y-2">
                             <p>{name}</p>
-                            <Link className="text-mainColor hover:underline" to="/profile">
+                            <Link className="text-mainColor hover:!underline" to={paths.userDashboard.dashboard.path}>
                                 اضغط لعرض الملف الشخصي
                             </Link>
                         </div>

@@ -78,7 +78,27 @@ const paths = {
         },
         analytics: {
             path: '/user-dashboard/analytics',
-            crumb: 'التحليلات',
+            crumb: 'الإحصائيات',
+        },
+        subjects: {
+            path: '/user-dashboard/subjects',
+            crumb: 'المواد',
+        },
+        myCourses: {
+            path: '/user-dashboard/my-courses',
+            crumb: 'كورساتي',
+        },
+        invoices: {
+            path: '/user-dashboard/invoices',
+            crumb: 'الفواتير',
+        },
+        quizzes: {
+            path: '/user-dashboard/quizzes',
+            crumb: 'الاختبارات',
+        },
+        settings: {
+            path: '/user-dashboard/settings',
+            crumb: 'الإعدادات',
         },
     },
 };

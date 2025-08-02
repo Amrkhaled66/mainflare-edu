@@ -26,7 +26,7 @@ import {
     UserDashboardLayout,
 } from '@/modules';
 import { createCrumb } from '@/shared/utils/createCrumb';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 const router = createBrowserRouter([
     {
         path: paths.home.path,
@@ -177,6 +177,9 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
+                element: <Navigate to={paths.userDashboard.analytics.path} replace />,
+            },
+            {
                 path: paths.userDashboard.analytics.path,
                 element: <AnalyticsScreen />,
                 handle: {
