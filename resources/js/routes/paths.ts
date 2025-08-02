@@ -80,13 +80,13 @@ const paths = {
             path: '/user-dashboard/analytics',
             crumb: 'الإحصائيات',
         },
-        // subjects: {
-        //     path: '/user-dashboard/subjects',
-        //     crumb: 'المواد',
-        // },
         myCourses: {
             path: '/user-dashboard/my-courses',
             crumb: 'كورساتي',
+        },
+        myFiles: {
+            path: '/user-dashboard/my-files',
+            crumb: 'ملفاتي',
         },
         invoices: {
             path: '/user-dashboard/invoices',

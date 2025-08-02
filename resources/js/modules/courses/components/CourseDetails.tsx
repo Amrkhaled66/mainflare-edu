@@ -16,7 +16,7 @@ const CourseDetails = ({ courseName, statics, createdAt, updatedAt }: { courseNa
             <div className="space-y-3">
                 <p className="text-xl font-bold">محتوي الكورس</p>
                 <ul className="flex flex-wrap gap-x-3 gap-y-4">
-                    <AnalyticIcon label={`${arabicPlural(statics.videos, 'فيديو')}`} icon="tabler:video-filled" className="bg-[#FFE4E4] text-[#F43F5E]" />
+                    <AnalyticIcon label={`${arabicPlural(statics.videos, 'فيديو')}`} icon="tabler:video-filled" className="bg-[#FFE4E4] text-rose" />
                     <AnalyticIcon label={`${arabicPlural(statics.files, 'ملف')}`} icon="mynaui:file-solid" className="bg-[#FFF5D8] text-[#EAB30A]" />
                     <AnalyticIcon label={` ${arabicPlural(statics.homeWork, 'واجب')}`} icon="bxs:file" className="bg-[#D9D9FF] text-mainColor" />
                     <AnalyticIcon

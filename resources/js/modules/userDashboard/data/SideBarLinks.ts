@@ -6,11 +6,11 @@ const SideBarLinks = [
         path: paths.userDashboard.analytics.path,
         icon: 'uil:analytics',
     },
-    // {
-    //     name: paths.userDashboard.subjects.crumb,
-    //     path: paths.userDashboard.subjects.path,
-    //     icon: 'fluent:book-24-regular',
-    // },
+    {
+        name: paths.userDashboard.myFiles.crumb,
+        path: paths.userDashboard.myFiles.path,
+        icon: 'mingcute:pdf-fill',
+    },
     {
         name: paths.userDashboard.myCourses.crumb,
         path: paths.userDashboard.myCourses.path,

@@ -23,7 +23,7 @@
     --color-secondaryGradient: linear-gradient(271deg, #282846 51.73%, #d8d8ef 232.35%);
     --color-secondaryGradientHover: linear-gradient(271deg, #3a3a5a 40%, #e8e8ff 220%);
     --color-bgBackground: #f4f4f4;
-
+    --color-rose: #f43f5e;
     --btn-height: 50px;
     --btn-width: 200px;
     --btn-radius: 50px;
@@ -43,7 +43,7 @@
     }
 
     .btn-outline {
-        @apply h-[50px] rounded-[var(--btn-radius)] border border-mainColor font-bold text-mainColor transition-all duration-300;
+        @apply border-mainColor text-mainColor h-[50px] rounded-[var(--btn-radius)] border font-bold transition-all duration-300;
     }
     .btn-outline:hover {
         @apply bg-mainColor text-white;
@@ -165,8 +165,6 @@ input[type='number'] {
     -moz-appearance: textfield;
 }
 
-
-
 .table-scrollbar::-webkit-scrollbar {
     height: 10px; /* for horizontal scroll */
 }
@@ -181,5 +179,5 @@ input[type='number'] {
 }
 
 .table-scrollbar::-webkit-scrollbar-track {
-    background: #C2C2CE;
+    background: #c2c2ce;
 }

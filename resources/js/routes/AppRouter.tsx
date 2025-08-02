@@ -13,6 +13,7 @@ import {
     CoursesList,
     HomePage,
     MyCoursesScreen,
+    MyFilesScreen,
     RequestOtpScreen,
     ResetPasswordScreen,
     SignIn,
@@ -192,6 +193,13 @@ const router = createBrowserRouter([
                 element: <MyCoursesScreen />,
                 handle: {
                     crumb: createCrumb(paths.userDashboard.myCourses.crumb, paths.userDashboard.myCourses.path),
+                },
+            },
+            {
+                path: paths.userDashboard.myFiles.path,
+                element: <MyFilesScreen />,
+                handle: {
+                    crumb: createCrumb(paths.userDashboard.myFiles.crumb, paths.userDashboard.myFiles.path),
                 },
             },
         ],
