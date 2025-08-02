@@ -22,5 +22,5 @@ export { default as SignIn } from './auth/screens/SingIn/signin-screen';
 
 // user dashboard
 export { default as UserDashboardLayout } from './userDashboard/layout';
-export {default as AnalyticsScreen} from './userDashboard/screens/analytics/analytics-screen';
-
+export { default as AnalyticsScreen } from './userDashboard/screens/analytics/analytics-screen';
+export { default as MyCoursesScreen } from './userDashboard/screens/myCourses/my-courses-screen';

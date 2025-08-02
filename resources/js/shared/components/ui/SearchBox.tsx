@@ -1,5 +1,13 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
-const SearchBox = ({ onSearch }: { onSearch: (searchTerm: string) => void }) => {
+const SearchBox = ({
+    className = 'bg-transparent',
+    onSearch,
+    placeholder,
+}: {
+    className?: string;
+    onSearch: (searchTerm: string) => void;
+    placeholder?: string;
+}) => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
@@ -7,9 +15,9 @@ const SearchBox = ({ onSearch }: { onSearch: (searchTerm: string) => void }) => 
         onSearch(searchTerm);
     };
     return (
-        <form onSubmit={handleSubmit} className="relative flex h-[50px] w-full items-center justify-between lg:max-w-[400px]">
+        <form onSubmit={handleSubmit} className={`relative flex h-[50px] w-full items-center justify-between ${className} lg:max-w-[400px]`}>
             <input
-                placeholder="ابحث عن المادة الدراسية"
+                placeholder={placeholder}
                 className="animate input size-full rounded-2xl border border-stroke ps-3 outline-none placeholder:text-sm placeholder:text-subTitle focus:border-mainColor"
                 type="text"
                 name="search"

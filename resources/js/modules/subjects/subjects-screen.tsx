@@ -1,12 +1,12 @@
 import PageTitle from '@/shared/components/ui/PageTitle';
 
-import SearchBox from './features/searchBox/SearchBox';
+import SearchBox from '@/shared/components/ui/SearchBox';
 import SubjectsSection from './features/subjectsSection/SubjectsSection';
 
+import paths from '@/routes/paths';
+import usePageTitle from '@/shared/hooks/usePageTitle';
 import { useState } from 'react';
 import subjects from './subjects';
-import usePageTitle from '@/shared/hooks/usePageTitle';
-import paths from '@/routes/paths';
 const SubjectsScreen = () => {
     usePageTitle(paths.subjects.crumb);
     const [filteredSubjects, setFilteredSubjects] = useState(subjects);
@@ -20,7 +20,7 @@ const SubjectsScreen = () => {
         <div className="container space-y-8">
             <PageTitle title="اختار المادة اللي عايز تذاكرها" />
             <div className="space-y-8">
-                <SearchBox onSearch={handleSearch} />
+                <SearchBox placeholder="ابحث عن المادة الدراسية" onSearch={handleSearch} />
                 <SubjectsSection loading={loading} subjects={filteredSubjects} />
             </div>
         </div>

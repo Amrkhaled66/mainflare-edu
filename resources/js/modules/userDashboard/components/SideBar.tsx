@@ -21,6 +21,7 @@ const SideBar = ({ menuOpen, onClose }: { menuOpen: boolean; onClose: () => void
                         className={({ isActive }) =>
                             `${isActive ? 'bg-mainColor font-medium text-white' : 'text-mainColor'} animate flex gap-x-2 rounded-2xl p-3 text-lg hover:bg-mainColor hover:text-white`
                         }
+                        onClick={onClose}
                         to={link.path}
                         key={link.name}
                     >

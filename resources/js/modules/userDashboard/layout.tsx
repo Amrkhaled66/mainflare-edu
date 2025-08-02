@@ -15,7 +15,7 @@ const layout = () => {
             <Header onOpen={openMenu} />
             <div className="flex">
                 <SideBar menuOpen={menuOpen} onClose={closeMenu} />
-                <div className="flex-1 p-6">
+                <div className="flex-1 w-2/3 p-6">
                     <Outlet />
                 </div>
             </div>
