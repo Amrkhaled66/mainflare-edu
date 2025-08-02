@@ -6,7 +6,7 @@ const Header = () => {
     const name = 'Amr Khalid';
     return (
         <div className="bg-mainColor-50 py-6">
-            <div className="container flex justify-between">
+            <div className="px-6 flex justify-between">
                 <Link to="/">
                     <img src={logo} alt="on skill" />
                 </Link>
