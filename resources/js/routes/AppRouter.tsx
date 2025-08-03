@@ -11,6 +11,8 @@ import {
     CourseOverviewScreen,
     CoursePageScreen,
     CoursesList,
+    ExamPage,
+    ExamsScreen,
     HomePage,
     MyCoursesScreen,
     MyFilesScreen,
@@ -218,10 +220,25 @@ const router = createBrowserRouter([
                 },
             },
             {
+                path: paths.userDashboard.exams.path,
+                element: <ExamsScreen />,
+                handle: {
+                    crumb: createCrumb(paths.userDashboard.exams.crumb, paths.userDashboard.exams.path),
+                },
+            },
+            {
+                path: paths.userDashboard.examPage.path(),
+                element: <ExamPage />,
+            },
+            {
+                path: paths.userDashboard.examResult.path(),
+                element: <div>dfdfd</div>,
+            },
+            {
                 path: paths.userDashboard.settings.path,
                 element: <SettingsScreen />,
                 handle: {
-                    crumb: createCrumb(paths.userDashboard.settings.crumb, paths.userDashboard.quizzes.path),
+                    crumb: createCrumb(paths.userDashboard.settings.crumb, paths.userDashboard.settings.path),
                 },
             },
         ],

@@ -22,8 +22,8 @@ const SideBarLinks = [
         icon: 'solar:bill-list-linear',
     },
     {
-        name: paths.userDashboard.quizzes.crumb,
-        path: paths.userDashboard.quizzes.path,
+        name: paths.userDashboard.exams.crumb,
+        path: paths.userDashboard.exams.path,
         icon: 'mdi:clipboard-text-outline',
     },
     {

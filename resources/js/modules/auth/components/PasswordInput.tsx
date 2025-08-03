@@ -29,7 +29,7 @@ const PasswordInput: React.FC<PasswordInputProps> = ({
     };
 
     return (
-        <label dir="rtl" className={`flex flex-col gap-y-4 font-medium text-textColor ${containerClassName}`}>
+        <label dir="rtl" className={`flex  flex-col gap-y-4 font-medium text-textColor ${containerClassName}`}>
             {label && <span className="font-bold">{label}</span>}
 
             <div className="relative">

@@ -96,9 +96,16 @@ const paths = {
             path: '/user-dashboard/invoices',
             crumb: 'الفواتير',
         },
-        quizzes: {
-            path: '/user-dashboard/quizzes',
+        exams: {
+            path: '/user-dashboard/exams',
             crumb: 'الاختبارات',
+        },
+
+        examPage: {
+            path: (id: string = ':id') => `/user-dashboard/exams/${id}`,
+        },
+        examResult: {
+            path: (id: string = ':id') => `/user-dashboard/exams/${id}/result`,
         },
         settings: {
             path: '/user-dashboard/settings',

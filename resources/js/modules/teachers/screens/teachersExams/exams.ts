@@ -3,35 +3,51 @@ import img from '@/assets/lessons/2.jpg';
 const exams = [
     {
         id: 1,
-        courseImg: img,
-        examName: 'اختبار الرياضيات - الوحدة الأولى',
+        courseInfo: {
+            img: img,
+            name: 'الفصل الاول',
+        },
+        name: 'اختبار الرياضيات - الوحدة الأولى',
         questionCount: 20,
         successPercentage: 70,
-        grade: 'الصف الثالث الثانوي',
+        lectureName: 'المحاضرة الاولي',
+        status: 'pending',
     },
     {
         id: 2,
-        courseImg: img,
-        examName: 'اختبار العلوم - الكائنات الحية',
+        courseInfo: {
+            img: img,
+            name: 'الفصل الاول',
+        },
+        name: 'اختبار العلوم - الكائنات الحية',
         questionCount: 15,
         successPercentage: 60,
-        grade: 'الصف الثالث الثانوي',
+        lectureName: 'المحاضرة الاولي',
+        status: 'pending',
     },
     {
         id: 3,
-        courseImg: img,
-        examName: 'اختبار اللغة العربية - النحو',
+        courseInfo: {
+            img: img,
+            name: 'الفصل الاول',
+        },
+        name: 'اختبار اللغة العربية - النحو',
         questionCount: 25,
         successPercentage: 75,
-        grade: 'الصف الثالث الثانوي',
+        lectureName: 'المحاضرة الاولي',
+        status: 'completed',
     },
     {
         id: 4,
-        courseImg: img,
-        examName: 'اختبار التاريخ - العصور القديمة',
+        courseInfo: {
+            img: img,
+            name: 'الفصل الاول',
+        },
+        name: 'اختبار التاريخ - العصور القديمة',
         questionCount: 18,
         successPercentage: 65,
-        grade: 'الصف الثالث الثانوي',
+        lectureName: 'المحاضرة الاولي',
+        status: 'completed',
     },
 ];
 

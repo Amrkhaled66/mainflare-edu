@@ -12,6 +12,7 @@
     --font-mainFont: 'IBM Plex Sans Arabic', sans-serif;
     --color-mainColor: #393962;
     --color-mainColor-50: #ebebef;
+    --color-mainColor-100: #c2c2ce;
     --color-mainColor-200: #e6e6ff;
     --color-mainColor-300: #7a7a96;
     --color-mainColor-700: #282846;
@@ -71,11 +72,14 @@
     .main-rounded {
         @apply rounded-[20px];
     }
+
+    .section-header {
+        @apply border-b-stroke border-b pb-3 text-lg font-semibold;
+    }
 }
 
 /* ============== utilities ================ */
 
-/* Common pseudo-element styles for gradient hover effect */
 .btn::before {
     content: '';
     position: absolute;
@@ -86,7 +90,6 @@
     border-radius: inherit;
 }
 
-/* Primary button specific styles */
 .btn-primary {
     background-image: var(--color-mainGradient);
     background-size: 100%;
@@ -96,7 +99,6 @@
     background-image: var(--color-mainGradientHover);
 }
 
-/* Secondary button specific styles */
 .btn-secondary {
     background-image: var(--color-secondaryGradient);
 }
@@ -105,7 +107,6 @@
     background-image: var(--color-secondaryGradientHover);
 }
 
-/* Hover effects for all buttons */
 .btn:hover::before {
     opacity: 1;
 }
@@ -128,6 +129,10 @@ html {
 
 button {
     cursor: pointer;
+}
+
+img {
+    pointer-events: none;
 }
 
 .container {
@@ -179,5 +184,5 @@ input[type='number'] {
 }
 
 .table-scrollbar::-webkit-scrollbar-track {
-    background: #c2c2ce;
+    background: var(--color-mainColor-100);
 }

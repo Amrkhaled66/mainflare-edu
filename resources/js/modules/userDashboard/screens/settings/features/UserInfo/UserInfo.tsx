@@ -15,7 +15,7 @@ const UserInfo: React.FC = () => {
 
     return (
         <form className="flex flex-col gap-y-5" onSubmit={(e) => handleSubmit(e, onSubmit)}>
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1  gap-6 lg:grid-cols-2">
                 <DashBoardContainer>
                     <div className="border-b border-b-stroke pb-3">
                         <p className="text-xl font-semibold">معلوماتك الشخصية</p>

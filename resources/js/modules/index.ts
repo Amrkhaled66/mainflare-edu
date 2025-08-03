@@ -9,9 +9,9 @@ export { default as SubjectsScreen } from './subjects/subjects-screen';
 export { default as TeacherBooks } from './teachers/screens/teacherBooks/teacher-books-screen';
 export { default as TeacherCourses } from './teachers/screens/teacherCourses/teacher-courses-screen';
 export { default as Teacher } from './teachers/screens/teacherOverView/teacher-screen';
+export { default as TeacherExams } from './teachers/screens/teachersExams/teacher-exams-screen';
 export { default as TeachersListScreen } from './teachers/screens/teachersList/teachers-list-screen';
 export { default as TeacherPageLayout } from './teachers/TeacherPageLayout';
-export {default as TeacherExams} from './teachers/screens/teachersExams/teacher-exams-screen';
 
 // Auth
 export { default as AuthLayout } from './auth/layout';
@@ -24,6 +24,8 @@ export { default as SignIn } from './auth/screens/SingIn/signin-screen';
 // user dashboard
 export { default as UserDashboardLayout } from './userDashboard/layout';
 export { default as AnalyticsScreen } from './userDashboard/screens/analytics/analytics-screen';
+export { default as ExamPage } from './userDashboard/screens/exams/screen/examPage/exam-page-screen';
+export { default as ExamsScreen } from './userDashboard/screens/exams/screen/exams/exams-screen';
 export { default as MyCoursesScreen } from './userDashboard/screens/myCourses/my-courses-screen';
 export { default as MyFilesScreen } from './userDashboard/screens/myFiles/my-files-screen';
 export { default as MyInvoicesScreen } from './userDashboard/screens/myInvoices/my-invoices-screen';

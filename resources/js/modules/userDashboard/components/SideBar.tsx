@@ -7,12 +7,11 @@ const SideBar = ({ menuOpen, onClose }: { menuOpen: boolean; onClose: () => void
     return (
         <div
             className={clsx(
-                'animate fixed top-0 z-50 h-screen min-w-[300px] overflow-auto bg-mainColor-50 lg:w-1/5 xl:relative xl:!translate-x-0',
-
+                'animate fixed top-0 z-100 lg:z-10 min-h-screen min-w-[300px] overflow-auto bg-mainColor-50 lg:w-1/5 xl:relative xl:!translate-x-0',
                 menuOpen ? 'translate-x-0' : 'translate-x-full',
             )}
         >
-            <div className="space-y-3 p-6">
+            <div className=" space-y-3 p-6">
                 <div className="mr-auto w-fit xl:hidden">
                     <CloseButton onClick={onClose} />
                 </div>

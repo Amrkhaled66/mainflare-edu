@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 const Header = ({ onOpen }: { onOpen: () => void }) => {
     const name = 'Amr Khalid';
     return (
-        <div className="bg-mainColor-50 fixed top-0 z-100 w-full inset-0 h-fit py-6">
+        <div className="bg-mainColor-50 fixed top-0 z-20 w-full inset-0 h-fit py-6">
             <div className="flex justify-between px-6">
                 <button
                     style={{ backgroundImage: 'var(--color-mainGradient)' }}
