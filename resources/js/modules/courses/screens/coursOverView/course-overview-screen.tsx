@@ -6,13 +6,13 @@ import CourseSummary from './features/courseSummary/CourseSummary';
 
 const CourseOverviewScreen = () => {
     usePageTitle(course.name || '');
-    const loading = false;
+    const loading = true;
     return (
         <div className="container space-y-8">
             {/* {!loading && <PageTitle title={course.name} />} */}
             <div className="flex flex-col gap-x-10 gap-y-6 lg:flex-row">
                 <CourseSummary courseImage={course.img} loading={loading} tutor={course.tutor} price={course.price} subject={course.subject} />
-                <CourseInfo course={course} />
+                <CourseInfo loading={loading} course={course} />
             </div>
         </div>
     );

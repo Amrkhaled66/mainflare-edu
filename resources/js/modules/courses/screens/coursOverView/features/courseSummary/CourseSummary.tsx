@@ -2,6 +2,8 @@ import priceFormatter from '@/shared/utils/priceFormatter';
 import { Link } from 'react-router';
 
 import paths from '@/routes/paths';
+
+import CourseSummarySkeleton from './CourseSummarySk';
 const CourseSummary = ({
     courseImage,
     loading,
@@ -17,7 +19,9 @@ const CourseSummary = ({
 }) => {
     const isSubscribed = 1;
     const id = '1';
-    return (
+    return loading ? (
+        <CourseSummarySkeleton />
+    ) : (
         <div className="main-rounded h-fit overflow-hidden border border-stroke bg-white drop-shadow-xl">
             <img className="h-[343px] sm:h-[680px] lg:h-[420px]" src={courseImage} alt={tutor.name} />
             <div className="space-y-5 p-4">

@@ -2,7 +2,7 @@ import { useActiveSubSection } from '../../context/activeSubSectionCtx';
 import SubSectionArea from './components/SubSectionArea';
 import TeacherInfo from './components/TeacherInfo';
 const CoursePreview = ({ course, name, loading }: { course: any; name: string; loading: boolean }) => {
-    const { activeSubSection, updateSubSection } = useActiveSubSection();
+    const { activeSubSection } = useActiveSubSection();
 
     return (
         <div className="main-rounded flex flex-1 flex-col gap-y-6 overflow-hidden rounded-[30px] bg-bgBackground p-4 drop-shadow-lg">
