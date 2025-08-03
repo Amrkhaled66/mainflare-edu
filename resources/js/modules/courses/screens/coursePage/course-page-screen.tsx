@@ -2,9 +2,12 @@ import course from '../../course';
 import CourseInfo from './features/CourseInfo/CourseInfo';
 import CoursePreview from './features/coursePreview/CoursePreview';
 
+import CourseInfoSkeleton from './features/CourseInfo/CourseInfoSk';
+import CoursePreviewSkeleton from './features/coursePreview/CoursePreviewSk';
+
 import { ActiveSubSectionProvider } from './context/activeSubSectionCtx';
 const CoursePageScreen = () => {
-    const loading = false;
+    const loading = true;
     return (
         <ActiveSubSectionProvider
             initialSubSection={
@@ -16,8 +19,17 @@ const CoursePageScreen = () => {
             <div className="container flex flex-col gap-y-8">
                 {/* {!loading && <PageTitle title={course.name} />} */}
                 <div className="flex flex-col-reverse gap-x-10 gap-y-8 xl:flex-row">
-                    <CourseInfo course={course} loading={loading} />
-                    <CoursePreview course={course} name={course.name} loading={loading} />
+                    {loading ? (
+                        <>
+                            <CourseInfoSkeleton />
+                            <CoursePreviewSkeleton />
+                        </>
+                    ) : (
+                        <>
+                            <CourseInfo course={course} loading={loading} />
+                            <CoursePreview course={course} name={course.name} loading={loading} />
+                        </>
+                    )}
                 </div>
             </div>
         </ActiveSubSectionProvider>

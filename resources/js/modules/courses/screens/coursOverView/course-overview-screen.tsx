@@ -6,7 +6,7 @@ import CourseSummary from './features/courseSummary/CourseSummary';
 
 const CourseOverviewScreen = () => {
     usePageTitle(course.name || '');
-    const loading = true;
+    const loading = false;
     return (
         <div className="container space-y-8">
             {/* {!loading && <PageTitle title={course.name} />} */}
