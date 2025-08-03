@@ -17,6 +17,7 @@ import {
     MyInvoicesScreen,
     RequestOtpScreen,
     ResetPasswordScreen,
+    SettingsScreen,
     SignIn,
     SignUp,
     SubjectsScreen,
@@ -208,6 +209,13 @@ const router = createBrowserRouter([
                 element: <MyInvoicesScreen />,
                 handle: {
                     crumb: createCrumb(paths.userDashboard.invoices.crumb, paths.userDashboard.invoices.path),
+                },
+            },
+            {
+                path: paths.userDashboard.settings.path,
+                element: <SettingsScreen />,
+                handle: {
+                    crumb: createCrumb(paths.userDashboard.settings.crumb, paths.userDashboard.quizzes.path),
                 },
             },
         ],

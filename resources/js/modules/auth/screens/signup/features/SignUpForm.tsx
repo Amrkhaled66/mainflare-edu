@@ -26,15 +26,15 @@ const SignUpForm = () => {
                         error={errors.firstName}
                     />
                     <FormInputWithLabel
-                        label="الوسط"
+                        label="الاسم التاني"
                         type="text"
                         name="middleName"
-                        placeholder="الاسم الأوسط"
+                        placeholder="الاسم التاني"
                         value={formData.middleName}
                         onChange={(e) => handleInputChange('middleName', e.target.value)}
                         error={errors.middleName}
                     />
-                    <div className="col-span-2 lg:col-span-1">
+                    {/* <div className="col-span-2 lg:col-span-1">
                         <FormInputWithLabel
                             label="الاسم الاخير"
                             type="text"
@@ -44,7 +44,7 @@ const SignUpForm = () => {
                             onChange={(e) => handleInputChange('lastName', e.target.value)}
                             error={errors.lastName}
                         />
-                    </div>
+                    </div> */}
                 </div>
 
                 <FormInputWithLabel

@@ -29,8 +29,8 @@ function ComboBox({ bgColor = 'bg-white', onSelected, options, label, value, pla
                         onSelected(val);
                     }}
                 >
-                    <div className="relative w-full">
-                        <FormInputWithLabel value={value} type="text" placeholder="الفصل الدراسي" />
+                    <div className={`relative w-full `}>
+                        <FormInputWithLabel inputClassName={bgColor} value={value} type="text" placeholder="الفصل الدراسي" />
                         <ComboboxButton className="absolute end-1 top-1/2 size-fit -translate-y-1/2 rounded px-3">
                             <Icon icon="iconamoon:arrow-down-2" width="24" height="24" />
                         </ComboboxButton>
