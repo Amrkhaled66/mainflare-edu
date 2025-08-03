@@ -6,6 +6,7 @@ const columns = [
         name: 'رقم الفاتورة',
         selector: (row: { id: string }) => row.id,
         wrap: true,
+        width: 'auto',
         sortable: true,
     },
     {

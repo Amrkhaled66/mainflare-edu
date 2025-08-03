@@ -1,11 +1,17 @@
 import priceFormatter from '@/shared/utils/priceFormatter';
 import { useParams } from 'react-router';
 import course from '../../../../course';
+
+import InvoiceSummarySkeleton from './InvoiceSummarySk';
 const InvoiceSummary = () => {
     const { courseId } = useParams();
 
+    const loading = false;
+
     // fetching course
-    return (
+    return loading ? (
+        <InvoiceSummarySkeleton />
+    ) : (
         <div className="main-rounded h-fit max-w-[40%] min-w-1/3 space-y-6 border border-stroke bg-bgBackground p-5 drop-shadow-sm">
             <div className="space-y-3">
                 <div className="flex items-center justify-between">

@@ -17,7 +17,7 @@ const CourseSummary = ({
     price: number;
     subject: any;
 }) => {
-    const isSubscribed = 1;
+    const isSubscribed = 0;
     const id = '1';
     return loading ? (
         <CourseSummarySkeleton />

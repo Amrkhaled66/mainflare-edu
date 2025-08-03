@@ -39,6 +39,10 @@ const paths = {
         path: (id: string = ':id') => `/teachers/${id}/Courses`,
         crumb: 'المحاضرات',
     },
+    teacherExams: {
+        path: (id: string = ':id') => `/teachers/${id}/exams`,
+        crumb: 'الاختبارات',
+    },
 
     cart: {
         path: '/cart',

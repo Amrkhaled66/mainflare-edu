@@ -11,7 +11,7 @@ const PagesOptions = () => {
         { name: 'تفاصيل المدرس', url: `${basePath}` },
         { name: 'الكورسات', url: `${basePath}/courses` },
         { name: 'الكتب', url: `${basePath}/books` },
-        { name: 'الامتحانات', url: `${basePath}/quizzes` },
+        { name: 'الامتحانات', url: `${basePath}/exams` },
     ];
 
     return (

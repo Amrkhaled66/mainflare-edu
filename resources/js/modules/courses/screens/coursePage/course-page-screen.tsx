@@ -7,7 +7,7 @@ import CoursePreviewSkeleton from './features/coursePreview/CoursePreviewSk';
 
 import { ActiveSubSectionProvider } from './context/activeSubSectionCtx';
 const CoursePageScreen = () => {
-    const loading = true;
+    const loading = false;
     return (
         <ActiveSubSectionProvider
             initialSubSection={
