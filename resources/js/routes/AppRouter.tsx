@@ -12,6 +12,7 @@ import {
     CoursePageScreen,
     CoursesList,
     ExamPage,
+    ExamResult,
     ExamsScreen,
     HomePage,
     MyCoursesScreen,
@@ -232,7 +233,7 @@ const router = createBrowserRouter([
             },
             {
                 path: paths.userDashboard.examResult.path(),
-                element: <div>dfdfd</div>,
+                element: <ExamResult />,
             },
             {
                 path: paths.userDashboard.settings.path,

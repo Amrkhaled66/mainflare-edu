@@ -24,6 +24,8 @@
     --color-secondaryGradient: linear-gradient(271deg, #282846 51.73%, #d8d8ef 232.35%);
     --color-secondaryGradientHover: linear-gradient(271deg, #3a3a5a 40%, #e8e8ff 220%);
     --color-bgBackground: #f4f4f4;
+    --color-greenColor: #00a756;
+    --color-wrong: #f46854;
     --color-rose: #f43f5e;
     --btn-height: 50px;
     --btn-width: 200px;
@@ -44,7 +46,7 @@
     }
 
     .btn-outline {
-        @apply border-mainColor text-mainColor h-[50px] rounded-[var(--btn-radius)] border font-bold transition-all duration-300;
+        @apply h-[50px] rounded-[var(--btn-radius)] border border-mainColor font-bold text-mainColor transition-all duration-300;
     }
     .btn-outline:hover {
         @apply bg-mainColor text-white;
@@ -74,7 +76,10 @@
     }
 
     .section-header {
-        @apply border-b-stroke border-b pb-3 text-lg font-semibold;
+        @apply border-b border-b-stroke pb-3 text-lg font-semibold;
+    }
+    .dashBoard-subContainer {
+        @apply rounded-3xl border border-stroke bg-white p-6 drop-shadow-sm ;
     }
 }
 
