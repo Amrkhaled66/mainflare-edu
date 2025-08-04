@@ -16,7 +16,7 @@ const CustomTeacherCard = ({
     const extraLarge = grades.length - 2;
 
     return (
-        <div className="flex gap-x-3 rounded-3xl border border-stroke p-3 drop-shadow-xl">
+        <div className="flex gap-x-3 bg-white rounded-3xl border border-stroke p-3 drop-shadow-sm y-animate">
             <img src={img} alt={name} className="h-[90px] rounded-[20px]" />
             <div className="space-y-2">
                 <p>{subject}</p>

@@ -111,7 +111,7 @@ const Header = () => {
                             <NavLink
                                 to={link.path}
                                 className={({ isActive }) =>
-                                    `${isActive ? 'bg-main-gradient text-white' : 'text-subTitle'} flex items-center gap-x-2 rounded-[20px] p-3 text-lg font-medium`
+                                    `${isActive ? 'bg-mainColor text-white' : 'text-subTitle'} flex items-center gap-x-2 rounded-[20px] p-3 text-lg font-medium`
                                 }
                                 onClick={() => setMenuOpen(false)}
                             >

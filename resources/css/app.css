@@ -81,6 +81,10 @@
     .dashBoard-subContainer {
         @apply rounded-3xl border border-stroke bg-white p-6 drop-shadow-sm ;
     }
+
+    .y-animate{
+        @apply transition-all duration-300 ease-in-out hover:translate-y-[-8px] hover:!drop-shadow-xl;
+    }
 }
 
 /* ============== utilities ================ */

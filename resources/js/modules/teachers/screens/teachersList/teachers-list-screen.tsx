@@ -30,7 +30,6 @@ const TeachersListScreen = () => {
                     closeSidebar={closeSidebar}
                     onOptionChange={handleOptionChange}
                     options={options}
-                    prices={{ min: 0, max: 100 }}
                     data={data}
                 />
                 <FilteredTeachers loading={false} openSidebar={toggleSidebar} data={teachers} />
