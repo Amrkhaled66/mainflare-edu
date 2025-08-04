@@ -7,7 +7,7 @@ import result from './result';
 const tabsNames = ['overview', 'questions'];
 
 const ExamResult = () => {
-    const [activeComponent, setActiveComponent] = useState(tabsNames[1]);
+    const [activeComponent, setActiveComponent] = useState(tabsNames[0]);
 
     const toggleTabs = () => {
         const currentIndex = tabsNames.indexOf(activeComponent);

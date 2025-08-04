@@ -112,6 +112,15 @@ const paths = {
             crumb: 'الإعدادات',
         },
     },
+
+    booksList: {
+        path: '/books',
+        crumb: ' الكتب',
+    },
+    bookPage: {
+        path: (id: string = ':id') => `/books/${id}`,
+        crumb: 'كتاب الفصل الاول فيزياء',
+    },
 };
 
 export default paths;

@@ -5,6 +5,8 @@ import Layout from '@/layout';
 import {
     AnalyticsScreen,
     AuthLayout,
+    BookListScreen,
+    BookPageScreen,
     CartScreen,
     CheckoutScreen,
     ContactUsScreen,
@@ -153,6 +155,20 @@ const router = createBrowserRouter([
                 element: <ContactUsScreen />,
                 handle: {
                     crumb: createCrumb(paths.contactUs.crumb, paths.contactUs.path),
+                },
+            },
+            {
+                path: paths.booksList.path,
+                element: <BookListScreen />,
+                handle: {
+                    crumb: createCrumb(paths.booksList.crumb, paths.booksList.path),
+                },
+            },
+            {
+                path: paths.bookPage.path(),
+                element: <BookPageScreen />,
+                handle: {
+                    crumb: createCrumb(paths.bookPage.crumb, paths.bookPage.path()),
                 },
             },
         ],

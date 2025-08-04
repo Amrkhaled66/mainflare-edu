@@ -15,13 +15,16 @@ const navLinks = [
         name: paths.subjects.crumb,
         path: paths.subjects.path,
         icon: 'ic:outline-class',
-
+    },
+    {
+        name: paths.booksList.crumb,
+        path: paths.booksList.path,
+        icon: 'mingcute:pdf-fill',
     },
     {
         name: paths.teachers.crumb,
         path: paths.teachers.path,
         icon: 'ic:outline-class',
-
     },
     {
         name: paths.contactUs.crumb,
@@ -35,7 +38,7 @@ const navLinks = [
         mob: true,
     },
     {
-        name: 'الملف الشخصي', // Not in paths yet
+        name: 'الملف الشخصي',
         path: '/profile',
         icon: 'mynaui:user',
         mob: true,
