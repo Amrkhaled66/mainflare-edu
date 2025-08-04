@@ -9,11 +9,7 @@ export default function PerformanceSummary({
     examStats: { finished: number; shouldFinish: number };
     videoStats: { watched: number; shouldWatch: number };
 }) {
-    // const metrics = [
-    //     { value: 12, total: 20, label: 'Videos Watched', color: '#F43F5E' },
-    //     { value: 4, total: 6, label: 'Exams Finished', color: '#06B6D4' },
-    //     { value: 76.5, total: 100, label: 'Avg Score', color: '#393962' },
-    // ];
+
 
     return (
         <div className="grid gap-6 place-items-center  lg:grid-cols-3">

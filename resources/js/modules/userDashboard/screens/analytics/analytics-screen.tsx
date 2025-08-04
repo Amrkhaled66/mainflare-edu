@@ -12,7 +12,12 @@ const AnalyticsScreen = () => {
                 numberOfTeachersSubscribedWith={analytics.numberOfTeachersSubscribedWith}
             />
             <PerformanceSummary avgExamScore={analytics.avgExamScore} examStats={analytics.examStats} videoStats={analytics.videoStats} />
-            <ActivityDetails totalLectureWatchTime={analytics.totalLectureWatchTime} videoViewCount={analytics.videoViewCount} examOpenCount={analytics.examOpenCount} examFinishCount={analytics.examFinishCount} />
+            <ActivityDetails
+                totalLectureWatchTime={analytics.totalLectureWatchTime}
+                videoViewCount={analytics.videoViewCount}
+                examOpenCount={analytics.examOpenCount}
+                examFinishCount={analytics.examFinishCount}
+            />
         </div>
     );
 };
