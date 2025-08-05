@@ -1,7 +1,7 @@
 import priceFormatter from '@/shared/utils/priceFormatter';
 
 import { Icon } from '@iconify/react/dist/iconify.js';
-import SelectorView from './QuantitySelector';
+import SelectorView from '../../../../../shared/components/ui/QuantitySelector';
 
 const TableCustomRowMobile = ({ id, title, img, quantity, price }: { id: number; title: string; img: string; quantity: number; price: number }) => {
     return (
@@ -9,7 +9,12 @@ const TableCustomRowMobile = ({ id, title, img, quantity, price }: { id: number;
             <div className="flex justify-between">
                 <p className="flex gap-x-2.5 overflow-hidden">
                     <img className="size-[60px] rounded-2xl" src={img} alt={title} />
-                    <span className="max-w-[200px] h-fit line-clamp-2">{title}{title}{title}{title}</span>
+                    <span className="line-clamp-2 h-fit max-w-[200px]">
+                        {title}
+                        {title}
+                        {title}
+                        {title}
+                    </span>
                 </p>
                 <button>
                     <Icon icon="fluent:delete-24-regular" className="size-6 text-red-600" />

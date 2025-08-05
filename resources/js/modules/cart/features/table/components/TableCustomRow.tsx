@@ -1,7 +1,7 @@
 import priceFormatter from '@/shared/utils/priceFormatter';
 
 import { Icon } from '@iconify/react/dist/iconify.js';
-import SelectorView from './QuantitySelector';
+import SelectorView from '../../../../../shared/components/ui/QuantitySelector';
 
 const TableCustomRow = ({ id, title, img, quantity, price }: { id: number; title: string; img: string; quantity: number; price: number }) => {
     return (

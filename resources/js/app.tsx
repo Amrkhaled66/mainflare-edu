@@ -1,8 +1,12 @@
 import AppRouter from '@/routes/AppRouter';
+import NavBarToggleBtnsProvider from './shared/context/NavBarToogleBtnsCtx';
+
 export default function App() {
     return (
-        <div>
-            <AppRouter />
-        </div>
+        <>
+            <NavBarToggleBtnsProvider>
+                <AppRouter />
+            </NavBarToggleBtnsProvider>
+        </>
     );
 }
