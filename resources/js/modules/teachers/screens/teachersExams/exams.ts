@@ -12,6 +12,7 @@ const exams = [
         successPercentage: 70,
         lectureName: 'المحاضرة الاولي',
         status: 'pending',
+        grade: 'الصف الثالث الابتدائي',
     },
     {
         id: 2,
@@ -23,7 +24,8 @@ const exams = [
         questionCount: 15,
         successPercentage: 60,
         lectureName: 'المحاضرة الاولي',
-        status: 'pending',
+        status: 'pending',        grade: 'الصف الثالث الابتدائي',
+
     },
     {
         id: 3,
@@ -35,7 +37,8 @@ const exams = [
         questionCount: 25,
         successPercentage: 75,
         lectureName: 'المحاضرة الاولي',
-        status: 'completed',
+        status: 'completed',        grade: 'الصف الثالث الابتدائي',
+
     },
     {
         id: 4,
@@ -47,7 +50,8 @@ const exams = [
         questionCount: 18,
         successPercentage: 65,
         lectureName: 'المحاضرة الاولي',
-        status: 'completed',
+        status: 'completed',        grade: 'الصف الثالث الابتدائي',
+
     },
 ];
 

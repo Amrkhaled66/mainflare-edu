@@ -12,17 +12,17 @@ const TeacherBooksScreen = () => {
         <div>
             <motion.div variants={animationsVariants} initial="initial" animate="animate" className="flex flex-col gap-x-6 gap-y-8 lg:flex-row">
                 {exams.map((exam) => {
-                    const isSubscribed = false;
+                    const isSubscribed = true;
                     return (
                         <CustomCard
-                            img={exam.courseImg}
+                            img={exam.courseInfo.img}
                             key={exam.id}
                             title={exam.grade}
-                            subTitle={exam.examName}
+                            subTitle={exam.name}
                             footer={
                                 <div className="space-y-4">
                                     <div className="space-y-2">
-                                        <p className="border-r-4 rounded-md border-s-mainColor ps-1">الاسئلة : {exam.questionCount}</p>
+                                        <p className="rounded-md border-r-4 border-s-mainColor ps-1">الاسئلة : {exam.questionCount}</p>
                                         <p className="font-medium text-mainColor">نسبة النجاح المطلوبة : {exam.successPercentage}%</p>
                                     </div>
                                     {isSubscribed && (
