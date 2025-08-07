@@ -1,7 +1,7 @@
 const paths = {
     home: {
         path: '/',
-        crumb: 'الصفحة الرئيسية',
+        crumb: 'الرئيسية',
     },
     courses: {
         path: '/courses',
@@ -113,6 +113,28 @@ const paths = {
         },
     },
 
+    parentDashboard: {
+        dashboard: {
+            path: '/parent-dashboard',
+            crumb: 'لوحة ولي الامر',
+        },
+        analytics: {
+            path: '/parent-dashboard/analytics',
+            crumb: 'لوحة ولي الامر - الاحصائيات',
+        },
+        courses: {
+            path: '/parent-dashboard/courses',
+            crumb: 'صفحة ولي الامر - الكورسات',
+        },
+        exams: {
+            path: '/parent-dashboard/exams',
+            crumb: 'صفحة ولي الامر - الامتحانات',
+        },
+        invoices: {
+            path: '/parent-dashboard/invoices',
+            crumb: 'صفحة ولي الامر - الفواتير',
+        },
+    },
     booksList: {
         path: '/books',
         crumb: ' الكتب',

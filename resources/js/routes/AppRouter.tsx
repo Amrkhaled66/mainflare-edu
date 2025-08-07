@@ -20,6 +20,7 @@ import {
     MyCoursesScreen,
     MyFilesScreen,
     MyInvoicesScreen,
+    ParentDashboardLayout,
     RequestOtpScreen,
     ResetPasswordScreen,
     SettingsScreen,
@@ -173,6 +174,7 @@ const router = createBrowserRouter([
             },
         ],
     },
+    // Auth
     {
         path: '/auth',
         element: <AuthLayout />,
@@ -200,6 +202,7 @@ const router = createBrowserRouter([
             },
         ],
     },
+    // User Dashboard
     {
         path: paths.userDashboard.dashboard.path,
         element: <UserDashboardLayout />,
@@ -256,6 +259,31 @@ const router = createBrowserRouter([
                 element: <SettingsScreen />,
                 handle: {
                     crumb: createCrumb(paths.userDashboard.settings.crumb, paths.userDashboard.settings.path),
+                },
+            },
+        ],
+    },
+    // Parent Dashboard
+    {
+        path: paths.parentDashboard.dashboard.path,
+        element: <ParentDashboardLayout />,
+        children: [
+            {
+                index: true,
+                element: <Navigate to={paths.parentDashboard.analytics.path} replace />,
+            },
+            {
+                path: paths.parentDashboard.analytics.path,
+                element: <AnalyticsScreen />,
+                handle: {
+                    crumb: createCrumb(paths.parentDashboard.analytics.crumb, paths.parentDashboard.analytics.path),
+                },
+            },
+            {
+                path: paths.parentDashboard.courses.path,
+                element: <MyCoursesScreen />,
+                handle: {
+                    crumb: createCrumb(paths.parentDashboard.courses.crumb, paths.parentDashboard.courses.path),
                 },
             },
         ],

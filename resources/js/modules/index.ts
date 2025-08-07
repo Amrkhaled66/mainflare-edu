@@ -33,3 +33,8 @@ export { default as MyCoursesScreen } from './userDashboard/screens/myCourses/my
 export { default as MyFilesScreen } from './userDashboard/screens/myFiles/my-files-screen';
 export { default as MyInvoicesScreen } from './userDashboard/screens/myInvoices/my-invoices-screen';
 export { default as SettingsScreen } from './userDashboard/screens/settings/settings-screen';
+
+
+
+// parent dashboard
+export {default as ParentDashboardLayout} from './parentDashboard/layout';

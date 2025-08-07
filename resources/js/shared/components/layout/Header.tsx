@@ -11,7 +11,7 @@ import navLinks from '../../data/navLinks';
 import { useNavBarToggleBtns } from '@/shared/context/NavBarToogleBtnsCtx';
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const isAuth = 1;
+    const isAuth = 0;
     const name = ' محمد محمد';
     const cartItemsCount = 9;
     const { toggleCart } = useNavBarToggleBtns();
@@ -43,9 +43,9 @@ const Header = () => {
                             <Icon icon="mdi:menu" width="28" height="28" />
                         </button>
                     </div>
-
+                    {/* desktop nav */}
                     <nav className="hidden xl:block">
-                        <ul className="flex gap-x-5">
+                        <ul className="flex gap-x-4">
                             {navLinks.map((link) => {
                                 if (link.mob) return;
                                 return (
@@ -53,7 +53,7 @@ const Header = () => {
                                         <NavLink
                                             to={link.path}
                                             className={({ isActive }) =>
-                                                `${isActive ? 'text-mainColor' : 'text-subTitle'} animate text-lg font-medium hover:text-mainColor`
+                                                `${isActive ? 'text-mainColor' : 'text-subTitle'} animate  font-medium hover:text-mainColor`
                                             }
                                         >
                                             {link.name}
@@ -106,6 +106,7 @@ const Header = () => {
             </div>
 
             <Overlay onClick={() => setMenuOpen(false)} isOpen={menuOpen} />
+            {/* mobile menu */}
             <div
                 className={`animate fixed top-0 right-0 z-90 h-screen xl:hidden ${menuOpen ? 'translate-x-0' : 'translate-x-full'} w-[350px] overflow-y-auto bg-white p-6 shadow-lg`}
             >

@@ -14,9 +14,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
 });
 
 
-Route::get('/{any}', function () {
-    return view('app'); // or whatever blade file loads your SPA
-})->where('any', '.*');
+Route::get('/{any}', fn () => Inertia::render('App'))
+    ->where('any', '.*');
 
 
 require __DIR__.'/settings.php';
