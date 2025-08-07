@@ -1,4 +1,4 @@
-import DashBoardContainer from '@/modules/userDashboard/components/DashBoardContainer';
+import DashBoardContainer from '@/shared/components/ui/DashBoardContainer';
 import QuestionNavigator from './features/QuestionNavigator/QuestoinNavigator';
 import QuestionResult from './features/QuestionResult/QuestionResult';
 

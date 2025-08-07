@@ -1,5 +1,5 @@
 import Pagination from '@/shared/components/Pagination';
-import DashBoardContainer from '../../components/DashBoardContainer';
+import DashBoardContainer from '../../../../shared/components/ui/DashBoardContainer';
 import CustomMyFileCard from './components/CustomMyFileCard';
 import files from './files';
 const MyFilesScreen = () => {

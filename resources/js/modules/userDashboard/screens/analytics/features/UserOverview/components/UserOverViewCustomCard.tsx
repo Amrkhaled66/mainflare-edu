@@ -1,4 +1,4 @@
-import DashBoardContainer from '@/modules/userDashboard/components/DashBoardContainer';
+import DashBoardContainer from '@/shared/components/ui/DashBoardContainer';
 import { Icon } from '@iconify/react/dist/iconify.js';
 const UserOverViewCustomCard = ({ icon, title, value }: { icon: string; title: string; value: string|number }) => {
     return (

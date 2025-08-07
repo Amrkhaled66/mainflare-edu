@@ -1,4 +1,4 @@
-import DashBoardContainer from '@/modules/userDashboard/components/DashBoardContainer';
+import DashBoardContainer from '@/shared/components/ui/DashBoardContainer';
 import Table from '@/modules/userDashboard/components/Table';
 import columns from '../columns';
 

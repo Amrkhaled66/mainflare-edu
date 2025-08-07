@@ -38,3 +38,7 @@ export { default as SettingsScreen } from './userDashboard/screens/settings/sett
 
 // parent dashboard
 export {default as ParentDashboardLayout} from './parentDashboard/layout';
+export {default as ParentAnalyticsScreen} from './parentDashboard/screens/analytics/analytics-screen';
+export {default as ParentExamsScreen} from './parentDashboard/screens/exams/exams-screen';
+export {default as ParentInvoicesScreen} from './parentDashboard/screens/invoices/invoices-screen';
+export {default as ParentCoursesScreen} from './parentDashboard/screens/courses/courses-screen';

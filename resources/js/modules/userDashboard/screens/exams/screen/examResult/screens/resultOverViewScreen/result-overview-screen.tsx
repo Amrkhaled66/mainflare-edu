@@ -1,4 +1,4 @@
-import DashBoardContainer from '@/modules/userDashboard/components/DashBoardContainer';
+import DashBoardContainer from '@/shared/components/ui/DashBoardContainer';
 import QuestionResult from './features/QuestionsResult/QuestionResult';
 import ResultChart from './features/ResultChart/ResultChart';
 const ResultOverviewScreen = ({ toggleTabs, result }: { toggleTabs: () => void; result: any }) => {

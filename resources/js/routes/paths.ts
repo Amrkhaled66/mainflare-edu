@@ -120,19 +120,19 @@ const paths = {
         },
         analytics: {
             path: '/parent-dashboard/analytics',
-            crumb: 'لوحة ولي الامر - الاحصائيات',
+            crumb: ' الاحصائيات',
         },
         courses: {
             path: '/parent-dashboard/courses',
-            crumb: 'صفحة ولي الامر - الكورسات',
+            crumb: 'الكورسات',
         },
         exams: {
             path: '/parent-dashboard/exams',
-            crumb: 'صفحة ولي الامر - الامتحانات',
+            crumb: 'الامتحانات',
         },
         invoices: {
             path: '/parent-dashboard/invoices',
-            crumb: 'صفحة ولي الامر - الفواتير',
+            crumb: 'الفواتير',
         },
     },
     booksList: {

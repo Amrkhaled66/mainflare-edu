@@ -1,5 +1,5 @@
 import SearchBox from '@/shared/components/ui/SearchBox';
-import DashBoardContainer from '../../components/DashBoardContainer';
+import DashBoardContainer from '../../../../shared/components/ui/DashBoardContainer';
 
 import { useCallback, useState } from 'react';
 import invoices from './invoices';

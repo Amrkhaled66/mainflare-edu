@@ -21,10 +21,12 @@ export default function Table({ ...props }) {
                 headCells: {
                     style: {
                         padding: '12px 26px',
+                        backgroundColor: '#393962',
                         fontWeight: '400',
                         display: 'flex',
                         textAlign: 'center',
                         justifyContent: 'center',
+                        alignItems:"center",
                         fontSize: '15px',
                         textWrap: 'wrap',
                         backgroundColor: '#393962',

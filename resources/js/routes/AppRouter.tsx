@@ -20,7 +20,11 @@ import {
     MyCoursesScreen,
     MyFilesScreen,
     MyInvoicesScreen,
+    ParentAnalyticsScreen,
+    ParentCoursesScreen,
     ParentDashboardLayout,
+    ParentExamsScreen,
+    ParentInvoicesScreen,
     RequestOtpScreen,
     ResetPasswordScreen,
     SettingsScreen,
@@ -274,16 +278,28 @@ const router = createBrowserRouter([
             },
             {
                 path: paths.parentDashboard.analytics.path,
-                element: <AnalyticsScreen />,
+                element: <ParentAnalyticsScreen />,
                 handle: {
                     crumb: createCrumb(paths.parentDashboard.analytics.crumb, paths.parentDashboard.analytics.path),
                 },
             },
             {
                 path: paths.parentDashboard.courses.path,
-                element: <MyCoursesScreen />,
+                element: <ParentCoursesScreen />,
                 handle: {
                     crumb: createCrumb(paths.parentDashboard.courses.crumb, paths.parentDashboard.courses.path),
+                },
+            },
+            {
+                path: paths.parentDashboard.exams.path,
+                element: <ParentExamsScreen />,
+                handle: { crumb: createCrumb(paths.parentDashboard.exams.crumb, paths.parentDashboard.exams.path) },
+            },
+            {
+                path: paths.parentDashboard.invoices.path,
+                element: <ParentInvoicesScreen />,
+                handle: {
+                    crumb: createCrumb(paths.parentDashboard.invoices.crumb, paths.parentDashboard.invoices.path),
                 },
             },
         ],

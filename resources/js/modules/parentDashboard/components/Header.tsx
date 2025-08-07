@@ -1,9 +1,9 @@
 import logo from '@/assets/logo.svg';
-import paths from '@/routes/paths';
+// import paths from '@/routes/paths';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { Link } from 'react-router';
 const Header = ({ onOpen }: { onOpen: () => void }) => {
-    const name = 'Amr Khalid';
+    // const name = 'Amr Khalid';
     return (
         <div className="bg-mainColor-50 fixed top-0 z-20 w-full inset-0 h-fit py-6">
             <div className="flex justify-between px-6">
@@ -17,7 +17,7 @@ const Header = ({ onOpen }: { onOpen: () => void }) => {
                 <Link to="/">
                     <img src={logo} alt="on skill" />
                 </Link>
-                <div className="mr-8 flex items-center gap-x-3">
+                {/* <div className="mr-8 flex items-center gap-x-3">
                     <div className="hidden space-y-2 font-medium lg:block">
                         <p>{name}</p>
                         <Link className="text-mainColor hover:!underline" to={paths.userDashboard.dashboard.path}>
@@ -25,7 +25,7 @@ const Header = ({ onOpen }: { onOpen: () => void }) => {
                         </Link>
                     </div>
                     <div className="size-14 rounded-full bg-mainColor" />
-                </div>
+                </div> */}
             </div>
         </div>
     );

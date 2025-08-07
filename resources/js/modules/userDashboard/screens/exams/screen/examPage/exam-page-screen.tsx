@@ -3,7 +3,7 @@
 import QuestionNavigator from './features/QuestionNavigator/QuestionNavigator';
 import QuestionSection from './features/QuestionSection/QuestionSection';
 import exam from './exam';
-import DashBoardContainer from '@/modules/userDashboard/components/DashBoardContainer';
+import DashBoardContainer from '@/shared/components/ui/DashBoardContainer';
 import { ExamProvider } from './context/ExamContext';
 
 const ExamPageScreen = () => {

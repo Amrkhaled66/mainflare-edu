@@ -1,4 +1,4 @@
-import DashBoardContainer from '@/modules/userDashboard/components/DashBoardContainer';
+import DashBoardContainer from '@/shared/components/ui/DashBoardContainer';
 
 const UserImage = ({ img, name }: { img: string; name: string }) => {
     return (

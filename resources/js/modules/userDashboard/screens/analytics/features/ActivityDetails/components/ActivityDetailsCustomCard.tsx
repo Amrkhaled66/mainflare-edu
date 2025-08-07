@@ -1,4 +1,4 @@
-import DashBoardContainer from '@/modules/userDashboard/components/DashBoardContainer';
+import DashBoardContainer from '@/shared/components/ui/DashBoardContainer';
 const ActivityDetailsCustomCard = ({ label, value, color }: { label: string; value: number; color: string }) => {
     return (
         <DashBoardContainer className="px-4">

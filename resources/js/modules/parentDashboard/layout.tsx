@@ -14,7 +14,7 @@ const layout = () => {
         <div dir="rtl" className="overflow-hidden">
             <Overlay isOpen={menuOpen} onClick={closeMenu} />
             <Header onOpen={openMenu} />
-            <div className="mt-[104px] flex">
+            <div className="mt-[90px] flex">
                 <SideBar menuOpen={menuOpen} onClose={closeMenu} />
                 <div className="w-2/3 flex-1 p-6">
                     <Outlet />

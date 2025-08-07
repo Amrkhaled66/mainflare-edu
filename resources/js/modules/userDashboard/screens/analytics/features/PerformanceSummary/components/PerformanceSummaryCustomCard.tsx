@@ -1,4 +1,4 @@
-import DashBoardContainer from '@/modules/userDashboard/components/DashBoardContainer';
+import DashBoardContainer from '@/shared/components/ui/DashBoardContainer';
 import DoughnutChart from '@/modules/userDashboard/components/DoughnutChart';
 const PerformanceSummaryCustomCard = ({
     label,

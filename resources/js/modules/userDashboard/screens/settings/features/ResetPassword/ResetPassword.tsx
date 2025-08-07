@@ -1,5 +1,5 @@
 import PasswordInput from '@/modules/auth/components/PasswordInput';
-import DashBoardContainer from '@/modules/userDashboard/components/DashBoardContainer';
+import DashBoardContainer from '@/shared/components/ui/DashBoardContainer';
 const ResetPassword = () => {
     return (
         <DashBoardContainer>

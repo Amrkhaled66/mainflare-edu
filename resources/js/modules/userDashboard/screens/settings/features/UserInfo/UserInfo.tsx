@@ -1,4 +1,4 @@
-import DashBoardContainer from '@/modules/userDashboard/components/DashBoardContainer';
+import DashBoardContainer from '@/shared/components/ui/DashBoardContainer';
 import ComboBox from '@/shared/components/ui/ComboBox';
 import FormInputWithLabel from '@/shared/components/ui/FormInputWithLabel';
 import { cityOptions, divisionOptions, semesterOptions, stateOptions } from './data';
