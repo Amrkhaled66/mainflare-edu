@@ -9,10 +9,12 @@ import { useNavBarToggleBtns } from './shared/context/NavBarToogleBtnsCtx';
 import { Outlet, useLocation } from 'react-router';
 import ScrollToTop from './shared/components/ScrollToTop';
 import LoadingBar from './shared/components/ui/LoadingBar';
+import usePageTitle from './shared/hooks/usePageTitle';
 const layout = () => {
     const { pathname } = useLocation();
     const { openCart, toggleCart } = useNavBarToggleBtns();
 
+    usePageTitle();
     return (
         <div dir="rtl">
             <ScrollToTop />

@@ -20,6 +20,7 @@ export { default as AuthLayout } from './auth/layout';
 export { default as RequestOtpScreen } from './auth/screens/forgetPassword/requestOtp/request-otp-screen';
 export { default as ResetPasswordScreen } from './auth/screens/forgetPassword/resetPassword/reset-password-screen';
 export { default as SubmitOtpScreen } from './auth/screens/forgetPassword/submitOtp/submit-otp-screen';
+export { default as ParentSigninPage } from './auth/screens/parentSignIn/parent-signin-page';
 export { default as SignUp } from './auth/screens/signup/signup-screen';
 export { default as SignIn } from './auth/screens/SingIn/signin-screen';
 
@@ -34,11 +35,9 @@ export { default as MyFilesScreen } from './userDashboard/screens/myFiles/my-fil
 export { default as MyInvoicesScreen } from './userDashboard/screens/myInvoices/my-invoices-screen';
 export { default as SettingsScreen } from './userDashboard/screens/settings/settings-screen';
 
-
-
 // parent dashboard
-export {default as ParentDashboardLayout} from './parentDashboard/layout';
-export {default as ParentAnalyticsScreen} from './parentDashboard/screens/analytics/analytics-screen';
-export {default as ParentExamsScreen} from './parentDashboard/screens/exams/exams-screen';
-export {default as ParentInvoicesScreen} from './parentDashboard/screens/invoices/invoices-screen';
-export {default as ParentCoursesScreen} from './parentDashboard/screens/courses/courses-screen';
+export { default as ParentDashboardLayout } from './parentDashboard/layout';
+export { default as ParentAnalyticsScreen } from './parentDashboard/screens/analytics/analytics-screen';
+export { default as ParentCoursesScreen } from './parentDashboard/screens/courses/courses-screen';
+export { default as ParentExamsScreen } from './parentDashboard/screens/exams/exams-screen';
+export { default as ParentInvoicesScreen } from './parentDashboard/screens/invoices/invoices-screen';

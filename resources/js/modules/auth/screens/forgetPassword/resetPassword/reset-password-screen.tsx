@@ -3,13 +3,9 @@ import AnimatingFormHeader from '@/modules/auth/components/AnimatingFormHeader';
 import PageHeader from '@/modules/auth/components/PageHeader';
 import FormInputWithLabel from '@/shared/components/ui/FormInputWithLabel';
 
-import paths from '@/routes/paths';
-import usePageTitle from '@/shared/hooks/usePageTitle';
-
 import { useReset } from '@/modules/auth/context/resetCtx';
 import { FormEvent, useState } from 'react';
 const ResetPasswordScreen = () => {
-    usePageTitle(paths.forgetPassword.crumb);
     const { token } = useReset();
 
     const [error, setError] = useState('');

@@ -3,12 +3,9 @@ import PageTitle from '@/shared/components/ui/PageTitle';
 import SearchBox from '@/shared/components/ui/SearchBox';
 import SubjectsSection from './features/subjectsSection/SubjectsSection';
 
-import paths from '@/routes/paths';
-import usePageTitle from '@/shared/hooks/usePageTitle';
 import { useState } from 'react';
 import subjects from './subjects';
 const SubjectsScreen = () => {
-    usePageTitle(paths.subjects.crumb);
     const [filteredSubjects, setFilteredSubjects] = useState(subjects);
 
     const handleSearch = (searchTerm: string) => {

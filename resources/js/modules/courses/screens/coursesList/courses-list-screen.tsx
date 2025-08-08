@@ -6,13 +6,9 @@ import Overlay from '@/shared/components/ui/Overlay';
 import FilteredCourses from './features/filterdCourses/FilteredCourses';
 import FilterSideBar from './features/filterSideBar/FilterSideBar';
 
-import usePageTitle from '@/shared/hooks/usePageTitle';
-import { useFilterOptions } from './hooks/useFilterOptions';
 import { useSidebar } from '@/shared/hooks/useSideBar';
-import paths from '@/routes/paths';
+import { useFilterOptions } from './hooks/useFilterOptions';
 const FilterCoursesScreen = () => {
-    usePageTitle(paths.courses.crumb);
-
     const { options, handleOptionChange, handlePriceRangeChange, appliedOptions, page, applyFilters, onPageChange } = useFilterOptions();
     const { sidebarOpen, closeSidebar, toggleSidebar } = useSidebar();
 

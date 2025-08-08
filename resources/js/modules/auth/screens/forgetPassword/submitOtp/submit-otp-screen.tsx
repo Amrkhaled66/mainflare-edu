@@ -6,11 +6,9 @@ import PageHeader from '@/modules/auth/components/PageHeader';
 
 import { useReset } from '@/modules/auth/context/resetCtx';
 import paths from '@/routes/paths';
-import usePageTitle from '@/shared/hooks/usePageTitle';
 import { useState } from 'react';
 import { Link, Navigate } from 'react-router';
 const SubmitOtpScreen = () => {
-    usePageTitle(paths.forgetPassword.crumb);
     const { phone, changePhone, changeToken } = useReset();
     const [otp, setOtp] = useState<string[]>(Array(4).fill(''));
     const [error, setError] = useState('');

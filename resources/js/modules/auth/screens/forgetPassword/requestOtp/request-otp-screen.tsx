@@ -1,6 +1,5 @@
 import AnimatingFormBody from '@/modules/auth/components/AnimatingFormBody';
 import paths from '@/routes/paths';
-import usePageTitle from '@/shared/hooks/usePageTitle';
 import { Link } from 'react-router';
 import AnimatingFormHeader from '../../../components/AnimatingFormHeader';
 import PageHeader from '../../../components/PageHeader';
@@ -11,7 +10,6 @@ import { useReset } from '@/modules/auth/context/resetCtx';
 import { checkPhoneValidation } from '@/shared/utils/checkPhoneValidation';
 import { useState } from 'react';
 const RequestOtpScreen = () => {
-    usePageTitle(paths.forgetPassword.crumb);
     const [error, setError] = useState('');
     const { changePhone } = useReset();
 

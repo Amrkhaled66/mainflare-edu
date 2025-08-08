@@ -1,4 +1,3 @@
-import usePageTitle from '@/shared/hooks/usePageTitle';
 import { useSidebar } from '@/shared/hooks/useSideBar';
 import { useFilterOptions } from './hooks/useFilterOptions';
 
@@ -11,10 +10,7 @@ import FilterSideBar from './features/filterSideBar/FilterSideBar';
 import books from './data/books';
 import data from './data/options';
 
-import paths from '@/routes/paths';
 const BookListScreen = () => {
-    usePageTitle(paths.booksList.crumb);
-
     const loading = false;
 
     const { options, handleOptionChange, appliedOptions, page, applyFilters, onPageChange } = useFilterOptions();

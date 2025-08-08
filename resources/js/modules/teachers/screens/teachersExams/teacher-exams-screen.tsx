@@ -1,4 +1,3 @@
-import usePageTitle from '@/shared/hooks/usePageTitle';
 import { motion } from 'framer-motion';
 import { animationsVariants } from '../../defaultSettings';
 
@@ -6,8 +5,6 @@ import CustomCard from '@/shared/components/CustomCard';
 import { Link } from 'react-router';
 import exams from './exams';
 const TeacherBooksScreen = () => {
-    usePageTitle('الامتحانات');
-
     return (
         <div>
             <motion.div variants={animationsVariants} initial="initial" animate="animate" className="flex flex-col gap-x-6 gap-y-8 lg:flex-row">

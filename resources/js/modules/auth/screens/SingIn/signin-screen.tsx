@@ -1,12 +1,9 @@
-import paths from '@/routes/paths';
-import usePageTitle from '@/shared/hooks/usePageTitle';
 import AnimatingFormHeader from '../../components/AnimatingFormHeader';
 import PageHeader from '../../components/PageHeader';
 import SignInForm from './features/singupForm/SignInForm';
 const SignIn = () => {
-    usePageTitle(paths.login.crumb);
     return (
-        <div className={`flex h-full lg:h-fit w-full flex-col justify-start text-textColor lg:max-w-[70%]`}>
+        <div className={`flex h-full w-full flex-col justify-start text-textColor lg:h-fit lg:max-w-[70%]`}>
             <PageHeader />
             <div className="h-full w-full space-y-5 lg:mt-8 lg:space-y-[80px]">
                 <AnimatingFormHeader>

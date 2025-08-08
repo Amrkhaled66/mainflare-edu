@@ -1,18 +1,14 @@
-import teachers from './data/teachers';
 import data from './data/options';
+import teachers from './data/teachers';
 
 import Pagination from '@/shared/components/Pagination';
 import Overlay from '@/shared/components/ui/Overlay';
 import FilteredTeachers from './features/filterdTeachers/FilteredTeachers';
 import FilterSideBar from './features/filterSideBar/FilterSideBar';
 
-import usePageTitle from '@/shared/hooks/usePageTitle';
-import { useFilterOptions } from './hooks/useFilterOptions';
 import { useSidebar } from '@/shared/hooks/useSideBar';
-import paths from '@/routes/paths';
+import { useFilterOptions } from './hooks/useFilterOptions';
 const TeachersListScreen = () => {
-    usePageTitle(paths.courses.crumb);
-
     const { options, handleOptionChange, appliedOptions, page, applyFilters, onPageChange } = useFilterOptions();
     const { sidebarOpen, closeSidebar, toggleSidebar } = useSidebar();
 

@@ -53,6 +53,10 @@ const paths = {
         path: `/auth/signin`,
         crumb: 'تسجيل الدخول',
     },
+    parentLogin: {
+        path: `/auth/parent-signin`,
+        crumb: 'لوحة ولي الامر - تسجيل الدخول',
+    },
     signup: {
         path: '/auth/signup',
         crumb: 'إنشاء حساب',

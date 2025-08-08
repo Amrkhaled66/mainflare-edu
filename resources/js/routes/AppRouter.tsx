@@ -25,6 +25,7 @@ import {
     ParentDashboardLayout,
     ParentExamsScreen,
     ParentInvoicesScreen,
+    ParentSigninPage,
     RequestOtpScreen,
     ResetPasswordScreen,
     SettingsScreen,
@@ -203,6 +204,10 @@ const router = createBrowserRouter([
             {
                 path: paths.resetPassword.path,
                 element: <ResetPasswordScreen />,
+            },
+            {
+                path: paths.parentLogin.path,
+                element: <ParentSigninPage />,
             },
         ],
     },

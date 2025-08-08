@@ -1,4 +1,5 @@
 import Overlay from '@/shared/components/ui/Overlay';
+import usePageTitle from '@/shared/hooks/usePageTitle';
 import { useCallback, useState } from 'react';
 import { Outlet } from 'react-router';
 import Header from './components/Header';
@@ -9,13 +10,14 @@ const layout = () => {
     const closeMenu = useCallback(() => setMenuOpen(false), []);
     const openMenu = useCallback(() => setMenuOpen(true), []);
 
+    usePageTitle();
     return (
         <div dir="rtl" className="overflow-hidden">
             <Overlay isOpen={menuOpen} onClick={closeMenu} />
             <Header onOpen={openMenu} />
-            <div className="flex mt-[104px]">
+            <div className="mt-[104px] flex">
                 <SideBar menuOpen={menuOpen} onClose={closeMenu} />
-                <div className="flex-1 w-2/3 p-6">
+                <div className="w-2/3 flex-1 p-6">
                     <Outlet />
                 </div>
             </div>
