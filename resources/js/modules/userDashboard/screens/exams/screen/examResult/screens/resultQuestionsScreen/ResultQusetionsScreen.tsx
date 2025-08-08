@@ -1,9 +1,8 @@
 import DashBoardContainer from '@/shared/components/ui/DashBoardContainer';
-import QuestionNavigator from './features/QuestionNavigator/QuestoinNavigator';
+import QuestionNavigator from './features/QuestionNavigator/QuestionNavigator';
 import QuestionResult from './features/QuestionResult/QuestionResult';
 
 import { useCallback, useState } from 'react';
-const tabsNames = ['overview', 'questions'];
 
 const ResultQuestionsScreen = ({ toggleTabs, result }: { toggleTabs: () => void; result: any }) => {
     const [activeQuestionIndex, setActiveQuestionIndex] = useState(0);

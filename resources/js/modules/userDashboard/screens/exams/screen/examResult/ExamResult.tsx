@@ -1,6 +1,6 @@
 import DashBoardContainer from '@/shared/components/ui/DashBoardContainer';
 import ResultOverviewScreen from './screens/resultOverViewScreen/result-overview-screen';
-import ResultQuestionsScreen from './screens/resultQuestionsScreen/result-question-screen';
+import ResultQuestionsScreen from './screens/resultQuestionsScreen/ResultQusetionsScreen';
 
 import { ReactNode, useState } from 'react';
 import result from './result';

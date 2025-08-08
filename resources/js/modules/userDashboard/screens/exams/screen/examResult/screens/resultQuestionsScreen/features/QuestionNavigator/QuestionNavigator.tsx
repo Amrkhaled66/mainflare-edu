@@ -1,4 +1,4 @@
-import QuestionNavigatorFooterFooter from './components/QuestionNavigatorFooter';
+import QuestionNavigatorFooterFooter from './components/QuestionNavigatorFooterFooter';
 
 const QuestionNavigator = ({
     answers,

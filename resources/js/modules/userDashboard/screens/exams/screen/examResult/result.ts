@@ -22,7 +22,7 @@ const examResult: ExamResult = {
     examId: 'PHY-2023-001',
     examTitle: 'امتحان الفيزياء - الثانوية العامة',
     submittedAt: new Date().toISOString(),
-    duration: 120, // minutes
+    duration: 120,
     totalQuestions: 5,
     correctAnswers: 3,
 
