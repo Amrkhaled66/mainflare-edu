@@ -183,11 +183,15 @@ const router = createBrowserRouter([
     {
         path: '/auth',
         element: <AuthLayout />,
+
         children: [
+            {
+                index: true,
+                element: <Navigate to={paths.login.path} replace />,
+            },
             {
                 path: paths.login.path,
                 element: <SignIn />,
-                index: true,
             },
             {
                 path: paths.signup.path,

@@ -15,7 +15,7 @@ const SignUpForm = () => {
     return (
         <form onSubmit={handleSubmit}>
             <AnimatingFormBody>
-                <div className="grid grid-cols-2 gap-6 lg:grid-cols-3">
+                <div className="grid grid-cols-2 gap-6 lg:grid-cols-2">
                     <FormInputWithLabel
                         label="الاسم الاول"
                         type="text"
