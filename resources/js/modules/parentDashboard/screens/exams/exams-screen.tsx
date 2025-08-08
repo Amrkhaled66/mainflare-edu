@@ -1,5 +1,6 @@
 import examData from './exams';
 import UserExams from './features/UserExams/UserExams';
+import DashBoardContainer from '@/shared/components/ui/DashBoardContainer';
 
 import ExamResult from './features/ExamResult/ExamResult';
 import { useState } from 'react';
