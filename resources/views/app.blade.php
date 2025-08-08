@@ -43,7 +43,7 @@
     @inertiaHead
 </head>
 
-<body>
+<body dir="rtl">
     @inertia
 </body>
 

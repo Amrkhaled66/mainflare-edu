@@ -79,11 +79,15 @@
         @apply border-b border-b-stroke pb-3 text-lg font-semibold;
     }
     .dashBoard-subContainer {
-        @apply rounded-3xl border border-stroke bg-white p-6 drop-shadow-sm ;
+        @apply rounded-3xl border border-stroke bg-white p-6 drop-shadow-sm;
     }
 
-    .y-animate{
+    .y-animate {
         @apply transition-all duration-300 ease-in-out hover:translate-y-[-8px] hover:!drop-shadow-xl;
+    }
+
+    .b-stroke {
+        @apply border-b border-b-stroke py-3;
     }
 }
 
