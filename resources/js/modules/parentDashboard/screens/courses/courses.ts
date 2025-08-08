@@ -1,4 +1,3 @@
-
 const parentCourseData = {
     courseId: '4522220',
     courseInfo: {
@@ -8,7 +7,7 @@ const parentCourseData = {
         hwCount: 6,
         examsCount: 3,
         publishedAt: '2025-07-01',
-        teacher:"محمد عبد المعبود",
+        teacher: 'محمد عبد المعبود',
     },
     watchedVideosCount: 18,
     submittedHomeworksCount: 5,
